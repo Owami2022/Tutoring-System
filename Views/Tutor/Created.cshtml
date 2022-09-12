@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Created";
+    Layout = "~/Views/Shared/_TutorLayoutcshtml.cshtml";
+}
+
+<a class="btn btn-primary" type="submit"  asp-controller="Student" asp-action="Enroll" >Submit</a>
+ <button type="submit" class="btn btn-primary  btn-md-lg btn-sm-sm text-center" style="width:400px">Login</button>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script src="http://path/to/your/copy/of/jquery.blockUI.js"></script>
+<link rel="stylesheet" href="~/css/Student/Loader.css"/>
+<script>
+//submit search, display loading message
+    $('button[type = submit]').click(function(){
+        $.blockUI({ css: { 
+            border: 'none', 
+            padding: '15px', 
+            background: 'rgba(6, 73, 181,0.0)',
+            opacity: 1.0
+        },
+        overlayCSS: {
+            cursor: 'wait',
+
+        },
+        message: '<div class="loader">Loading......</div>'
+        }); 
+    });
+</script>

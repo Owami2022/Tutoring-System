@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_AdminLayout";
+}
+@************************************************Admin Image Carousel*****************************************************************************************************@
+ <hr class="border-2  pt-0 border-light " style="width:100%"/> 
+      
+  <div class="carousel-inner" style="width:100%; height:25%">
+    <div class="carousel-item active "style="width:100% !important; height:25% !important; background-size:cover">
+        <div class="w3-display-container w3-text-blue">
+             
+      <img class="d-block w-100" src="~/css/Admin/Admin_3.png" alt="First slide" />
+                <div class="carousel-caption d-none d-md-block">
+                     <h1  class="text-primary text-center "style="font-weight:900">Welcome Back</h1>
+        <h2 class="text-primary text-center "style="font-weight:900">Ms Shoba</h2>
+      
+         </div>
+       </div>
+      </div>
+    </div>
+
+<hr class="border-3  pt-0" style="width:100%" /> 
+
+@************************************************stats overview*****************************************************************************************************@
+<div class="Faculty-container container-fluid pt-1 pb-1 " style="background:#FFFFFF"> @*#f3f3f3*@
+    <h2 class="text text-center pt-2 pb-2">Overview</h2>
+    <div class="card-deck ">
+        <div class="card border-3 bg-transparent border-primary">
+            <div class="card-header bg-gradient-success pl-2 pr-2">
+                <h3 class="text text-center ">Students</h3>
+               <h2 class="text text-center ">1</h2>
+
+            </div>
+            <div class="card-body">
+                <img src="~/css/Admin/Card1.png" class="card-img-bottom"style="height:150px;width:150px;"/>
+            </div>
+        </div>
+
+         <div class="card border-3 bg-transparent border-primary">
+            <div class="card-header bg-gradient-danger pl-2 pr-2">
+                <h3 class="text text-center ">Staff </h3>
+                <h2 class="text text-center ">4</h2>
+            </div>
+            <div class="card-body">
+                <img src="~/css/admin/Card2.png" class="card-img-bottom"style="height:150px;width:150px;"/>
+            </div>
+    
+        </div>
+
+         <div class="card border-3 bg-transparent border-primary  admin-cards" >
+           <div class="card-header bg-gradient-info pl-2 pr-2">
+                <h3 class="text text-center">Courses</h3>
+                
+                <h2 class="text text-center ">@ViewBag.Courses</h2>
+           </div>
+          
+           <div class="card-body">
+               
+               <a asp-action="ListCourse" asp-controller="Admin"> <img src="~/css/Admin/Card3.png" class="card-img-bottom" style="height:150px;width:150px;" /></a>
+           </div>
+        </div>
+
+         <div class="card border-3 bg-transparent border-primary">
+           <div class="card-header bg-gradient-warning  pl-2 pr-2">
+                <h3 class="text text-center ">Tutors</h3>
+                <h2 class="text text-center ">1</h2>
+            </div>
+            <div class="card-body">
+                <img src="~/css/Admin/Card4.png" class="card-img-bottom"style="height:150px;width:150px;"/>
+            </div>
+        </div>
+
+            <div class="card border-3 bg-transparent border-primary">
+           <div class="card-header bg-gradient-secondary  pl-2 pr-2">
+                <h3 class="text text-center ">Faculties</h3>
+                <h2 class="text text-center ">@ViewBag.Faculty</h2>
+            </div>
+            <div class="card-body">
+                <img src="~/css/Admin/Card5.png" class="card-img-bottom"style="height:150px;width:150px;"/>
+            </div>
+        </div>
+
+        
+        </div>
+
+       
+    </div>
+
+<hr class="border-3  pt-0" style="width:100%" /> 
+@************************************************Faculties*****************************************************************************************************@
+<div class="Faculty-container container-fluid pt-1 pb-1 " style="background:#f3f3f3">
+    <h2 class="text text-center pt-2 pb-2">Recently Enrolled Students </h2>
+    <br />
+    <ol>
+        <li><a href="1"> - </a></li>
+    </ol>
+
+<hr class="border-3  pt-0" style="width:100%" /> 
+@************************************************Conselling and Support*****************************************************************************************************@
+@*<div class=" container-fluid col-12 pt-2 pb-2 row " style="background:#f3f3f3">
+    <div class="container col-8">
+     <h2 class="text text-center pt-2 pb-2">COUNSELLLING AND SUPPORT</h2>
+     
+     <p class="text text-wrap">Occasionally, life brings its own challenges, and dealing with them on your own is not always easy. We care about the well being of each and every one of our students. If you need any type of counselling or support, you may turn to any of the resources below:</p>
+     <p> South Africa Depression And Anxiety Group <a href="http://www.sadag.org">http://www.sadag.org</a></p>
+     <p> Life Line South Africa <a href=" http://lifelinesa.co.za/contact-us"> http://lifelinesa.co.za/contact-us</a></p>
+     <p> Open Counselling <a href="https://www.opencounseling.com/hotlines-za">https://www.opencounseling.com/hotlines-za</a></p>
+     <p> Brothers for Life <a class="text-decoration-none" href="https://www.brothersforlife.org">https://www.brothersforlife.org</a></p>
+    </div>
+    <div class="container col-4">
+        <img src="~/css/StudentCounsil1.png"/>
+    </div>
+</div>*@
+</div>

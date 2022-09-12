@@ -1,0 +1,99 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_Login-RegisterLayout";
+}
+
+
+
+<div class="row"style="background-color:#4152B3; width:100%">
+    <div class="pl-5 pr-5 pt-5 col-md-6 col-sm-12">
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+             <a href="@Url.Action("Index","Home")"><i class='bx bx-arrow-back bx-rotate-270 bx-tada bx-sm' style='color:white'  ></i></a> 
+            <h2 class="text-white text-center">Create new Account</h2>
+           
+            <h6 class="text-white">Already Registered?    <a class="text-white font-italic" asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl">Log in here.</a></h6>
+            <div asp-validation-summary="All" class="text-danger"></div>
+             <div class="form-group">
+                <label class="text-white" asp-for="Input.FirstName"></label>
+                <input asp-for="Input.FirstName" class="form-control" />
+                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+            </div>
+
+             <div class="form-group">
+                <label class="text-white" asp-for="Input.LastName"></label>
+                <input asp-for="Input.LastName" class="form-control" />
+                <span asp-validation-for="Input.LastName" class="text-danger"></span>
+            </div>
+
+             <div class="form-group">
+                <label class="text-white" asp-for="Input.DOB">Date Of Birth</label>
+                 <input asp-for="Input.DOB" class="form-control" placeholder="dd/mm/yy"/>
+                <span asp-validation-for="Input.DOB" class="text-danger"></span>
+            </div>
+
+                <div class="form-group ">
+                <label class="text-white" asp-for="Input.Gender">Gender</label>
+                <div class="text-white row col-6">
+                      <div class="container-fluid col-3">
+                    Male <br />
+                    <input id="gender" asp-for="Input.Gender" value="Male" type="radio"class="form-control" />
+                </div>
+                <div class="container-fluid col-3" >
+                    Female <br />
+                     <input id="gender" asp-for="Input.Gender" value="Female" type="radio"class="form-control" />
+                </div>
+                <span asp-validation-for="Input.Gender" class="text-danger"></span>
+                </div>
+              
+            </div>
+             <div class="form-group">
+                <label class="text-white" asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="form-control" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label class="text-white" asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="form-control" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="text-white" asp-for="Input.ConfirmPassword"></label>
+                <input asp-for="Input.ConfirmPassword" class="form-control" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="text-center pb-3">
+                <button type="submit" class="btn btn-primary btn-md-lg btn-sm-sm text-center" style="width:400px">Register</button>
+            </div>
+            
+        </form>
+    </div>
+
+  <div class=" col-md-6 col-md-offset-2 col-sm-12" style="Background:#e6eef4">
+      <img src="~/css/LOgINBackground.png" width="80%" />
+       <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                   </ul>
+    </div> 
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+     <script type="text/javascript">
+            $(function() {
+                $(".datepicker").datepicker();
+            });
+        </script>
+}

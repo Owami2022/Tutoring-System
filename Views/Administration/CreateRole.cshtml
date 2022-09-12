@@ -1,0 +1,39 @@
+﻿@model CreateRoleViewModel
+@{
+    ViewData["Title"] = "CreateRole";
+    Layout = Layout = "_AdminLayout";
+}
+
+  <section>
+            <form id="account" method="post">
+                 <div class="w-100 " style="background: rgba(6, 73, 181,0.5)">
+    <div class="pt-1 m-0 row">
+        <h5 class="text-white text-center ">Create A Role</h5>
+    </div>
+</div>
+           
+           
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="RoleName"></label>
+                    <input asp-for="RoleName" class="form-control" />
+                    <span asp-validation-for="RoleName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                 
+                     <button type="submit" class="btn btn-primary  btn-md-lg btn-sm-sm text-center" style="width:400px">Create Role</button>
+                </div>
+            </form>
+        </section>
+           @if(ViewBag.Message != null)
+   {
+    <script type="text/javascript">
+window.onload = function() {
+    alert("@ViewBag.Message");
+
+};
+
+    </script>
+
+   }
+

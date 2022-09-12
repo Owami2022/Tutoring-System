@@ -1,0 +1,39 @@
+﻿@using TBHAcademy.Models
+@model List<TBHAcademy.Models.UserRolesViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_AdminLayout";
+}
+@*<h1>User Roles</h1>*@
+
+    <div class="w-100 mb-2  " style="background: rgba(6, 73, 181,0.5)">
+    <div class="pt-1 m-0 row">
+        <h5 class="text-white text-center ">User Roles</h5>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Roles</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+        <tr>
+            <td>@user.FirstName</td>
+            <td>@user.LastName</td>
+            <td>@user.Email</td>
+            <td>@string.Join(" , ", user.Roles.ToList())</td>
+            <td>
+                <a class="btn btn-primary" asp-controller="UserRoles" asp-action="Manage" asp-route-userId="@user.UserId">Manage Roles</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

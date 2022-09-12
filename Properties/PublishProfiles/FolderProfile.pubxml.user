@@ -1,0 +1,794 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\koketso mosena\OneDrive\Desktop\Published</_PublishTargetUrl>
+    <History>True|2022-06-10T21:54:10.0887246Z;True|2022-06-10T08:52:56.4431786+02:00;True|2022-06-09T02:42:43.2155234+02:00;True|2022-06-07T20:07:50.5649598+02:00;True|2022-06-05T04:40:41.8693559+02:00;True|2022-06-05T01:51:09.6226929+02:00;True|2022-06-05T01:35:23.2890954+02:00;True|2022-06-04T00:12:03.5904501+02:00;True|2022-06-03T23:58:11.5339752+02:00;True|2022-06-03T23:03:49.0199625+02:00;True|2022-06-01T23:58:24.2417089+02:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="TBHAcademyContextConnection">
+      <Value>server=sict-sql.mandela.ac.za%3bDatabase=GRP31-DB-THBAcademy%3buser id=GRP31%3bpassword=grp31-soit2022%3b Trusted_Connection=False</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="TBHAcademy.Data.TBHAcademyContext">
+      <Value>server=sict-sql.mandela.ac.za%3bDatabase=GRP31-DB-THBAcademy%3buser id=GRP31%3bpassword=grp31-soit2022%3b Trusted_Connection=False</Value>
+    </EFMigrations>
+  </ItemGroup>
+  <ItemGroup>
+    <File Include="Areas/Identity/Data/TBHAcademyContext.cs">
+      <publishTime>06/10/2022 20:48:13</publishTime>
+    </File>
+    <File Include="Areas/Identity/Data/TBHAcademyUser.cs">
+      <publishTime>06/05/2022 01:22:18</publishTime>
+    </File>
+    <File Include="Areas/Identity/IdentityHostingStartup.cs">
+      <publishTime>06/07/2022 01:51:20</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/AccessDenied.cshtml">
+      <publishTime>06/01/2022 02:51:46</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/AccessDenied.cshtml.cs">
+      <publishTime>06/01/2022 02:51:42</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ConfirmEmail.cshtml">
+      <publishTime>06/01/2022 02:51:46</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ConfirmEmail.cshtml.cs">
+      <publishTime>06/01/2022 02:51:43</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml">
+      <publishTime>06/01/2022 02:51:46</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml.cs">
+      <publishTime>06/01/2022 02:51:43</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ExternalLogin.cshtml">
+      <publishTime>06/01/2022 02:51:46</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ExternalLogin.cshtml.cs">
+      <publishTime>06/01/2022 02:51:43</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ForgotPassword.cshtml">
+      <publishTime>06/01/2022 02:51:46</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ForgotPassword.cshtml.cs">
+      <publishTime>06/01/2022 02:51:43</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml">
+      <publishTime>06/01/2022 02:51:46</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml.cs">
+      <publishTime>06/01/2022 02:51:43</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Lockout.cshtml">
+      <publishTime>06/01/2022 02:51:46</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Lockout.cshtml.cs">
+      <publishTime>06/01/2022 02:51:43</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Login.cshtml">
+      <publishTime>06/10/2022 14:36:55</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Login.cshtml.cs">
+      <publishTime>06/10/2022 23:52:57</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/LoginWith2fa.cshtml">
+      <publishTime>06/01/2022 02:51:46</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/LoginWith2fa.cshtml.cs">
+      <publishTime>06/01/2022 02:51:43</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml.cs">
+      <publishTime>06/01/2022 02:51:43</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Logout.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Logout.cshtml.cs">
+      <publishTime>06/01/2022 02:51:43</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml.cs">
+      <publishTime>06/01/2022 02:51:43</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml.cs">
+      <publishTime>06/01/2022 02:51:43</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml.cs">
+      <publishTime>06/01/2022 02:51:44</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml.cs">
+      <publishTime>06/01/2022 02:51:44</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/Email.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/Email.cshtml.cs">
+      <publishTime>06/01/2022 02:51:44</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml.cs">
+      <publishTime>06/01/2022 02:51:44</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml.cs">
+      <publishTime>06/01/2022 02:51:44</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml.cs">
+      <publishTime>06/01/2022 02:51:44</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/Index.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/Index.cshtml.cs">
+      <publishTime>06/01/2022 02:51:44</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/ManageNavPages.cs">
+      <publishTime>06/01/2022 02:51:43</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/PersonalData.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/PersonalData.cshtml.cs">
+      <publishTime>06/01/2022 02:51:44</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml.cs">
+      <publishTime>06/01/2022 02:51:44</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/SetPassword.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/SetPassword.cshtml.cs">
+      <publishTime>06/01/2022 02:51:44</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml.cs">
+      <publishTime>06/01/2022 02:51:44</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml">
+      <publishTime>06/01/2022 02:51:48</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml.cs">
+      <publishTime>06/01/2022 02:51:44</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/_Layout.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml">
+      <publishTime>06/01/2022 02:51:43</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml">
+      <publishTime>06/01/2022 02:51:47</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml">
+      <publishTime>06/01/2022 02:51:46</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Register.cshtml">
+      <publishTime>06/04/2022 00:10:50</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/Register.cshtml.cs">
+      <publishTime>06/04/2022 03:07:58</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/RegisterConfirmation.cshtml">
+      <publishTime>06/01/2022 02:51:48</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/RegisterConfirmation.cshtml.cs">
+      <publishTime>06/01/2022 02:51:44</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml">
+      <publishTime>06/01/2022 02:51:48</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml.cs">
+      <publishTime>06/01/2022 02:51:45</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ResetPassword.cshtml">
+      <publishTime>06/01/2022 02:51:49</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ResetPassword.cshtml.cs">
+      <publishTime>06/01/2022 02:51:45</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml">
+      <publishTime>06/01/2022 02:51:49</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml.cs">
+      <publishTime>06/01/2022 02:51:45</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/_StatusMessage.cshtml">
+      <publishTime>06/01/2022 02:51:46</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Account/_ViewImports.cshtml">
+      <publishTime>06/01/2022 02:51:46</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Error.cshtml">
+      <publishTime>06/01/2022 02:51:49</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/Error.cshtml.cs">
+      <publishTime>06/01/2022 02:51:45</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/_ValidationScriptsPartial.cshtml">
+      <publishTime>06/01/2022 02:51:46</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/_ViewImports.cshtml">
+      <publishTime>06/01/2022 02:51:46</publishTime>
+    </File>
+    <File Include="Areas/Identity/Pages/_ViewStart.cshtml">
+      <publishTime>06/01/2022 02:51:42</publishTime>
+    </File>
+    <File Include="Controllers/AdminController.cs">
+      <publishTime>06/10/2022 21:40:01</publishTime>
+    </File>
+    <File Include="Controllers/AdministrationController.cs">
+      <publishTime>06/07/2022 01:51:20</publishTime>
+    </File>
+    <File Include="Controllers/HodController.cs">
+      <publishTime>06/10/2022 21:55:42</publishTime>
+    </File>
+    <File Include="Controllers/HomeController.cs">
+      <publishTime>06/10/2022 08:52:12</publishTime>
+    </File>
+    <File Include="Controllers/StudentController.cs">
+      <publishTime>06/10/2022 20:57:35</publishTime>
+    </File>
+    <File Include="Controllers/TutorController.cs">
+      <publishTime>06/10/2022 22:44:36</publishTime>
+    </File>
+    <File Include="Migrations/20220601104613_Initial-Create.cs">
+      <publishTime>06/01/2022 12:46:13</publishTime>
+    </File>
+    <File Include="Migrations/20220601104613_Initial-Create.Designer.cs">
+      <publishTime>06/01/2022 12:46:13</publishTime>
+    </File>
+    <File Include="Migrations/20220601110227_Update.cs">
+      <publishTime>06/01/2022 13:02:27</publishTime>
+    </File>
+    <File Include="Migrations/20220601110227_Update.Designer.cs">
+      <publishTime>06/01/2022 13:02:27</publishTime>
+    </File>
+    <File Include="Migrations/20220604010826_IncludeDate.cs">
+      <publishTime>06/04/2022 03:08:27</publishTime>
+    </File>
+    <File Include="Migrations/20220604010826_IncludeDate.Designer.cs">
+      <publishTime>06/04/2022 03:08:27</publishTime>
+    </File>
+    <File Include="Migrations/20220609155048_CreateCourse.cs">
+      <publishTime>06/09/2022 17:50:48</publishTime>
+    </File>
+    <File Include="Migrations/20220609155048_CreateCourse.Designer.cs">
+      <publishTime>06/09/2022 17:50:48</publishTime>
+    </File>
+    <File Include="Migrations/20220610133647_AddFaculty.cs">
+      <publishTime>06/10/2022 15:36:48</publishTime>
+    </File>
+    <File Include="Migrations/20220610133647_AddFaculty.Designer.cs">
+      <publishTime>06/10/2022 15:36:48</publishTime>
+    </File>
+    <File Include="Migrations/20220610185521_CreateTB.cs">
+      <publishTime>06/10/2022 20:55:21</publishTime>
+    </File>
+    <File Include="Migrations/20220610185521_CreateTB.Designer.cs">
+      <publishTime>06/10/2022 20:55:21</publishTime>
+    </File>
+    <File Include="Migrations/TBHAcademyContextModelSnapshot.cs">
+      <publishTime>06/10/2022 20:55:21</publishTime>
+    </File>
+    <File Include="Models/Course.cs">
+      <publishTime>06/09/2022 17:45:27</publishTime>
+    </File>
+    <File Include="Models/CreateRoleViewModel.cs">
+      <publishTime>06/07/2022 00:42:03</publishTime>
+    </File>
+    <File Include="Models/Enroll.cs">
+      <publishTime>06/10/2022 07:45:22</publishTime>
+    </File>
+    <File Include="Models/ErrorViewModel.cs">
+      <publishTime>06/01/2022 02:47:15</publishTime>
+    </File>
+    <File Include="Models/Faculty.cs">
+      <publishTime>06/10/2022 15:22:33</publishTime>
+    </File>
+    <File Include="Models/ModuleCourse.cs">
+      <publishTime>06/10/2022 07:45:22</publishTime>
+    </File>
+    <File Include="Models/Modules.cs">
+      <publishTime>06/10/2022 07:45:22</publishTime>
+    </File>
+    <File Include="Views/Admin/Index.cshtml">
+      <publishTime>06/10/2022 17:27:43</publishTime>
+    </File>
+    <File Include="Views/Admin/Index1.cshtml">
+      <publishTime>06/10/2022 21:46:24</publishTime>
+    </File>
+    <File Include="Views/Admin/InsertCourse.cshtml">
+      <publishTime>06/10/2022 21:46:24</publishTime>
+    </File>
+    <File Include="Views/Administration/CreateRole.cshtml">
+      <publishTime>06/10/2022 20:48:13</publishTime>
+    </File>
+    <File Include="Views/Hod/Index.cshtml">
+      <publishTime>06/10/2022 23:50:05</publishTime>
+    </File>
+    <File Include="Views/Hod/Index1.cshtml">
+      <publishTime>06/10/2022 23:50:05</publishTime>
+    </File>
+    <File Include="Views/Hod/InsertFaculty.cshtml">
+      <publishTime>06/10/2022 23:50:05</publishTime>
+    </File>
+    <File Include="Views/Home/demo.cshtml">
+      <publishTime>06/10/2022 08:15:54</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>06/10/2022 22:12:59</publishTime>
+    </File>
+    <File Include="Views/Home/Privacy.cshtml">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="Views/Shared/_AdminLayout.cshtml">
+      <publishTime>06/10/2022 17:27:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_Fake.cshtml">
+      <publishTime>06/10/2022 21:02:36</publishTime>
+    </File>
+    <File Include="Views/Shared/_HodLayout.cshtml">
+      <publishTime>06/10/2022 17:01:32</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>06/10/2022 17:41:41</publishTime>
+    </File>
+    <File Include="Views/Shared/_LogIn-RegisterLayout.cshtml">
+      <publishTime>06/05/2022 01:28:07</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>06/05/2022 04:40:10</publishTime>
+    </File>
+    <File Include="Views/Shared/_StudentLayout - Copy.cshtml">
+      <publishTime>06/10/2022 20:48:13</publishTime>
+    </File>
+    <File Include="Views/Shared/_StudentLayout.cshtml">
+      <publishTime>06/10/2022 20:48:13</publishTime>
+    </File>
+    <File Include="Views/Shared/_TutorLayoutcshtml.cshtml">
+      <publishTime>06/10/2022 22:41:16</publishTime>
+    </File>
+    <File Include="Views/Shared/_ValidationScriptsPartial.cshtml">
+      <publishTime>06/01/2022 19:41:27</publishTime>
+    </File>
+    <File Include="Views/Student/Enroll.cshtml">
+      <publishTime>06/10/2022 23:40:05</publishTime>
+    </File>
+    <File Include="Views/Student/Index.cshtml">
+      <publishTime>06/10/2022 23:20:13</publishTime>
+    </File>
+    <File Include="Views/Student/Index1.cshtml">
+      <publishTime>06/10/2022 21:05:31</publishTime>
+    </File>
+    <File Include="Views/Student/Index1cshtml">
+      <publishTime>06/10/2022 20:48:13</publishTime>
+    </File>
+    <File Include="Views/Tutor/Create.cshtml">
+      <publishTime>06/10/2022 23:01:25</publishTime>
+    </File>
+    <File Include="Views/Tutor/Created.cshtml">
+      <publishTime>06/10/2022 23:05:14</publishTime>
+    </File>
+    <File Include="Views/Tutor/Index.cshtml">
+      <publishTime>06/10/2022 22:13:57</publishTime>
+    </File>
+    <File Include="Views/_ViewImports.cshtml">
+      <publishTime>06/01/2022 02:47:02</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>06/01/2022 02:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/assets/bootstrap/css/bootstrap.min.css">
+      <publishTime>06/07/2022 20:22:53</publishTime>
+    </File>
+    <File Include="wwwroot/assets/bootstrap/js/bootstrap.min.js">
+      <publishTime>06/07/2022 20:22:53</publishTime>
+    </File>
+    <File Include="wwwroot/assets/css/Bootstrap-4---Payment-Form.css">
+      <publishTime>06/07/2022 20:22:53</publishTime>
+    </File>
+    <File Include="wwwroot/assets/css/Bootstrap-4-Calendar-No-Custom-Code.css">
+      <publishTime>06/07/2022 20:22:53</publishTime>
+    </File>
+    <File Include="wwwroot/assets/css/Bootstrap-Calendar.css">
+      <publishTime>06/07/2022 20:22:53</publishTime>
+    </File>
+    <File Include="wwwroot/assets/css/Footer-Basic.css">
+      <publishTime>06/07/2022 20:22:53</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-brands-400.eot">
+      <publishTime>06/07/2022 20:22:53</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-brands-400.svg">
+      <publishTime>06/07/2022 20:22:53</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-brands-400.ttf">
+      <publishTime>06/07/2022 20:22:53</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-brands-400.woff">
+      <publishTime>06/07/2022 20:22:53</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-brands-400.woff2">
+      <publishTime>06/07/2022 20:22:53</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-regular-400.eot">
+      <publishTime>06/07/2022 20:22:53</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-regular-400.svg">
+      <publishTime>06/07/2022 20:22:53</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-regular-400.ttf">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-regular-400.woff">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-regular-400.woff2">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-solid-900.eot">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-solid-900.svg">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-solid-900.ttf">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-solid-900.woff">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fa-solid-900.woff2">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/font-awesome.min.css">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fontawesome-all.min.css">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fontawesome-webfont.eot">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fontawesome-webfont.svg">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fontawesome-webfont.ttf">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fontawesome-webfont.woff">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fontawesome-webfont.woff2">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/FontAwesome.otf">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/fontawesome5-overrides.min.css">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/ionicons.eot">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/ionicons.min.css">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/ionicons.svg">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/ionicons.ttf">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/ionicons.woff">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/img/avatars/avatar1.jpeg">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/img/avatars/avatar2.jpeg">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/img/avatars/avatar3.jpeg">
+      <publishTime>06/07/2022 20:22:55</publishTime>
+    </File>
+    <File Include="wwwroot/assets/img/avatars/avatar4.jpeg">
+      <publishTime>06/07/2022 20:22:55</publishTime>
+    </File>
+    <File Include="wwwroot/assets/img/avatars/avatar5.jpeg">
+      <publishTime>06/07/2022 20:22:55</publishTime>
+    </File>
+    <File Include="wwwroot/assets/img/avatars/_MG_1681.jpg">
+      <publishTime>06/07/2022 20:22:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/img/dogs/image2.jpeg">
+      <publishTime>06/07/2022 20:22:55</publishTime>
+    </File>
+    <File Include="wwwroot/assets/img/dogs/image3.jpeg">
+      <publishTime>06/07/2022 20:22:55</publishTime>
+    </File>
+    <File Include="wwwroot/assets/img/dogs/_MG_1681.jpg">
+      <publishTime>06/07/2022 20:22:55</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/Bootstrap-4---Payment-Form.js">
+      <publishTime>06/07/2022 20:22:55</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/bs-init.js">
+      <publishTime>06/07/2022 20:22:55</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/chart.min.js">
+      <publishTime>06/07/2022 20:22:55</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/theme.js">
+      <publishTime>06/07/2022 20:22:55</publishTime>
+    </File>
+    <File Include="wwwroot/css/Admin/Admin001.png">
+      <publishTime>06/10/2022 14:32:36</publishTime>
+    </File>
+    <File Include="wwwroot/css/Admin/Admin002.png">
+      <publishTime>06/10/2022 14:33:32</publishTime>
+    </File>
+    <File Include="wwwroot/css/Admin/Admin003.png">
+      <publishTime>06/10/2022 14:34:28</publishTime>
+    </File>
+    <File Include="wwwroot/css/favicon %281%29.ico">
+      <publishTime>06/05/2022 01:15:01</publishTime>
+    </File>
+    <File Include="wwwroot/css/Hod-1.png">
+      <publishTime>06/10/2022 15:58:29</publishTime>
+    </File>
+    <File Include="wwwroot/css/hom2 %282%29.png">
+      <publishTime>05/30/2022 06:58:55</publishTime>
+    </File>
+    <File Include="wwwroot/css/Home1 %282%29.png">
+      <publishTime>05/30/2022 06:58:15</publishTime>
+    </File>
+    <File Include="wwwroot/css/Home3 %282%29.png">
+      <publishTime>05/30/2022 06:58:34</publishTime>
+    </File>
+    <File Include="wwwroot/css/Home4 %282%29.png">
+      <publishTime>06/02/2022 19:31:58</publishTime>
+    </File>
+    <File Include="wwwroot/css/HomePage %282%29.png">
+      <publishTime>06/02/2022 21:47:48</publishTime>
+    </File>
+    <File Include="wwwroot/css/kiosk.css">
+      <publishTime>06/07/2022 20:22:55</publishTime>
+    </File>
+    <File Include="wwwroot/css/Log1 %282%29.png">
+      <publishTime>06/05/2022 01:13:03</publishTime>
+    </File>
+    <File Include="wwwroot/css/log2 %282%29.png">
+      <publishTime>05/25/2022 23:07:49</publishTime>
+    </File>
+    <File Include="wwwroot/css/LOgINBackground.png">
+      <publishTime>06/01/2022 18:05:58</publishTime>
+    </File>
+    <File Include="wwwroot/css/pppp.png">
+      <publishTime>06/10/2022 23:23:18</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.css">
+      <publishTime>06/10/2022 04:14:19</publishTime>
+    </File>
+    <File Include="wwwroot/css/Student/StuMod1 - Copy.png">
+      <publishTime>06/08/2022 22:43:33</publishTime>
+    </File>
+    <File Include="wwwroot/css/Student/StuMod2 - Copy.png">
+      <publishTime>06/08/2022 22:44:22</publishTime>
+    </File>
+    <File Include="wwwroot/css/Student/StuMod3 - Copy.png">
+      <publishTime>06/08/2022 22:44:49</publishTime>
+    </File>
+    <File Include="wwwroot/css/Student1.png">
+      <publishTime>06/07/2022 22:38:12</publishTime>
+    </File>
+    <File Include="wwwroot/css/Student2.png">
+      <publishTime>06/07/2022 22:39:21</publishTime>
+    </File>
+    <File Include="wwwroot/css/Student3.png">
+      <publishTime>06/07/2022 22:39:43</publishTime>
+    </File>
+    <File Include="wwwroot/css/student4.png">
+      <publishTime>06/07/2022 22:40:20</publishTime>
+    </File>
+    <File Include="wwwroot/css/StudentCounsil.png">
+      <publishTime>06/09/2022 01:43:39</publishTime>
+    </File>
+    <File Include="wwwroot/css/StudentCounsil1.png">
+      <publishTime>06/09/2022 02:12:47</publishTime>
+    </File>
+    <File Include="wwwroot/css/StuMod1.png">
+      <publishTime>06/08/2022 22:43:33</publishTime>
+    </File>
+    <File Include="wwwroot/css/StuMod2.png">
+      <publishTime>06/08/2022 22:44:22</publishTime>
+    </File>
+    <File Include="wwwroot/css/StuMod3.png">
+      <publishTime>06/08/2022 22:44:49</publishTime>
+    </File>
+    <File Include="wwwroot/css/StuMod4.png">
+      <publishTime>06/08/2022 22:45:15</publishTime>
+    </File>
+    <File Include="wwwroot/css/update contect 0.5 B %28002%29.png">
+      <publishTime>06/10/2022 22:38:04</publishTime>
+    </File>
+    <File Include="wwwroot/css/update contect 0.5 B.png">
+      <publishTime>06/10/2022 19:34:20</publishTime>
+    </File>
+    <File Include="wwwroot/css/update content 0.5 - Copy.png">
+      <publishTime>06/10/2022 19:34:20</publishTime>
+    </File>
+    <File Include="wwwroot/css/update content 2 - Copy.png">
+      <publishTime>06/10/2022 19:34:19</publishTime>
+    </File>
+    <File Include="wwwroot/css/User1 %282%29.png">
+      <publishTime>05/30/2022 01:31:34</publishTime>
+    </File>
+    <File Include="wwwroot/css/view course 1 - Copy.png">
+      <publishTime>06/10/2022 20:50:52</publishTime>
+    </File>
+    <File Include="wwwroot/css/view course 1.png">
+      <publishTime>06/10/2022 20:50:52</publishTime>
+    </File>
+    <File Include="wwwroot/css/view course 2 - Copy.png">
+      <publishTime>06/10/2022 20:50:52</publishTime>
+    </File>
+    <File Include="wwwroot/css/view course 2.png">
+      <publishTime>06/10/2022 20:50:52</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>06/01/2022 02:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/js/site.js">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css">
+      <publishTime>06/01/2022 21:32:46</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map">
+      <publishTime>06/01/2022 21:32:48</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+      <publishTime>06/01/2022 21:32:48</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map">
+      <publishTime>06/01/2022 21:32:48</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css.map">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js.map">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/LICENSE">
+      <publishTime>06/01/2022 02:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js">
+      <publishTime>06/01/2022 02:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js">
+      <publishTime>06/01/2022 02:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt">
+      <publishTime>06/01/2022 02:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.js">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.min.js">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.js">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.min.js">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/LICENSE.md">
+      <publishTime>06/01/2022 02:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.js">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.js">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.map">
+      <publishTime>06/01/2022 02:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/LICENSE.txt">
+      <publishTime>06/01/2022 02:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/Log1 %282%29.png">
+      <publishTime>06/05/2022 01:13:03</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

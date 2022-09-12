@@ -1,0 +1,24 @@
+﻿@model IEnumerable<TBHAcademy.Models.ModuleDisplay>
+
+@{
+    ViewData["Title"] = @ViewBag.Tittle;
+    Layout = ViewBag.Layout;
+}
+
+<!------------------------------------------------- Header --------------------------------------------------------------------------------------->
+<div class="w-100 " style="background: rgba(6, 73, 181,0.5)">
+    <div class="pt-1 m-0 row">
+        <h5 class="text-white text-center ">@ViewBag.Header</h5>
+    </div>
+</div>
+<!------------------------------------------------- accordion --------------------------------------------------------------------------------------->
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Add Content
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Text</a></li>
+    <li><a class="dropdown-item" href="#">Document</a></li>
+    <li><a class="dropdown-item" href="#">Link</a></li>
+  </ul>
+</div>

@@ -1,0 +1,106 @@
+﻿@model IEnumerable<TBHAcademy.Models.ModuleDisplay>
+
+
+@{
+    ViewData["Title"] = "Enroll";
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+
+<!------------------------------------------------- Header --------------------------------------------------------------------------------------->
+<div class="w-100 " style="background: rgba(6, 73, 181,0.5)">
+    <div class="pt-1 m-0 row">
+        <h5 class="text-white text-center ">@ViewBag.Message</h5>
+    </div>
+</div>
+<!------------------------------------------------- accordion --------------------------------------------------------------------------------------->
+<div id="accordion" class="pt-2">
+    @foreach (var item in Model)
+    {
+        <h2>
+            <a href="#">
+                @item.ModulesVM.ModuleCode - @item.ModulesVM.ModuleName
+            </a>
+        </h2>
+        <div>
+            <div>
+                <div class="pb-2 fw-bold">
+                    Module Name:  <a class="text-primary" href="#">@item.ModulesVM.ModuleName</a>
+                </div>
+                <div class="pb-2 fw-bold">
+                    Module Code: <a class="text-primary" href="#">@item.ModulesVM.ModuleCode</a>
+
+                </div>
+                <div class="pb-2 fw-bold">
+                    Module Description: <a class="text-primary" href="#">None</a>
+
+                </div>
+                <div class="pb-2 fw-bold">
+                    Year   : <a class="text-primary" href="#">@item.ModulesVM.Year</a>
+
+                </div>
+                <div class="pb-2 fw-bold">
+                    Course : <a class="text-primary" href="#">@item.CourseVM.CourseName</a>
+
+                </div>
+                <div class="pb-2 fw-bold">
+                    Faculty : <a class="text-primary" href="#">Pending</a>
+
+                </div>
+                <div class="pb-2 fw-bold">
+                    Tutor   : <a class="text-primary" href="#">@item.UserVM.LastName @item.UserVM.FirstName</a>
+                </div>
+
+                <button class="btn btn-primary float-right color-white" data-toggle="modal" data-target="#@item.ModulesVM.ModuleCode" type="submit">Enroll</button>
+                <!------------------------------------------------- Modal --------------------------------------------------------------------------------------->
+                <div class="modal fade" id="@item.ModulesVM.ModuleCode" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-black text-center" id="exampleModalLabel">Confirmation of Enrollment</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="pb-2 fw-bold">
+                                    Module Name:  <a class="text-primary" href="#">@item.ModulesVM.ModuleName</a>
+                                </div>
+                                <div class="pb-2 fw-bold">
+                                    Module Code: <a class="text-primary" href="#">@item.ModulesVM.ModuleCode</a>
+
+                                </div>
+                                <div class="pb-2 fw-bold">
+                                    Module Description: <a class="text-primary" href="#">None</a>
+
+                                </div>
+                                <div class="pb-2 fw-bold">
+                                    Year   : <a class="text-primary" href="#">@item.ModulesVM.Year</a>
+
+                                </div>
+                                <div class="pb-2 fw-bold">
+                                    Course : <a class="text-primary" href="#">@item.CourseVM.CourseName</a>
+
+                                </div>
+                                <div class="pb-2 fw-bold">
+                                    Faculty : <a class="text-primary" href="#">Pending</a>
+
+                                </div>
+                                <div class="pb-2 fw-bold">
+                                    Tutor   : <a class="text-primary" href="#">@item.UserVM.LastName @item.UserVM.FirstName</a>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a asp-controller="Student" asp-action="Enrolled" asp-route-ID="@item.AssignModulesVM.AssignedID" name="ModuleID" class="btn btn-primary">Confirm</a>
+                                
+                                <button type="button" class="btn btn-outline-danger text-mute" data-dismiss="modal">Cancel</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    }
+</div>
