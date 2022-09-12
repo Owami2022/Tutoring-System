@@ -415,6 +415,9 @@ namespace TBHAcademy.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.HasKey("FacultyId");
 
                     b.ToTable("Faculty");

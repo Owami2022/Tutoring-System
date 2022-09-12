@@ -141,7 +141,7 @@ namespace TBHAcademy.Controllers
         {
             //selecting the user that matches the id then gives me the first record
             var user = _db.Users.Where(x => x.Id == id).FirstOrDefault();
-            user.
+            
             if (!string.IsNullOrEmpty(id))
             {
                 return View(user);
