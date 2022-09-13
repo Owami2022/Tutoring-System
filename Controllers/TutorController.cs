@@ -46,6 +46,16 @@ namespace TBHAcademy.Controllers
         {
             return View();
         }
+        public IActionResult Calender()
+        {
+            return View();
+        }
+        //[HttpPost]
+
+        //public IActionResult Calendar()
+        //{
+        //    return View();
+        //}
 
         //public IActionResult Index()
         //{
