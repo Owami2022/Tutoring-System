@@ -3977,4 +3977,4 @@ C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\TBHAcademy.cspro
 C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\TBHAcademy.genruntimeconfig.cache
 C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\ref\TBHAcademy.dll
 C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Administration\ListRoles.cshtml.g.cs
-C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\ComingSoonPage.cshtml.g.cs
+C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\ComingSoonPage\Index.cshtml.g.cs

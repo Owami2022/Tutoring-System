@@ -35,6 +35,7 @@ namespace TBHAcademy.Controllers
 
                 if (result.Succeeded)
                 {
+
                     return RedirectToAction("Index", "Home");
                 }
 

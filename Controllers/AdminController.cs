@@ -264,9 +264,6 @@ namespace TBHAcademy.Controllers
                 return Redirect("/");
             }
         }
-        public IActionResult ComingSoonPage()
-        {
-            return View();
-        }
+        
     }
 }
