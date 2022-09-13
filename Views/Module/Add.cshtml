@@ -1,0 +1,76 @@
+﻿@model TBHAcademy.Models.ManageContent
+@{
+    Layout = "~/Views/Shared/_TutorLayoutcshtml.cshtml";
+}
+<script>
+    $(document).ready(function(){
+        $("#exampleModal").modal('show');
+    });
+</script>
+
+ <form method="post">
+
+@*    <div class="card ">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+     
+
+  </div>
+  <div class="card-footer text-muted">
+    <button class="button btn btn-primary text-center">Add Content</button>
+  </div>
+</div>*@
+
+<div class="modal fade" id="exampleModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Insert Topic Information</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <div class="border m-1 p-1">
+          <h5 class="card-title">Insert Topic Information</h5>
+          <div class="form-group">
+                <label class="text-primary" asp-for="topic.TopicName"></label>
+                <input asp-for="topic.TopicName" class="form-control w-50" />
+                <span asp-validation-for="topic.TopicName" class="text-danger"></span>
+            </div>
+
+               <div class="form-group">
+                <label class="text-primary" asp-for="topic.TopicDescription"></label>
+                <input asp-for="topic.TopicDescription" class="form-control w-50" />
+                <span asp-validation-for="topic.TopicDescription" class="text-danger"></span>
+               </div>
+
+      </div>
+    @* <div class="border m-1 p-1">
+          <h5 class="card-title">Insert Link</h5>
+               <div class="form-group">
+                    <label class="text-primary" asp-for="content.Link1"></label>
+                <input asp-for="content.Link1" class="form-control w-50" />
+                <span asp-validation-for="content.Link1" class="text-danger"></span>
+               </div>
+
+             <div class="form-group">
+                <label class="text-primary" asp-for="content.LinkDescription1"></label>
+                <input asp-for="content.LinkDescription1" class="form-control w-50" />
+                <span asp-validation-for="content.LinkDescription1" class="text-danger"></span>
+             </div>
+
+      </div>*@
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="Submit" class=" button btn btn-primary">Add Topic</button>
+      </div>
+    </div>
+  </div>
+</div>
+ </form>
+
+
+

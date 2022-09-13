@@ -2960,6 +2960,18 @@ C:\Users\koketso mosena\OneDrive\Desktop\TBHAcademy\obj\Debug\net5.0\refint\TBHA
 C:\Users\koketso mosena\OneDrive\Desktop\TBHAcademy\obj\Debug\net5.0\TBHAcademy.pdb
 C:\Users\koketso mosena\OneDrive\Desktop\TBHAcademy\obj\Debug\net5.0\TBHAcademy.genruntimeconfig.cache
 C:\Users\koketso mosena\OneDrive\Desktop\TBHAcademy\obj\Debug\net5.0\ref\TBHAcademy.dll
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.csproj.AssemblyReference.cache
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.AssemblyInfoInputs.cache
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.AssemblyInfo.cs
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.csproj.CoreCompileInputs.cache
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.RazorAssemblyInfo.cache
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.RazorAssemblyInfo.cs
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\appsettings.json
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\bundleconfig.json
@@ -3264,7 +3276,6 @@ C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\Micr
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\Microsoft.CodeAnalysis.Razor.dll
-C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\Microsoft.CodeAnalysis.Workspaces.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -3317,7 +3328,6 @@ C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\zh-H
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
@@ -3353,7 +3363,6 @@ C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\ru\M
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
@@ -3367,15 +3376,6 @@ C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\runt
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.csproj.AssemblyReference.cache
-C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.AssemblyInfoInputs.cache
-C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.AssemblyInfo.cs
-C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.csproj.CoreCompileInputs.cache
-C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.RazorAssemblyInfo.cache
-C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.RazorAssemblyInfo.cs
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\scopedcss\bundle\TBHAcademy.styles.css
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\staticwebassets\TBHAcademy.StaticWebAssets.Manifest.cache
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\staticwebassets\TBHAcademy.StaticWebAssets.xml
@@ -3435,6 +3435,9 @@ C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\Razo
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\Razor\Views\Home\demo.cshtml.g.cs
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\Razor\Views\Module\Add.cshtml.g.cs
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\Razor\Views\Module\AddTopics.cshtml.g.cs
+C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\Razor\Views\Module\Content.cshtml.g.cs
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\Razor\Views\Shared\_Fake.cshtml.g.cs
@@ -3467,4 +3470,3 @@ C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\refi
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.pdb
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\TBHAcademy.genruntimeconfig.cache
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\ref\TBHAcademy.dll
-C:\Users\koketso mosena\OneDrive\Desktop\Latest\TBHAcademy\obj\Debug\net5.0\Razor\Views\Module\Content.cshtml.g.cs

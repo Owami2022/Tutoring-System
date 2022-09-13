@@ -29,7 +29,7 @@ namespace TBHAcademy.Controllers
         public AdminController(TBHAcademyContext db, INotyfService not, UserManager<TBHAcademyUser> userManager, IEmailSender emailSender, RoleManager<IdentityRole> roleManager, SignInManager<TBHAcademyUser> signInManager)
         {
             _db = db;
-            _notyf = not;
+            INotyfService not3;
             _userManager = userManager;
             _emailSender = emailSender;
             _roleManager = roleManager;
@@ -110,159 +110,9 @@ namespace TBHAcademy.Controllers
         [HttpPost]
         public IActionResult Edit(Course course)
         {
-           
-            if (ModelState.IsValid)
-            {
-                if (course.CourseId == 0)
-                {
-                    ViewBag.Faculty = _db.Faculty.OrderBy(x => x.FacultyName).ToList();
-                    _db.Course.Add(course);
-                    _notyf.Success("Course Added");
-                }
-                else if (course.CourseId == course.CourseId && course.CourseId > 0)
-                {
-                    _db.Course.Update(course);
-                    _notyf.Success("Course Updated");
-                }
-                _db.SaveChanges();
-            }
-            else
-            {
-                ViewBag.Action = (course.CourseId == 0) ? "Add" : "Update";
-                ViewBag.Faculty = _db.Faculty.OrderBy(x => x.FacultyName).ToList();
-                
-                return View(course);
-            }
-
-            return RedirectToAction("ListCourse");
-        }
-        [HttpGet]
-        public IActionResult EditUsers(string id)
-        {
-            //selecting the user that matches the id then gives me the first record
-            var user = _db.Users.Where(x => x.Id == id).FirstOrDefault();
-            user.
-            if (!string.IsNullOrEmpty(id))
-            {
-                return View(user);
-            }
-            else
-            {
-                return View(new TBHAcademyUser());
-            }
-        }
-        //public async Task<IActionResult> EditUsers(TBHAcademyUser model)
-        // {
-        //     if (ModelState.IsValid)
-        //     {
-        //         var user = new TBHAcademyUser { UserName = Input.Email,
-        //             Email = model.Email,
-        //             FirstName = model.FirstName,
-        //             LastName = model.LastName,
-        //             DOB = model.DOB,
-        //             Gender = model.Gender,
-        //             Role = "Student",
-        //             Status = "Active",
-        //             date = DateTime.Today 
-        //         };
-        //         var result = await _userManager.CreateAsync(user, Input.Password);
-        //         if (result.Succeeded)
-        //         {
-        //             var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-        //             code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-        //             var callbackUrl = Url.Page(
-        //                 "/Account/ConfirmEmail",
-        //                 pageHandler: null,
-        //                 values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
-        //                 protocol: Request.Scheme);
-
-        //             await IEmailSender.SendEmailAsync(model.Email, "Confirm your email",
-        //                 $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
-        //             if (_userManager.Options.SignIn.RequireConfirmedAccount)
-        //             {
-        //                 return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
-        //             }
-        //         }
-        //         foreach (var error in result.Errors)
-        //         {
-        //             ModelState.AddModelError(string.Empty, error.Description);
-        //         }
-        //     }
-
-        // }
-
-
-        //Roles 
-        [HttpGet]
-        public IActionResult Roles()
-        {
             return View();
-        }
-        [HttpPost]
-        public async Task<IActionResult> Roles(CreateRoleViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                IdentityRole identityRole = new IdentityRole
-                {
-                    Name = model.RoleName
-
-                };
-                IdentityResult result = await _roleManager.CreateAsync(identityRole);
-                if (result.Succeeded)
-                {
-                    return RedirectToAction("ListRoles", "Role");
-                }
-                foreach (IdentityError error in result.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-
-                }
-            }
-            return View(model);
-        }
-        [HttpGet]
-        public IActionResult ListRoles()
-        {
-            var Roles = _roleManager.Roles;
-            return View(Roles);
-        }
-        //public async Task<IActionResult> EditRole(string id)
-        //{
-        //    var users = _db.Users.ToList();
-        //    var role = await _roleManager.FindByIdAsync(id);
-        //    if (role == null)
-        //    {
-        //        ViewBag.ErrorMessage = $"Role with Id={id} cannot be found";
-
-        //        return View("NotFound");
-        //    }
-        //    var model = new EditRoleViewModel
-        //    {
-        //        Id = role.Id,
-        //        RoleName = role.Name
-        //    };
-        //    foreach (var user in users)
-        //    {
-        //        if (await _userManager.IsInRoleAsync(user, role.Name))
-        //        {
-        //            model.Users.Add(user.UserName);
-        //        }
-        //    }
-        //    return View(model);
-        //}
-        public async Task<IActionResult> Logout(string returnUrl = null)
-        {
-            await _signInManager.SignOutAsync();
-            if (returnUrl != null)
-            {
-                return LocalRedirect(returnUrl);
-            }
-            else
-            {
-                return Redirect("/");
-            }
         }
     }
 }
+           
+           
