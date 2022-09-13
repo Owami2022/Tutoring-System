@@ -21,7 +21,7 @@ namespace TBHAcademy.Controllers
         public IActionResult Index()
         {
             var email = "theblackhats2022@gmail.com";
-            ViewBag.Message = "Please Note That this  Website is Stil Under development, so it is Considered as a demo. " +
+            ViewBag.Message = "Please Note That this  Website is Still Under development, so it is Considered as a demo. " +
                 "For more Information contact : "+ email;
             return View();
         }

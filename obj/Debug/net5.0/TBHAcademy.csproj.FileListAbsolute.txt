@@ -3938,9 +3938,7 @@ C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admi
 C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\ListCourse.cshtml.g.cs
 C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\ContactUs\Index.cshtml.g.cs
-C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\DisplayFaculty.cshtml.g.cs
 C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\Index.cshtml.g.cs
-C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\Index1.cshtml.g.cs
 C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\InsertFaculty.cshtml.g.cs
 C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\UpdateFaculty.cshtml.g.cs
 C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Home\demo.cshtml.g.cs
@@ -3978,3 +3976,4 @@ C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\TBHAcademy.genru
 C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\ref\TBHAcademy.dll
 C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Administration\ListRoles.cshtml.g.cs
 C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\ComingSoonPage\Index.cshtml.g.cs
+C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\ListFaculty.cshtml.g.cs
