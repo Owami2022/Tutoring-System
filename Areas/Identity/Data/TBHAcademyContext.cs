@@ -32,6 +32,7 @@ namespace TBHAcademy.Data
         public DbSet<AssignModules> AssignModules { get; set; }
         public DbSet<Content> Content { get; set; }
         public DbSet<Topic> Topic { get; set; }
+        public DbSet<TeamMark> TeamMark { get; set; }
 
     }
 }
