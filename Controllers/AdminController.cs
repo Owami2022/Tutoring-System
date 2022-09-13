@@ -137,20 +137,20 @@ namespace TBHAcademy.Controllers
             return RedirectToAction("ListCourse");
         }
         [HttpGet]
-        //public IActionResult EditUsers(string id)
-        //{
-        //    //selecting the user that matches the id then gives me the first record
-        //    var user = _db.Users.Where(x => x.Id == id).FirstOrDefault();
-        //    user.
-        //    if (!string.IsNullOrEmpty(id))
-        //    {
-        //        return View(user);
-        //    }
-        //    else
-        //    {
-        //        return View(new TBHAcademyUser());
-        //    }
-        //}
+        public IActionResult EditUsers(string id)
+        {
+            //selecting the user that matches the id then gives me the first record
+            var user = _db.Users.Where(x => x.Id == id).FirstOrDefault();
+           
+            if (!string.IsNullOrEmpty(id))
+            {
+                return View(user);
+            }
+            else
+            {
+                return View(new TBHAcademyUser());
+            }
+        }
         //public async Task<IActionResult> EditUsers(TBHAcademyUser model)
         // {
         //     if (ModelState.IsValid)
@@ -264,5 +264,6 @@ namespace TBHAcademy.Controllers
                 return Redirect("/");
             }
         }
+        
     }
 }

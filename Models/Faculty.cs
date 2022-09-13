@@ -10,7 +10,7 @@ namespace TBHAcademy.Models
     public class Faculty
     {
 
-        [Required]
+        
         [Key]
         public int FacultyId { get; set; }
         [Required]
@@ -19,5 +19,7 @@ namespace TBHAcademy.Models
         public string FacultyDescription { get; set; }
 
         public List<Course> Courses { get; set; }
+        
+        public int Status { get; set; }
     }
 }

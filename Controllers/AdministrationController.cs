@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using TBHAcademy.Models;
 
@@ -21,29 +22,36 @@ namespace TBHAcademy.Controllers
         {
             return View();
         }
-        //[HttpPost]
-        //public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        IdentityRole identityRole = new IdentityRole
-        //        {
-        //            Name = model.RoleName
-        //        };
-        //        IdentityResult result = await roleManager.CreateAsync(identityRole);
+        [HttpPost]
+        public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                IdentityRole identityRole = new IdentityRole
+                {
+                    Name = model.RoleName
+                };
+                IdentityResult result = await roleManager.CreateAsync(identityRole);
 
-        //        if (result.Succeeded)
-        //        {
-        //            return RedirectToAction("Index","Home");
-        //        }
+                if (result.Succeeded)
+                {
 
-        //        foreach(IdentityError error in result.Errors)
-        //        {
-        //            ModelState.AddModelError(" ", error.Description);
-        //        }
-        //    }
-            
-        //    return View(model);
-        //}
+                    return RedirectToAction("Index", "Home");
+                }
+
+                foreach (IdentityError error in result.Errors)
+                {
+                    ModelState.AddModelError(" ", error.Description);
+                }
+            }
+
+            return View(model);
+        }
+        public async Task<IActionResult> ListRoles()
+        {
+            var roles = await roleManager.Roles.ToListAsync();
+            return View(roles);
+        }
+
     }
 }
