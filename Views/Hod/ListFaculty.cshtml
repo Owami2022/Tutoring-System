@@ -42,9 +42,9 @@
                                 <td>Active</td>
                             }
                             <td>
-                                <a asp-action="UpdateFaculty" class="btn btn-outline-info  w-100" asp-route-id="@faculty.FacultyId">Update</a>
+                                <a asp-action="UpdateFaculty" class="button btn btn-outline-info  w-100" asp-route-id="@faculty.FacultyId">Update</a>
                                 <form asp-action="ActivateFaculty" method="post" asp-route-id="@faculty.FacultyId" class="d-inline w-100">
-                                    <button type="submit" class="btn btn-success">Activate</button>
+                                    <button type="submit" class="btn btn-success w-100">Activate</button>
                                 </form>
                                 
                                 <form asp-action="DeleteFaculty" method="post" asp-route-id="@faculty.FacultyId" class="d-inline w-100" id="_@faculty.FacultyId">
@@ -57,7 +57,7 @@
             </tbody>
         </table>
 
-        <a asp-action="InsertFaculty" class="btn btn-outline-info ml-1 mb-2">Add A New Faculty</a>
+        <a asp-action="InsertFaculty" class="button btn btn-outline-info ml-1 mb-2">Add A New Faculty</a>
 
     </div>
 
