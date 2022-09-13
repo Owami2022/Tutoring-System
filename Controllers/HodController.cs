@@ -1,5 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using TBHAcademy.Areas.Identity.Data;
 using TBHAcademy.Data;
 using TBHAcademy.Models;
 
@@ -8,6 +14,11 @@ namespace TBHAcademy.Controllers
     public class HodController : Controller
     {
         private readonly TBHAcademyContext _db;
+        private readonly INotyfService _notyf;
+        private readonly IEmailSender _emailSender;
+        private readonly UserManager<TBHAcademyUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly SignInManager<TBHAcademyUser> _signInManager;
         public HodController(TBHAcademyContext db)
         {
             _db = db;
@@ -17,10 +28,15 @@ namespace TBHAcademy.Controllers
         {
             return View();
         }
-        public IActionResult Index1()
+        public IActionResult InsertFaculty()
         {
 
             return View();
+        }
+        public IActionResult ListFaculty()
+        {
+            IEnumerable<Faculty> FacultyList = _db.Faculty;
+            return View(FacultyList);
         }
 
 
@@ -32,16 +48,73 @@ namespace TBHAcademy.Controllers
             {
                 _db.Faculty.Add(faculty);
                 _db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("ListFaculty");
             }
             return View(faculty);
 
         }
-        public IActionResult DisplayFaculty()
+        [HttpPost]
+        public async Task<IActionResult> DeleteFaculty(int? id)
         {
-            IEnumerable<Faculty> FacultyList = _db.Faculty;
-            return View(FacultyList);
+            if (id == null)
+                return NotFound();
+            var faculty = await _db.Faculty.FirstOrDefaultAsync(s => s.FacultyId == id);
+            if (faculty.Status == (int)CourseStatus.Inactive)
+            {
+                _notyf.Warning("This course is already Inactive");
+            }
+            else
+            {
+                faculty.Status = (int)CourseStatus.Inactive;
+                _notyf.Success("Course Deactivated");
+                await _db.SaveChangesAsync();
+            }
+            return RedirectToAction(nameof(ListFaculty));
         }
+        [HttpPost]
+        public async Task<IActionResult> ActivateFaculty(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+
+            var faculty = await _db.Faculty.FirstOrDefaultAsync(s => s.FacultyId == id);
+            if (faculty.Status == (int)CourseStatus.Active)
+            {
+                _notyf.Warning("Faculty already active");
+            }
+            else
+            {
+                faculty.Status = (int)CourseStatus.Active;
+                _notyf.Success("Faculty Activated");
+                await _db.SaveChangesAsync();
+            }
+
+            return RedirectToAction(nameof(ListFaculty));
+        }
+        //public IActionResult ListFaculty()
+        //{
+        //    IEnumerable<Faculty> FacultyList = _db.Faculty;
+        //    return View(FacultyList);
+        //}
+        //[HttpPost]
+        //public async Task<IActionResult> DeleteFaculty(int? id)
+        //{
+        //    if (id == null)
+        //        return NotFound();
+        //    var faculty = await _db.Faculty.FirstOrDefaultAsync(s => s.FacultyId == id);
+        //    if (faculty.Status == (int)FacultyStatus.Inactive)
+        //    {
+        //        _notyf.Warning("This faculty is already Inactive");
+        //    }
+        //    else
+        //    {
+        //        faculty.Status = (int)FacultyStatus.Inactive;
+        //        _notyf.Success("Faculty Deactivated");
+        //        await _db.SaveChangesAsync();
+        //    }
+        //    return RedirectToAction(nameof(ListFaculty));
+        //}
         public IActionResult UpdateFaculty(int? id)
         {
             if(id == null && id== 0)
@@ -61,7 +134,7 @@ namespace TBHAcademy.Controllers
         {
             _db.Faculty.Update(faculty);
             _db.SaveChanges();
-            return RedirectToAction("DisplayFaculty");
+            return RedirectToAction("ListFaculty");
         }
 
     }

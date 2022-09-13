@@ -97,9 +97,9 @@ namespace TBHAcademy.Areas.Identity.Pages.Account
                     {
                         return RedirectToAction("Index","Admin");
                     }
-                    else if(Role.Contains("Head of department"))
+                    else if(Role.Contains("Head of Department"))
                     {
-                        return RedirectToAction("Index", "hod");
+                        return RedirectToAction("Index", "Hod");
                     }
                     else if (Role.Contains("Tutor"))
                     {
