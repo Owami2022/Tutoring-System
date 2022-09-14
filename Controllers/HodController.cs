@@ -218,6 +218,9 @@ namespace TBHAcademy.Controllers
                                  select new TutorModule { CourseTM = c, ModulesTM = o, AssignTM = m, UserTM = u });
             return View(assignedtutor);
         }
-
+        public IActionResult Calendar()
+        {
+            return View();
+        }
     }
 }
