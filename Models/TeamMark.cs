@@ -14,14 +14,14 @@ namespace TBHAcademy.Models
         [Required]
         [DisplayName("Surname")]
         public string StSurname { get; set; }
-        [DisplayName("Team 1")]
+        [DisplayName("Term 1")]
         public int TeamOne { get; set; }
-        [DisplayName("Team 2")]
+        [DisplayName("Term 2")]
         public int TeamTwo { get; set; }
-        [DisplayName("Team 3")]
+        [DisplayName("Term 3")]
         public int TeamThree { get; set; }
 
-        [DisplayName("Team 4")]
+        [DisplayName("Term 4")]
         public int TeamFour { get; set; }
 
     }

@@ -24,15 +24,9 @@ namespace TBHAcademy.Controllers
         public TutorController(TBHAcademyContext db)
         {
             _db = db;
-
         }
 
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult CaptureMark()
         {
             return View();
         }
@@ -42,7 +36,7 @@ namespace TBHAcademy.Controllers
             IEnumerable<TeamMark> teamMarks = _db.TeamMark;
             return View(teamMarks);
         }
-        public IActionResult ListCapture()
+        public IActionResult Calender()
         {
             return View();
         }
@@ -51,11 +45,67 @@ namespace TBHAcademy.Controllers
             return View();
         }
 
-        //public IActionResult Index()
-        //{
-        //    IEnumerable<Item> objList = _db.Items;//Coming from our database
-        //    return View(objList);
-        //}
+
+        public IActionResult InsertMark(TeamMark teamMark)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.TeamMark.Add(teamMark);
+                _db.SaveChanges();
+                return RedirectToAction("Index", "Tutor");
+            }
+            return View(teamMark);
+        }
+
+        public IActionResult TearmResultUpdate(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            var obj = _db.TeamMark.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            return View(obj);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult TearmResultUpdate(TeamMark teamMark)
+        {
+            _db.TeamMark.Update(teamMark);
+            _db.SaveChanges();
+            return RedirectToAction("Index", "Tutor");
+        }
+
+        public IActionResult DeleteTermMark(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            var obj = _db.TeamMark.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            return View(obj);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteTermMark(TeamMark teamMark)
+        {
+            ViewBag.Message = teamMark.StName + "Will be Deleted!";
+            _db.TeamMark.Remove(teamMark);
+            _db.SaveChanges();
+            return RedirectToAction("CapturetMarklist", "Tutor");
+
+        }
 
 
 
