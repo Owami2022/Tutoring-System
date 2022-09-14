@@ -158,12 +158,6 @@ namespace TBHAcademy.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
-                    b.Property<string>("AddressLine1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("AddressLine2")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -192,9 +186,6 @@ namespace TBHAcademy.Migrations
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
-
-                    b.Property<byte[]>("MyPicture")
-                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)

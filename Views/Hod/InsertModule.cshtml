@@ -1,0 +1,59 @@
+﻿@model TBHAcademy.Models.Modules
+
+@{
+    ViewData["Title"] = "InsertModule";
+    Layout = "~/Views/Shared/_HodLayout.cshtml";
+}
+
+<div>
+    <div class="w-100 mb-2  " style="background: rgba(6, 73, 181,0.5)">
+    <div class="pt-1 m-0 row">
+        <h5 class="text-white text-center ">Add A New Module</h5>
+    </div>
+</div>
+<br />
+<h4>Module Information</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="InsertModule">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ModuleCode" class="control-label"></label>
+                <input asp-for="ModuleCode" class="form-control" />
+                <span asp-validation-for="ModuleCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModuleName" class="control-label"></label>
+                <input asp-for="ModuleName" class="form-control" />
+                <span asp-validation-for="ModuleName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Year" class="control-label"></label>
+                <input asp-for="Year" class="form-control" />
+                <span asp-validation-for="Year" class="text-danger"></span>
+            </div>
+            <div>
+                <label class="text-black font-weight-bold" asp-for="Course"></label>
+                
+            <div class="dropdown">
+                 <select asp-for="CourseId" class="form-control">
+                     @foreach (Course p in ViewBag.Course)
+                     {
+                         <option value="@p.CourseId">@p.CourseName</option>
+                     }
+                 </select>
+                 <span asp-validation-for="Course.CourseId" class="text-danger"></span>
+             </div>
+             </div>
+            <div class="form-group">
+                <input type="submit" value="Add" class="button btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ListModules">Back to List</a>
+</div>
+

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\koketso\\Source\\Repos\\Final_Year_Project\\TBHAcademy.csproj": {}
+    "C:\\Users\\koketso\\Desktop\\3rd Year Project\\TBHAcademy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\koketso\\Source\\Repos\\Final_Year_Project\\TBHAcademy.csproj": {
+    "C:\\Users\\koketso\\Desktop\\3rd Year Project\\TBHAcademy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\koketso\\Source\\Repos\\Final_Year_Project\\TBHAcademy.csproj",
+        "projectUniqueName": "C:\\Users\\koketso\\Desktop\\3rd Year Project\\TBHAcademy.csproj",
         "projectName": "TBHAcademy",
-        "projectPath": "C:\\Users\\koketso\\Source\\Repos\\Final_Year_Project\\TBHAcademy.csproj",
+        "projectPath": "C:\\Users\\koketso\\Desktop\\3rd Year Project\\TBHAcademy.csproj",
         "packagesPath": "C:\\Users\\koketso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\koketso\\Source\\Repos\\Final_Year_Project\\obj\\",
+        "outputPath": "C:\\Users\\koketso\\Desktop\\3rd Year Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\koketso\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }
