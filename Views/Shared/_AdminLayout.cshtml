@@ -148,9 +148,22 @@
                     <div class="nav-item dropdown no-arrow">
                         <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">
                             <span class="d-none d-lg-inline me-2 text-gray-600 small">
-                                @UserManager.GetUserAsync(User).Result.FirstName   @UserManager.GetUserAsync(User).Result.LastName (Administrator)
+                                @UserManager.GetUserAsync(User).Result.FirstName   @UserManager.GetUserAsync(User).Result.LastName (Admin)
                             </span>
-                            <img class="border rounded-circle img-profile" src="~/css/User1 (2).png">
+                           @* <img class="border rounded-circle img-profile" src="~/css/User1 (2).png">*@
+
+                           @if (SignInManager.IsSignedIn(User))
+{
+  @*  <li class="nav-item" style="align-self: center;">*@
+        @if (UserManager.GetUserAsync(User).Result.MyPicture != null)
+        {
+                            <img style="width:40px;height:40px; object-fit:cover; border-radius:30px" src="data:image/*;base64,@(Convert.ToBase64String(UserManager.GetUserAsync(User).Result.MyPicture))">
+        }
+
+    
+   @* </li>*@
+   
+}
                         </a>
                         <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in">
                             <a class="dropdown-item"  asp-area="Identity" asp-page="/Account/Manage/Index"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a>
@@ -171,15 +184,15 @@
                 </div>
                 <div class="nav_list">
                     <a href="@Url.Action("Index","Admin")" class="nav_link active"> <i class='bx bxs-grid-alt bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Dashboard</span> </a>
-                    <a href="@Url.Action("Edit","Admin")"  class="button nav_link"><i class='bx bxs-book-open bx-sm bx-flashing-hover'></i> <span class="nav_name">Manage Courses</span> </a>
+                    <a href="@Url.Action("Edit","Admin")"  class="button nav_link"><i class='bx bxs-book-content bx-sm bx-flashing-hover'></i> <span class="nav_name">Manage Courses</span> </a>
                     <a href="@Url.Action("Index","ComingSoonPage")" class="nav_link"> <i class='bx bxs-calendar-event bx-sm bx-flashing-hover nav_icon '></i> <span class="nav_name">Upcoming Events</span></a>
                     <a href="@Url.Action("Index","ComingSoonPage")" class="nav_link"> <i class='bx bxs-calendar bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">My Calendar</span> </a>
                     <a href="@Url.Action("Index","ComingSoonPage")" class="nav_link"> <i class='bx bxs-report bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Statistics</span> </a>
                     <a href="@Url.Action("Index","ComingSoonPage")" class="nav_link"> <i class='bx bxs-conversation bx-flashing-hover bx-sm nav_icon'></i> <span class="nav_name">FAQs</span> </a>
                     <a href="@Url.Action("CreateRole","Administration")" class="nav_link"> <i class='bx bxs-group bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">User Roles</span> </a>
-                     <a href="@Url.Action("UserRoleIndex","UserRoles")" class="nav_link"> <i class='bx bxs-group bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Manage Users</span> </a>
+                     <a href="@Url.Action("UserRoleIndex","UserRoles")" class="nav_link"> <i class='bx bxs-user-detail bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Manage Users</span> </a>
                     <a href="@Url.Action("Index","ComingSoonPage")" class="nav_link"> <ion-icon name="settings" style="font-size: 25px"></ion-icon> <span class="nav_name">Settings</span> </a>
-
+                 
                 </div>
             </div> <a class="nav_link"  href="@Url.Action("Logout","Admin")" > <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
         </nav>
