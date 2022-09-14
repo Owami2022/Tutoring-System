@@ -5,68 +5,49 @@
     Layout = "~/Views/Shared/_TutorLayoutcshtml.cshtml";
 }
 
-<h1>CapturetMarklist</h1>
+<h1>Results</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="InsertMark">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Teamid)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StSurname)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TeamOne)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TeamTwo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TeamThree)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TeamFour)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Teamid)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StSurname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TeamOne)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TeamTwo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TeamThree)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TeamFour)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+    @if (Model.Count() > 0)
+    {
+       
+        {
+            <div class="card-deck">
+                @foreach (var teamMark in Model)
+                   {
+                    <div class="card border-3  border-primary">
+                    
+                 
+                             <div class="card-header bg-white pl-2 pr-2">
+                <h5 class="text text-center border-primary">@teamMark.StSurname, @teamMark.StName</h5>
+                 
+            </div>
+            <div class="card-body bg-tr">
+                <h6>Team 1: @teamMark.TeamOne</h6>
+                <h6>Team 2: @teamMark.TeamTwo</h6>
+                <h6>Team 3: @teamMark.TeamThree</h6>
+                <h6>Team 4: @teamMark.TeamFour</h6>
+
+            </div>
+            <div class="card-footer bg-white">
+                <div class="text-primary center">
+                    <a asp-controller="Tutor" asp-action="TearmResultUpdate" asp-route-ID="@teamMark.Teamid" class="button btn btn-outline-primary mx-1">Edit</a>
+                     <a asp-controller="Tutor" asp-action="DeleteTermMark" asp-route-ID="@teamMark.Teamid" class="button btn btn-outline-primary mx-1">Delete</a>
+                </div>
+            </div>
+                    
+               
+        </div>
+        }
+            </div>
+        }
+    }
+    else
+    {
+        <h5 class="text-danger">No Student Add Yet One the system.</h5>
+        <a asp-controller="Tutor" asp-action="InserMark" class="button btn btn-primary w-25 pb-2 pr-2 pl-2 pt-2 justify-content-center">Insert a new fighter</a>
+    }
+ 
