@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc;
 using TBHAcademy.Areas.Identity;
 using TBHAcademy.Data;
 using TBHAcademy.Models;

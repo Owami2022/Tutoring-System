@@ -3975,8 +3975,11 @@ C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\ref\TBHAcademy.d
 C:\Users\Owami\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Administration\ListRoles.cshtml.g.cs
 C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\ComingSoonPage\Index.cshtml.g.cs
 C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\ListFaculty.cshtml.g.cs
-C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Tutor\CaptureMark.cshtml.g.cs
 C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Tutor\CapturetMarklist.cshtml.g.cs
-C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Tutor\ListCapture.cshtml.g.cs
 C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Student\Dashboard.cshtml.g.cs
 C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Tutor\Dashboard.cshtml.g.cs
+C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Tutor\Calender.cshtml.g.cs
+C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Tutor\DeleteTermMark.cshtml.g.cs
+C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Tutor\InsertMark.cshtml.g.cs
+C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Tutor\TearmResultUpdate.cshtml.g.cs
+C:\Users\Owami\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\Statistics.cshtml.g.cs
