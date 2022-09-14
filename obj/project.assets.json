@@ -7611,23 +7611,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Owami\\.nuget\\packages\\": {},
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Owami\\source\\repos\\Final_Year_Project\\TBHAcademy.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\Project\\Project Final\\TBHAcademy.csproj",
       "projectName": "TBHAcademy",
-      "projectPath": "C:\\Users\\Owami\\source\\repos\\Final_Year_Project\\TBHAcademy.csproj",
-      "packagesPath": "C:\\Users\\Owami\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Owami\\source\\repos\\Final_Year_Project\\obj\\",
+      "projectPath": "C:\\Users\\LENOVO\\Documents\\Project\\Project Final\\TBHAcademy.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LENOVO\\Documents\\Project\\Project Final\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Owami\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7703,7 +7703,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
