@@ -3,7 +3,7 @@
 
 @{
     ViewData["Title"] = "Enroll";
-    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+  Layout = "_StudentLayout - Copy";
 }
 
 <!------------------------------------------------- Header --------------------------------------------------------------------------------------->
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <a asp-controller="Student" asp-action="Enrolled" asp-route-ID="@item.AssignModulesVM.AssignedID" name="ModuleID" class="btn btn-primary">Confirm</a>
+                                <a asp-controller="Student" asp-action="Enrolled" asp-route-ID="@item.AssignModulesVM.AssignedID" name="ModuleID" class="button btn btn-primary">Confirm</a>
                                 
                                 <button type="button" class="btn btn-outline-danger text-mute" data-dismiss="modal">Cancel</button>
 

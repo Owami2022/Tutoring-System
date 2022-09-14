@@ -170,15 +170,15 @@
                     <i class='bx bx-menu bx-flashing-hover' id="header-toggle"></i>
                 </div>
                 <div class="nav_list">
-                    <a href="" class="nav_link active"> <i class='bx bxs-grid-alt bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Dashboard</span> </a>
+                    <a href="@Url.Action("Index","Admin")" class="nav_link active"> <i class='bx bxs-grid-alt bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Dashboard</span> </a>
                     <a href="@Url.Action("Edit","Admin")"  class="button nav_link"><i class='bx bxs-book-open bx-sm bx-flashing-hover'></i> <span class="nav_name">Manage Courses</span> </a>
-                    <a href="" class="nav_link"> <i class='bx bxs-calendar-event bx-sm bx-flashing-hover nav_icon '></i> <span class="nav_name">Upcoming Events</span></a>
-                    <a href="#" class="nav_link"> <i class='bx bxs-calendar bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">My Calendar</span> </a>
-                    <a href="#" class="nav_link"> <i class='bx bxs-report bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Statistics</span> </a>
-                    <a href="#" class="nav_link"> <i class='bx bxs-conversation bx-flashing-hover bx-sm nav_icon'></i> <span class="nav_name">FAQs</span> </a>
+                    <a href="@Url.Action("Index","ComingSoonPage")" class="nav_link"> <i class='bx bxs-calendar-event bx-sm bx-flashing-hover nav_icon '></i> <span class="nav_name">Upcoming Events</span></a>
+                    <a href="@Url.Action("Index","ComingSoonPage")" class="nav_link"> <i class='bx bxs-calendar bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">My Calendar</span> </a>
+                    <a href="@Url.Action("Index","ComingSoonPage")" class="nav_link"> <i class='bx bxs-report bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Statistics</span> </a>
+                    <a href="@Url.Action("Index","ComingSoonPage")" class="nav_link"> <i class='bx bxs-conversation bx-flashing-hover bx-sm nav_icon'></i> <span class="nav_name">FAQs</span> </a>
                     <a href="@Url.Action("CreateRole","Administration")" class="nav_link"> <i class='bx bxs-group bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">User Roles</span> </a>
-                     <a href="@Url.Action("UserRoleIndex","UserRoles")" class="nav_link"> <i class='bx bxs-group bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Roles</span> </a>
-                    <a href="#" class="nav_link"> <ion-icon name="settings" style="font-size: 25px"></ion-icon> <span class="nav_name">Settings</span> </a>
+                     <a href="@Url.Action("UserRoleIndex","UserRoles")" class="nav_link"> <i class='bx bxs-group bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Manage Users</span> </a>
+                    <a href="@Url.Action("Index","ComingSoonPage")" class="nav_link"> <ion-icon name="settings" style="font-size: 25px"></ion-icon> <span class="nav_name">Settings</span> </a>
 
                 </div>
             </div> <a class="nav_link"  href="@Url.Action("Logout","Admin")" > <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
@@ -186,7 +186,7 @@
     </div>
     <!--Container Main start-->
     <div class="container-fluid bg-ligh p-0 m-0">
-        @RenderBody();
+        @RenderBody()
     </div>
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function (event) {
@@ -249,6 +249,7 @@
     <script src="~/js/Button1Loader.js" asp-append-version="true"></script>
         <script src="~/js/AncorLoader.js" asp-append-version="true"></script>
 
+     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     @await RenderSectionAsync("Scripts", required: false)

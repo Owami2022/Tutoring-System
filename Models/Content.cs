@@ -6,8 +6,15 @@ namespace TBHAcademy.Models
     {
         [Key]
         [Required]
-        //Content ID
         public int ContentId { get; set; }
+        [Required]
+        [Display(Name = "Content Header ")]
+        public string Title { get; set; }
+        [Display(Name = "Topic Name")]
+        [Required]
+        public string TopicName { get; set; }
+        [Display(Name = "Topic Description")]
+        public string TopicDescription { get; set; }
         //Documents
         [Display(Name = "Document discription")]
         public string DocumentDescription1 { get; set; }
@@ -52,9 +59,10 @@ namespace TBHAcademy.Models
         [Display(Name = "Link")]
         public string Link5 { get; set; }
 
+
         //Topic ID
-        public int TopicID { get; set; }
-        public virtual Topic Topic { get; set; }
+        public int AssignId { get; set; }
+        public virtual AssignModules AssignModules { get; set; }
 
     }
 }

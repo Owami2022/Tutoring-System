@@ -9,6 +9,7 @@ using System;
 using TBHAcademy.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using System.Runtime.CompilerServices;
 
 namespace TBHAcademy.Controllers
 {
@@ -28,6 +29,20 @@ namespace TBHAcademy.Controllers
         //    IEnumerable<Enroll> List1 = _db.Enroll;
         //    return View(List1);
         //}
+        //public async Task<IViewComponentResult> Invoke()
+        //{
+        //    //var user = _db.Users.Where(x => x.Id == user1).FirstOrDefault();
+        //    var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        //    var Modules =(from  m in _db.Modules
+        //                  join A in _db.AssignModules on m.ModuleId equals A.ModuleID
+        //                  from E in _db.Enroll
+        //                  join U in _db.Users on E.StudentID equals U.Id
+        //                  where A.AssignedID == E.ModuleID && E.StudentID == user
+        //                  select new ModuleDisplay { AssignModulesVM = A, ModulesVM = m, EnrollVM = E, UserVM = U };
+        //    return View(" ",Modules.ToList());
+
+        //}
+       
         public IActionResult Index1()
         {
             return View();
@@ -35,11 +50,25 @@ namespace TBHAcademy.Controllers
 
         public IActionResult Index()
         {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewBag.Modules = (from m in _db.Modules
+                           join A in _db.AssignModules on m.ModuleId equals A.ModuleID
+                           from E in _db.Enroll
+                           join U in _db.Users on E.StudentID equals U.Id
+                           where A.AssignedID == E.ModuleID && E.StudentID == user
+                           select new MyModules { AssignModulesVM = A, ModulesVM = m, EnrollVM = E}).ToList();
             return View();
         }
 
         public IActionResult Enroll()
         {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewBag.Modules = (from m in _db.Modules
+                               join A in _db.AssignModules on m.ModuleId equals A.ModuleID
+                               from E in _db.Enroll
+                               join U in _db.Users on E.StudentID equals U.Id
+                               where A.AssignedID == E.ModuleID && E.StudentID == user
+                               select new MyModules { AssignModulesVM = A, ModulesVM = m, EnrollVM = E }).ToList();
             //List<Modules> modules = new List<Modules>();
             //List<Course> courses = new List<Course>();
             ViewBag.Message = "Enroll a New Module";
@@ -80,8 +109,15 @@ namespace TBHAcademy.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Enrolled(Enroll enroll,int iD)
         {
-
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewBag.Modules = (from m in _db.Modules
+                               join A in _db.AssignModules on m.ModuleId equals A.ModuleID
+                               from E in _db.Enroll
+                               join U in _db.Users on E.StudentID equals U.Id
+                               where A.AssignedID == E.ModuleID && E.StudentID == user
+                               select new MyModules { AssignModulesVM = A, ModulesVM = m, EnrollVM = E }).ToList();
+
+           
            
             enroll.DateErolled = DateTime.Today;
             enroll.ModuleID = iD;

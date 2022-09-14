@@ -47,21 +47,21 @@
 
 
     <link rel="stylesheet" href="~/css/Congrats.css" />
-
+    <link rel="stylesheet" href="~/css/Student/Loader.css"/>
 </head>
 <
 <div class="d-flex aligns-items-center justify-content-center card text-center w-50 position-absolute top-50 start-50 translate-middle">
     <div class="card-header">
-        <h5>Congratulations</h5>
+        <h5>Congratulations🎊🎊🎊🎊🎊🎉🎉🎉🎉🎉🎉🎊🎊🎊🎊</h5>
     </div>
     <div class="card-body">
         <form asp-action="Enrolled">
-            <h5 class="card-title">Special title treatment</h5>
+            <h5 class="card-title">You have Successfully a enrolled, Welcome to THBAcademy</h5>
       @*      @Html.HiddenFor(model => model.DateErolled,  new { @Value=DateTime.Now.ToString("dd-MM-yyyy") })
             @Html.HiddenFor(model => model.ModuleID,  new { @Value=1 })*@
 
             <div class="form-group">
-                <input type="submit" value="Enrolled" class="btn btn-primary" />
+                <input type="submit" value="Done" class="btn btn-primary" />
             </div>
         </form>
 
@@ -153,6 +153,12 @@
 
 </body>
 
-
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+   <script src="~/js/jquery.blockUI.js" asp-append-version="true"></script>
+    <script src="~/js/jquery-ui.js" asp-append-version="true"></script>
+    <script src="~/js/Button1Loader.js" asp-append-version="true"></script>
+        <script src="~/js/AncorLoader.js" asp-append-version="true"></script>
+                       <script id="bs-live-reload" data-sseport="50036" data-lastchange="1629819821869" src="/js/livereload.js"></script>
 
 

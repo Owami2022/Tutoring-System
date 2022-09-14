@@ -6,6 +6,7 @@ namespace TBHAcademy.Models
     {
         public Modules ModulesVM { get; set; }
         public Course CourseVM { get; set; }
+        public Enroll EnrollVM { get; set; } 
         public TBHAcademyUser UserVM {get;set;}
         public  Faculty FacultyVM { get; set; }
         public AssignModules AssignModulesVM { get; set; }

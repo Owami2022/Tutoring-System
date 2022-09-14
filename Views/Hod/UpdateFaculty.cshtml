@@ -2,18 +2,23 @@
 
 @{
     ViewData["Title"] = "UpdateFaculty";
-    Layout = "~/Views/Shared/_HodLayout.cshtml";
+    Layout = "_HodLayout";
 }
 
-<h1>UpdateFaculty</h1>
+<div class="w-100 mb-2  " style="background: rgba(6, 73, 181,0.5)">
+    <div class="pt-1 m-0 row">
+        <h5 class="text-white text-center ">Update Faculty</h5>
+    </div>
+</div>
 
-<h4>Faculty</h4>
+<br />
+<br />
+<h4>Faculty Information</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="UpdateFaculty">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input asp-for="FacultyId" hidden/>
             <div class="form-group">
                 <label asp-for="FacultyName" class="control-label"></label>
                 <input asp-for="FacultyName" class="form-control" />
@@ -25,13 +30,12 @@
                 <span asp-validation-for="FacultyDescription" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" class="button btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+   <a asp-action="ListFaculty" class="button btn btn-outline-info ml-1 mb-2">Back To List</a>
 </div>
-

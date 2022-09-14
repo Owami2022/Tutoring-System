@@ -29,19 +29,19 @@ namespace TBHAcademy.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> Content()
+        public IActionResult Content()
         {
             ViewBag.Tittle = "Module Content";
-            string TutorID = "fgsgsggg";
-            int mOdule = 1;
-            //getting the 
+            IEnumerable<Content> content = _db.Content;
+            //int module = ID;
+            
 
             var Id = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
 
             if (User.IsInRole("Student"))
             {
-                ViewBag.Layout = "~/Views/Shared/_StudentLayout.cshtml";
+                ViewBag.Layout = "_StudentLayout - Copy";
             }
             else if (User.IsInRole("Tutor"))
             {
@@ -51,66 +51,31 @@ namespace TBHAcademy.Controllers
             {
                 return RedirectToAction();
             }
-            var Module = _db.Modules.Where(x => x.ModuleId == mOdule).FirstOrDefault();
-            ViewBag.Header = /*Module.ModuleCode + " " + Module.ModuleName;*/ "JHAA402 Commercial Law";
-            //var content; = from am in _db.AssignModules
-            //                    join t in _db.Topic on am.AssignedID equals t.AssignedModuleId
-            //                    from c in _db.Content
-            //                    join t2 in _db.Topic on c.TopicID equals t2.TopicId
-            //                    from am2 in _db.AssignModules
-            //                    join U in _db.Users on am2.TutorID equals U.Id
-            //                    from m in _db.Modules 
-            //                    join am3 in _db.AssignModules on m.ModuleId equals am3.ModuleID
-
-            //                    where am.ModuleID == mOdule && U.Id == TutorID
-            //                    select new ManageContent { assignModules = am, topic = t, UserVM = U, content = c };
-
-            return View();
+            //var Module = _db.Modules.Where(x => x.ModuleId == module).FirstOrDefault();
+           
+            //var content = from am in _db.AssignModules
+            //              join m in _db.Modules on am.ModuleID equals m.ModuleId
+            //              from U in _db.Users 
+            //              join am2 in _db.AssignModules on U.Id equals am2.TutorID
+            //              from c in _db.Content 
+            //              join am3 in _db.AssignModules on c.AssignId equals am3.AssignedID
+            //              where am.ModuleID == module 
+            //              select new ManageContent { assignModules = am, UserVM = U, content = c };
+            ViewBag.Bool = content;
+             ViewBag.Header = /*Module.ModuleCode + " " + Module.ModuleName;*/ "JHAA402 Commercial Law";
+            return View(content);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Add(ManageContent manageContent)
+        public IActionResult Add(Content content)
         {
-            Content content = new Content();
-            Topic topic = new Topic();
-
-            //Assigning to content
-            //content.ContentId = manageContent.content.ContentId;
-            content.Document1 = manageContent.content.Document1;
-            content.Document2 = manageContent.content.Document2;
-            content.Document3 = manageContent.content.Document3;
-            content.Document4 = manageContent.content.Document4;
-            content.Document5 = manageContent.content.Document5;
-            content.DocumentDescription1 = manageContent.content.DocumentDescription1;
-            content.DocumentDescription2 = manageContent.content.DocumentDescription2;
-            content.DocumentDescription3 = manageContent.content.DocumentDescription3;
-            content.DocumentDescription4 = manageContent.content.DocumentDescription4;
-            content.DocumentDescription5 = manageContent.content.DocumentDescription5;
-            content.Link1 = manageContent.content.Link1;
-            content.Link2 = manageContent.content.Link2;
-            content.Link3 = manageContent.content.Link3;
-            content.Link4 = manageContent.content.Link4;
-            content.Link5 = manageContent.content.Link5;
-            //content.TopicID = manageContent.content.TopicID;
-
-            //Assigning to Topic
-            topic.TopicId = manageContent.topic.TopicId;
-            topic.TopicName = manageContent.topic.TopicName;
-            topic.TopicDescription = manageContent.topic.TopicDescription;
-            topic.AssignedModuleId = 21;
-
-            if (topic != null || content != null)
+            content.AssignId = 1;
+            if (content.Title != null)
             {
-                _db.Topic.Add(topic);
-                _db.SaveChanges();
-
-
                 _db.Content.Add(content);
                 _db.SaveChanges();
-                _notyf.Success("Success Full Added The Content");
-
+                //_notyf.Success("Successfully Added a Topic");
                 return RedirectToAction("Content");
-
             }
             else
             {
@@ -127,16 +92,34 @@ namespace TBHAcademy.Controllers
 
             return View();
         }
-        public IActionResult AddTopics(Topic topic)
+        public IActionResult AddTopics()
         {
-            if (ModelState.IsValid)
+            IEnumerable<Content> contList = _db.Content;
+            return View(contList);
+        }
+        public IActionResult AddContent()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AddContent(Content content)
+        {
+            content.AssignId = 1;
+            if (content.Title != null)
             {
-                _db.Topic.Add(topic);
+                _db.Content.Add(content);
                 _db.SaveChanges();
                 //_notyf.Success("Successfully Added a Topic");
                 return RedirectToAction("Content");
             }
-            return View();
+            else
+            {
+                _notyf.Error("Something went Wrong, Please try again");
+                return View();
+            }
+
         }
+
     }
 }

@@ -22,7 +22,7 @@ namespace TBHAcademy.Areas.Identity.Data
         [Display(Name = "Date of Birthday")]
         [DataType(DataType.Date)]
         [Column(TypeName = "Date")]
-        
+
 
         public DateTime DOB { get; set; }
         [PersonalData]
@@ -35,6 +35,15 @@ namespace TBHAcademy.Areas.Identity.Data
         [Column(TypeName = "nvarchar(100)")]
         public string Role { get; set; }
 
-        public DateTime date { get;set; }    
+        public DateTime date { get;set; }
+        [Display(Name = "User Picture")]
+        public byte[] MyPicture { get; set; }
+
+        [Display(Name = "Address Line 1")]
+        public string AddressLine1 { get; set; }
+
+        [Display(Name = "Address Line 2")]
+        public string AddressLine2 { get; set; }
+
     }
 }
