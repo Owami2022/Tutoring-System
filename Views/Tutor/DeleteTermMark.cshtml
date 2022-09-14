@@ -1,0 +1,63 @@
+﻿@model TBHAcademy.Models.TeamMark
+
+@{
+    ViewData["Title"] = "DeleteTermMark";
+    Layout = "~/Views/Shared/_TutorLayoutcshtml.cshtml";
+}
+
+<h5>Delete Term Mark</h5>
+
+<h6>Are you sure you want to delete this?</h6>
+<div>
+    <h5 style="border-block-start-color">Remove Record</h5>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Teamid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Teamid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StSurname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StSurname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TeamOne)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TeamOne)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TeamTwo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TeamTwo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TeamThree)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TeamThree)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TeamFour)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TeamFour)
+        </dd>
+    </dl>
+    
+    <form asp-action="DeleteTermMark">
+        <input type="submit" value="Delete" class="button btn btn-danger" /> |
+        <a asp-action="CapturetMarklist" class="button">Back to List</a>
+    </form>
+</div>

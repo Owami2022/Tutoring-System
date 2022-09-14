@@ -75,7 +75,7 @@ namespace TBHAcademy.Controllers
             //IEnumerable<int> enumerable = Enumerable.Range(1, 300);
             //List<int> list = enumerable.ToList();
             var moduleDisplay = from c in _db.Course
-                                join m in _db.Modules on c.CourseId equals m.CourseID
+                                join m in _db.Modules on c.CourseId equals m.CourseId
                                 from U in _db.Users
                                 join AU in _db.AssignModules on U.Id equals AU.TutorID
                                 
@@ -132,6 +132,11 @@ namespace TBHAcademy.Controllers
             return View();
         }
         public IActionResult Report()
+        {
+            return View();
+        }
+
+        public IActionResult Dashboard()
         {
             return View();
         }

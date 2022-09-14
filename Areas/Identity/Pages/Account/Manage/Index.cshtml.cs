@@ -57,20 +57,27 @@ namespace TBHAcademy.Areas.Identity.Pages.Account.Manage
 
         private async Task LoadAsync(TBHAcademyUser user)
         {
+
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
 
             var firstName = user.FirstName;
             var lastName = user.LastName;
-            //var profilePicture = user.MyPicture;
+            var profilePicture = user.MyPicture;
+            var addressline1 = user.AddressLine1;
+            var addressline2 = user.AddressLine2;
             Username = userName;
+            
 
             Input = new InputModel
             {
                 PhoneNumber = phoneNumber,
                  FirstName = firstName,
                 LastName = lastName,
-                //ProfilePicture = profilePicture,
+                AddressLine1 = addressline1,
+                AddressLine2 = addressline2,
+                ProfilePicture = profilePicture,
+
             };
         }
 
@@ -93,6 +100,8 @@ namespace TBHAcademy.Areas.Identity.Pages.Account.Manage
 
             var firstName = user.FirstName;
             var lastName = user.LastName;
+            var addressline1 = user.AddressLine1;
+            var addressline2 = user.AddressLine2;
             if (Input.FirstName != firstName)
             {
                 user.FirstName = Input.FirstName;
@@ -101,6 +110,16 @@ namespace TBHAcademy.Areas.Identity.Pages.Account.Manage
             if (Input.LastName != lastName)
             {
                 user.LastName = Input.LastName;
+                await _userManager.UpdateAsync(user);
+            }
+            if (Input.AddressLine1 != addressline1)
+            {
+                user.AddressLine1 = Input.AddressLine1;
+                await _userManager.UpdateAsync(user);
+            }
+            if (Input.AddressLine2 != addressline2)
+            {
+                user.AddressLine2 = Input.AddressLine2;
                 await _userManager.UpdateAsync(user);
             }
             if (user == null)

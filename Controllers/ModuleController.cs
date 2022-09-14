@@ -29,7 +29,8 @@ namespace TBHAcademy.Controllers
         {
             return View();
         }
-        public IActionResult Content()
+
+        public async Task<IActionResult> Content()
         {
             ViewBag.Tittle = "Module Content";
             IEnumerable<Content> content = _db.Content;

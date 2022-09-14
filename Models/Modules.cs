@@ -11,13 +11,17 @@ namespace TBHAcademy.Models
         [Key]
         public int ModuleId { get; set; }
         [Required]
+        [Display(Name = "Module Code")]
         public string ModuleCode { get; set; }
         [Required]
+        [Display(Name = "Module Name")]
         public string ModuleName { get; set; }
         [Required]
+        [Display(Name = "Year")]
         public string Year { get; set; }
         [Required]
-        public int CourseID { get; set; }
+        [Display(Name = "Course Name")]
+        public int CourseId { get; set; }
         public virtual Course Course { get; set; }
     }
 }

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<TBHAcademy.Models.Modules>
+
+@{
+    ViewData["Title"] = "ListModules";
+    Layout = "~/Views/Shared/_HodLayout.cshtml";
+}
+
+<div>
+    <div class="w-100 mb-2  " style="background: rgba(6, 73, 181,0.5)">
+    <div class="pt-1 m-0 row">
+        <h5 class="text-white text-center ">List Of Modules</h5>
+    </div>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.ModuleCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModuleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var modules in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => modules.ModuleCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modules.ModuleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modules.Year)
+            </td>
+            
+            @*<td>@modules.Course.CourseName</td>*@
+                @*@if (modules.Status == (int)CourseStatus.Inactive)
+                {
+                    <td>Deactivated</td>
+                }
+                else if (modules.Status == (int)CourseStatus.Active)
+                {
+                    <td>Active</td>
+                }*@
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                <a asp-action="UpdateModule" class="button btn btn-outline-info  w-100" asp-route-id="@modules.ModuleId">Update</a>
+                 @*<form asp-action="ActivateCourse" method="post" asp-route-id="@course.CourseId" class="d-inline ">
+                   <button type="submit" class="btn btn-success">Activate</button>
+                   </form>
+                   <form asp-action="DeleteModule" method="post" asp-route-id="@course.CourseId" class="d-inline w-50" id="_@course.CourseId">
+                   <button type="button" class="btn btn-danger " id="DeleteBtn" onclick="Confirmation(this,@course.CourseId)">Deactivate</button>
+                   </form>*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p>
+    <a asp-action="InsertModule" class="button btn btn-outline-info">Add New Module</a>
+</p>
