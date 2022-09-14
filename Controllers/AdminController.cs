@@ -263,7 +263,12 @@ namespace TBHAcademy.Controllers
             {
                 return Redirect("/");
             }
+
         }
-        
+        public IActionResult Statistics()
+        {
+            return View();
+        }
+
     }
 }

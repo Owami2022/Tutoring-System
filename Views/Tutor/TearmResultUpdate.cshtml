@@ -1,0 +1,62 @@
+﻿@model TBHAcademy.Models.TeamMark
+
+@{
+    ViewData["Title"] = "TearmResultUpdate";
+    Layout = "~/Views/Shared/_TutorLayoutcshtml.cshtml";
+}
+
+<h1>TearmResultUpdate</h1>
+
+<h4>TeamMark</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="TearmResultUpdate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+       @*     <div class="form-group">
+                <label asp-for="Teamid" class="control-label"></label>
+                <input asp-for="Teamid" class="form-control" />
+                <span asp-validation-for="Teamid" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="StName" class="control-label"></label>
+                <input asp-for="StName" class="form-control" />
+                <span asp-validation-for="StName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StSurname" class="control-label"></label>
+                <input asp-for="StSurname" class="form-control" />
+                <span asp-validation-for="StSurname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamOne" class="control-label"></label>
+                <input asp-for="TeamOne" class="form-control" />
+                <span asp-validation-for="TeamOne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamTwo" class="control-label"></label>
+                <input asp-for="TeamTwo" class="form-control" />
+                <span asp-validation-for="TeamTwo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamThree" class="control-label"></label>
+                <input asp-for="TeamThree" class="form-control" />
+                <span asp-validation-for="TeamThree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamFour" class="control-label"></label>
+                <input asp-for="TeamFour" class="form-control" />
+                <span asp-validation-for="TeamFour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-action="CapturetMarklist" type="submit" value="Save" class="button btn btn-primary" />
+                @* <a asp-action="CapturetMarklist" class="button"></a>*@
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="CapturetMarklist" class="button">Back to List</a>
+</div>
+

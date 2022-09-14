@@ -452,6 +452,38 @@ namespace TBHAcademy.Migrations
                     b.ToTable("Modules");
                 });
 
+            modelBuilder.Entity("TBHAcademy.Models.TeamMark", b =>
+                {
+                    b.Property<int>("Teamid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("StName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StSurname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TeamFour")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TeamOne")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TeamThree")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TeamTwo")
+                        .HasColumnType("int");
+
+                    b.HasKey("Teamid");
+
+                    b.ToTable("TeamMark");
+                });
+
             modelBuilder.Entity("TBHAcademy.Models.Topic", b =>
                 {
                     b.Property<int>("TopicId")

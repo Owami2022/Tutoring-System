@@ -1,10 +1,11 @@
 ﻿@{
 	//Layout = "~/Views/Shared/_StudentLayout.cshtml";
-    ViewData["Title"] = "Coming Soon Page";
-    ViewData["AppClass"] = "app-full-height app-without-header app-full-width";
-    ViewData["AppWithoutHeader"] = true;
-    ViewData["AppWithoutSidebar"] = true;
-    ViewData["AppWithoutContainer"] = true;
+	ViewData["Title"] = "Coming Soon Page";
+	ViewData["AppClass"] = "app-full-height app-without-header app-full-width";
+	ViewData["AppWithoutHeader"] = true;
+	ViewData["AppWithoutSidebar"] = true;
+	ViewData["AppWithoutContainer"] = true;
+	Layout = ViewBag.Layout;
 }
 x
     <link href="~/lib/kbw-countdown/dist/css/jquery.countdown.css" rel="stylesheet" />
@@ -12,7 +13,6 @@ x
     <script src="~/lib/kbw-countdown/dist/js/jquery.plugin.js"></script>
     <script src="~/lib/kbw-countdown/dist/js/jquery.countdown.js"></script>
     <script src="~/js/demo/page-coming-soon.demo.js"></script>
-
 
 <!-- BEGIN coming-soon -->
 <div class="coming-soon">
