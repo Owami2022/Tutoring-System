@@ -303,9 +303,9 @@ body {
     width: 30%;
 }
 
-.card-body:hover {
+.card-body-admin:hover {
     transition: ease-in .3s;
     box-shadow: 0 0 30px rgba(255,33,33,.3);
     background-color: rgba(255,140,0);
-    color: rgba(255,140,0);
+    color: rgba(255,140,0);*/
 }

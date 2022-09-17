@@ -29,7 +29,7 @@ namespace TBHAcademy.Controllers
         public AdminController(TBHAcademyContext db, INotyfService not, UserManager<TBHAcademyUser> userManager, IEmailSender emailSender, RoleManager<IdentityRole> roleManager, SignInManager<TBHAcademyUser> signInManager)
         {
             _db = db;
-            INotyfService not3;
+            _notyf=not;
             _userManager = userManager;
             _emailSender = emailSender;
             _roleManager = roleManager;
