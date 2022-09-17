@@ -11,7 +11,7 @@ GO
 BEGIN TRANSACTION;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
 BEGIN
     CREATE TABLE [AspNetRoles] (
         [Id] nvarchar(450) NOT NULL,
@@ -23,15 +23,20 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
 BEGIN
     CREATE TABLE [AspNetUsers] (
         [Id] nvarchar(450) NOT NULL,
         [FirstName] nvarchar(100) NULL,
         [LastName] nvarchar(100) NULL,
         [DOB] Date NOT NULL,
-        [Gender] nvarchar(max) NULL,
-        [Status] nvarchar(max) NULL,
+        [Gender] nvarchar(100) NULL,
+        [Status] nvarchar(100) NULL,
+        [Role] nvarchar(100) NULL,
+        [date] datetime2 NOT NULL,
+        [MyPicture] varbinary(max) NULL,
+        [AddressLine1] nvarchar(max) NULL,
+        [AddressLine2] nvarchar(max) NULL,
         [UserName] nvarchar(256) NULL,
         [NormalizedUserName] nvarchar(256) NULL,
         [Email] nvarchar(256) NULL,
@@ -51,7 +56,34 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    CREATE TABLE [Faculty] (
+        [FacultyId] int NOT NULL IDENTITY,
+        [FacultyName] nvarchar(max) NOT NULL,
+        [FacultyDescription] nvarchar(max) NOT NULL,
+        [Status] int NOT NULL,
+        CONSTRAINT [PK_Faculty] PRIMARY KEY ([FacultyId])
+    );
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    CREATE TABLE [TeamMark] (
+        [Teamid] int NOT NULL IDENTITY,
+        [StName] nvarchar(max) NOT NULL,
+        [StSurname] nvarchar(max) NOT NULL,
+        [TeamOne] int NOT NULL,
+        [TeamTwo] int NOT NULL,
+        [TeamThree] int NOT NULL,
+        [TeamFour] int NOT NULL,
+        CONSTRAINT [PK_TeamMark] PRIMARY KEY ([Teamid])
+    );
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
 BEGIN
     CREATE TABLE [AspNetRoleClaims] (
         [Id] int NOT NULL IDENTITY,
@@ -64,7 +96,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
 BEGIN
     CREATE TABLE [AspNetUserClaims] (
         [Id] int NOT NULL IDENTITY,
@@ -77,11 +109,11 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
 BEGIN
     CREATE TABLE [AspNetUserLogins] (
-        [LoginProvider] nvarchar(128) NOT NULL,
-        [ProviderKey] nvarchar(128) NOT NULL,
+        [LoginProvider] nvarchar(450) NOT NULL,
+        [ProviderKey] nvarchar(450) NOT NULL,
         [ProviderDisplayName] nvarchar(max) NULL,
         [UserId] nvarchar(450) NOT NULL,
         CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
@@ -90,7 +122,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
 BEGIN
     CREATE TABLE [AspNetUserRoles] (
         [UserId] nvarchar(450) NOT NULL,
@@ -102,12 +134,12 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
 BEGIN
     CREATE TABLE [AspNetUserTokens] (
         [UserId] nvarchar(450) NOT NULL,
-        [LoginProvider] nvarchar(128) NOT NULL,
-        [Name] nvarchar(128) NOT NULL,
+        [LoginProvider] nvarchar(450) NOT NULL,
+        [Name] nvarchar(450) NOT NULL,
         [Value] nvarchar(max) NULL,
         CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
         CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
@@ -115,188 +147,181 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
 BEGIN
-    CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+    CREATE TABLE [Enroll] (
+        [EnrolledID] int NOT NULL IDENTITY,
+        [DateErolled] datetime2 NOT NULL,
+        [ModuleID] int NOT NULL,
+        [StudentID] nvarchar(max) NOT NULL,
+        [TBHAcademyUserId] nvarchar(450) NULL,
+        CONSTRAINT [PK_Enroll] PRIMARY KEY ([EnrolledID]),
+        CONSTRAINT [FK_Enroll_AspNetUsers_TBHAcademyUserId] FOREIGN KEY ([TBHAcademyUserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE NO ACTION
+    );
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
-BEGIN
-    EXEC(N'CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL');
-END;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
-BEGIN
-    CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
-END;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
-BEGIN
-    CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
-END;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
-BEGIN
-    CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
-END;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
-BEGIN
-    CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
-END;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
-BEGIN
-    EXEC(N'CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL');
-END;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601104613_Initial-Create')
-BEGIN
-    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20220601104613_Initial-Create', N'5.0.17');
-END;
-GO
-
-COMMIT;
-GO
-
-BEGIN TRANSACTION;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601110227_Update')
-BEGIN
-    DECLARE @var0 sysname;
-    SELECT @var0 = [d].[name]
-    FROM [sys].[default_constraints] [d]
-    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
-    WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'Status');
-    IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var0 + '];');
-    ALTER TABLE [AspNetUsers] ALTER COLUMN [Status] nvarchar(100) NULL;
-END;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601110227_Update')
-BEGIN
-    DECLARE @var1 sysname;
-    SELECT @var1 = [d].[name]
-    FROM [sys].[default_constraints] [d]
-    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
-    WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'Gender');
-    IF @var1 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var1 + '];');
-    ALTER TABLE [AspNetUsers] ALTER COLUMN [Gender] nvarchar(100) NULL;
-END;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601110227_Update')
-BEGIN
-    ALTER TABLE [AspNetUsers] ADD [Role] nvarchar(100) NULL;
-END;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220601110227_Update')
-BEGIN
-    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20220601110227_Update', N'5.0.17');
-END;
-GO
-
-COMMIT;
-GO
-
-BEGIN TRANSACTION;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220604010826_IncludeDate')
-BEGIN
-    ALTER TABLE [AspNetUsers] ADD [date] datetime2 NOT NULL DEFAULT '0001-01-01T00:00:00.0000000';
-END;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220604010826_IncludeDate')
-BEGIN
-    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20220604010826_IncludeDate', N'5.0.17');
-END;
-GO
-
-COMMIT;
-GO
-
-BEGIN TRANSACTION;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220609155048_CreateCourse')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
 BEGIN
     CREATE TABLE [Course] (
         [CourseId] int NOT NULL IDENTITY,
         [CourseName] nvarchar(max) NOT NULL,
         [CourseDescription] nvarchar(max) NOT NULL,
-        [Faculty] nvarchar(max) NULL,
-        CONSTRAINT [PK_Course] PRIMARY KEY ([CourseId])
+        [Status] int NOT NULL,
+        [FacultyId] int NOT NULL,
+        CONSTRAINT [PK_Course] PRIMARY KEY ([CourseId]),
+        CONSTRAINT [FK_Course_Faculty_FacultyId] FOREIGN KEY ([FacultyId]) REFERENCES [Faculty] ([FacultyId]) ON DELETE CASCADE
     );
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220609155048_CreateCourse')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
 BEGIN
-    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20220609155048_CreateCourse', N'5.0.17');
-END;
-GO
-
-COMMIT;
-GO
-
-BEGIN TRANSACTION;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220610133647_AddFaculty')
-BEGIN
-    CREATE TABLE [Faculty] (
-        [FacultyId] int NOT NULL IDENTITY,
-        [FacultyName] nvarchar(max) NOT NULL,
-        [FacultyDescription] nvarchar(max) NOT NULL,
-        CONSTRAINT [PK_Faculty] PRIMARY KEY ([FacultyId])
+    CREATE TABLE [Modules] (
+        [ModuleId] int NOT NULL IDENTITY,
+        [ModuleCode] nvarchar(max) NOT NULL,
+        [ModuleName] nvarchar(max) NOT NULL,
+        [Year] nvarchar(max) NOT NULL,
+        [CourseID] int NOT NULL,
+        CONSTRAINT [PK_Modules] PRIMARY KEY ([ModuleId]),
+        CONSTRAINT [FK_Modules_Course_CourseID] FOREIGN KEY ([CourseID]) REFERENCES [Course] ([CourseId]) ON DELETE CASCADE
     );
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220610133647_AddFaculty')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
 BEGIN
-    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20220610133647_AddFaculty', N'5.0.17');
-END;
-GO
-
-COMMIT;
-GO
-
-BEGIN TRANSACTION;
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220610185521_CreateTB')
-BEGIN
-    CREATE TABLE [Enroll] (
-        [EnrolledID] int NOT NULL IDENTITY,
-        [DateErolled] datetime2 NOT NULL,
-        [ModuleCourseId] int NOT NULL,
-        [StudentID] int NOT NULL,
-        CONSTRAINT [PK_Enroll] PRIMARY KEY ([EnrolledID])
+    CREATE TABLE [AssignModules] (
+        [AssignedID] int NOT NULL IDENTITY,
+        [TutorID] nvarchar(max) NOT NULL,
+        [ModuleID] int NOT NULL,
+        [DateAssigned] datetime2 NOT NULL,
+        [TBHAcademyUserId] nvarchar(450) NULL,
+        [ModulesModuleId] int NULL,
+        CONSTRAINT [PK_AssignModules] PRIMARY KEY ([AssignedID]),
+        CONSTRAINT [FK_AssignModules_AspNetUsers_TBHAcademyUserId] FOREIGN KEY ([TBHAcademyUserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE NO ACTION,
+        CONSTRAINT [FK_AssignModules_Modules_ModulesModuleId] FOREIGN KEY ([ModulesModuleId]) REFERENCES [Modules] ([ModuleId]) ON DELETE NO ACTION
     );
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220610185521_CreateTB')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    CREATE TABLE [Content] (
+        [ContentId] int NOT NULL IDENTITY,
+        [Title] nvarchar(max) NOT NULL,
+        [TopicName] nvarchar(max) NOT NULL,
+        [TopicDescription] nvarchar(max) NULL,
+        [DocumentDescription1] nvarchar(max) NULL,
+        [Document1] varbinary(max) NULL,
+        [DocumentDescription2] nvarchar(max) NULL,
+        [Document2] varbinary(max) NULL,
+        [DocumentDescription3] nvarchar(max) NULL,
+        [Document3] varbinary(max) NULL,
+        [DocumentDescription4] nvarchar(max) NULL,
+        [Document4] varbinary(max) NULL,
+        [DocumentDescription5] nvarchar(max) NULL,
+        [Document5] varbinary(max) NULL,
+        [LinkDescription1] nvarchar(max) NULL,
+        [Link1] nvarchar(max) NULL,
+        [LinkDescription2] nvarchar(max) NULL,
+        [Link2] nvarchar(max) NULL,
+        [LinkDescription3] nvarchar(max) NULL,
+        [Link3] nvarchar(max) NULL,
+        [LinkDescription4] nvarchar(max) NULL,
+        [Link4] nvarchar(max) NULL,
+        [LinkDescription5] nvarchar(max) NULL,
+        [Link5] nvarchar(max) NULL,
+        [AssignId] int NOT NULL,
+        [AssignModulesAssignedID] int NULL,
+        CONSTRAINT [PK_Content] PRIMARY KEY ([ContentId]),
+        CONSTRAINT [FK_Content_AssignModules_AssignModulesAssignedID] FOREIGN KEY ([AssignModulesAssignedID]) REFERENCES [AssignModules] ([AssignedID]) ON DELETE NO ACTION
+    );
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    EXEC(N'CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL');
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    EXEC(N'CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL');
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    CREATE INDEX [IX_AssignModules_ModulesModuleId] ON [AssignModules] ([ModulesModuleId]);
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    CREATE INDEX [IX_AssignModules_TBHAcademyUserId] ON [AssignModules] ([TBHAcademyUserId]);
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    CREATE INDEX [IX_Content_AssignModulesAssignedID] ON [Content] ([AssignModulesAssignedID]);
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    CREATE INDEX [IX_Course_FacultyId] ON [Course] ([FacultyId]);
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    CREATE INDEX [IX_Enroll_TBHAcademyUserId] ON [Enroll] ([TBHAcademyUserId]);
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
+BEGIN
+    CREATE INDEX [IX_Modules_CourseID] ON [Modules] ([CourseID]);
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220913112322_InitDB')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20220610185521_CreateTB', N'5.0.17');
+    VALUES (N'20220913112322_InitDB', N'5.0.17');
 END;
 GO
 

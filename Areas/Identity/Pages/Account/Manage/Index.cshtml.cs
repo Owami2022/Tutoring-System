@@ -57,6 +57,7 @@ namespace TBHAcademy.Areas.Identity.Pages.Account.Manage
 
         private async Task LoadAsync(TBHAcademyUser user)
         {
+            
 
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);

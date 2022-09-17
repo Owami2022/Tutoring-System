@@ -1,6 +1,7 @@
 ﻿@*@model IEnumerable<TBHAcademy.Models.MyModules>*@
 @using Microsoft.AspNetCore.Identity
 @using TBHAcademy.Areas.Identity.Data
+@using TBHAcademy.Models
 
 @inject SignInManager<TBHAcademyUser> SignInManager
 @inject UserManager<TBHAcademyUser> UserManager
@@ -167,10 +168,10 @@
         </nav>
       </div><!-- sidebar-body -->
       <div class="sidebar-footer">
-        <a href="" class="avatar online"><span class="avatar-initial">KM</span></a>
+        <a  asp-area="Identity" asp-page="/Account/Manage/Index" class="avatar online"><span class="avatar-initial">KM</span></a>
         <div class="avatar-body">
           <div class="d-flex align-items-center justify-content-between"style="color:white">
-            <h6>                                                 @UserManager.GetUserAsync(User).Result.FirstName   @UserManager.GetUserAsync(User).Result.LastName 
+            <h6>@UserManager.GetUserAsync(User).Result.FirstName   @UserManager.GetUserAsync(User).Result.LastName 
                 </h6>
             <a href="" class="footer-menu"><i class="ri-settings-4-line"></i></a>
           </div>
