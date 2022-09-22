@@ -89,7 +89,7 @@
           <li class="nav-item active show">
             <a href="" class="nav-link with-sub"><i data-feather="package"style="color:white"></i><span>Dashboard</span></a>
             <nav class="nav-sub">
-              <a href="" class="sub-link active"style="color:white">Overview</a>
+             <a  asp-controller="Dashboard" asp-action="Enroll" class="button sub-link active" style="color:white">Overview</a>
               <a href="" class="sub-link"style="color:white">Reports</a>
             </nav>
           </li>
@@ -160,7 +160,7 @@
 
         <hr>
 
-        <nav class="nav-sidebar">
+        <nav class="nav-sideba ">
           <a href=""style="color:white" class="nav-link"><i data-feather="activity"style="color:white"></i><span style="color:white">Activity Logs</span></a>
           <a href=""style="color:white" class="nav-link"><i data-feather="settings"style="color:white"></i><span>Preferences</span></a>
           <a href=""style="color:white" class="nav-link"><i data-feather="help-circle"style="color:white"></i><span>Help &amp; Support</span></a>
@@ -181,14 +181,14 @@
     </div><!-- sidebar -->
 
     <div class="content  bg-white">
-      <div class="content-header p-0 m-0" style="position: static">
-          <nav class="navbar navbar-light navbar-expand bg-light mb-4 topbar static-top" id="header">
+      <div class="content-header p-0 mt-1 ml-1 ">
+          <nav class="navbar p-0 m-0 navbar-light navbar-expand bg-white mb-4 topbar navbar-default static" id="header">
                         <div class="container-fluid">
                             <button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
                                                                 
                            <a class="button navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
                         <div class="sidebar-brand-icon">
-                            <img src="~/css/log2 (2).png" style="width:60px" class="m-0 p-0"/>
+                            <img src="~/css/log2 (2).png" style="width:70px" class="m-0 p-0"/>
                             </div>
                    
                           </a>
@@ -270,9 +270,7 @@
                                     </div>
                                     <div class="shadow dropdown-list dropdown-menu dropdown-menu-end" aria-labelledby="alertsDropdown"></div>
                                 </li>
-                                <div class="d-none d-sm-block topbar-divider"  style="color:#4723D9"> 
-
-                                </div>
+                               <div class="vr"></div>
                                 <li class="nav-item dropdown no-arrow">
                                     <div class="nav-item dropdown no-arrow">
                                         <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">
@@ -294,14 +292,9 @@
                     </nav>
 
       </div><!-- content-header -->
-      <hr class="border-3  p-0 m-0" style="width:100%" /> 
-      <div class="content-body pl-2 pr-0 ml-1">
+      
+      <div class="content-body  bg-white  mt-0 pl-2 pr-0 ml-1">
           @RenderBody()
-                                <footer class="border-top footer text-muted">
-                          <div class="container-fluid pt-0"  style="background-color:#e6eef4">
-                          &copy; 2022 - TBHAcademy - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                         </div>
-            </footer>
         @*<label class="content-label">Navigation Skins</label>
         <nav id="navigationSkins" class="nav">
           <a href="" data-skin="base" class="nav-link active">Base</a>
@@ -332,6 +325,12 @@
         </nav>*@
       </div><!-- content-body -->
     </div><!-- content -->
+    
+             <footer class="border-top footer text-muted text-center">
+                          <div class="container-fluid pt-0 text-center"  style="background-color:#e6eef4">
+                          &copy; 2022 - TBHAcademy - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                         </div>
+            </footer>
 @*                     <div class="content container-fluid pl-0 pr-0  ml-0 mr-0  bg-white ">
                         
                     </div>*@

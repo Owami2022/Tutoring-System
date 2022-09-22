@@ -134,7 +134,7 @@ abbr[title],
 abbr[data-bs-original-title] {
   text-decoration: underline dotted;
   cursor: help;
-  text-decoration-skip-ink: none; }
+   }
 
 address {
   margin-bottom: 1rem;
@@ -3741,8 +3741,8 @@ progress {
       margin-left: 5px; } }
 
 .content-header {
-  padding: 20px 25px;
-  position: static; }
+ /* padding: 20px 25px;*/
+  position: fixed; }
 
 .content-menu {
   display: flex;
@@ -3756,8 +3756,8 @@ progress {
     height: 20px;
     stroke-width: 2.5px; }
 
-.content-body {
-  padding: 5px 5px; }
+/*.content-body {
+  padding: 5px 5px; }*/
   .content-body .nav {
     display: flex;
     flex-wrap: wrap; }
