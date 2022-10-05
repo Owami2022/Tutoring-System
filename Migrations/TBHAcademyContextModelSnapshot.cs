@@ -158,6 +158,12 @@ namespace TBHAcademy.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("AddressLine1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AddressLine2")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -186,6 +192,9 @@ namespace TBHAcademy.Migrations
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<byte[]>("MyPicture")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
@@ -414,6 +423,24 @@ namespace TBHAcademy.Migrations
                     b.ToTable("Enroll");
                 });
 
+            modelBuilder.Entity("TBHAcademy.Models.FAQ", b =>
+                {
+                    b.Property<int>("FAQId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Answer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("FAQId");
+
+                    b.ToTable("fAQs");
+                });
+
             modelBuilder.Entity("TBHAcademy.Models.Faculty", b =>
                 {
                     b.Property<int>("FacultyId")
@@ -444,7 +471,7 @@ namespace TBHAcademy.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CourseID")
+                    b.Property<int>("CourseId")
                         .HasColumnType("int");
 
                     b.Property<string>("ModuleCode")
@@ -461,7 +488,7 @@ namespace TBHAcademy.Migrations
 
                     b.HasKey("ModuleId");
 
-                    b.HasIndex("CourseID");
+                    b.HasIndex("CourseId");
 
                     b.ToTable("Modules");
                 });
@@ -597,7 +624,7 @@ namespace TBHAcademy.Migrations
                 {
                     b.HasOne("TBHAcademy.Models.Course", "Course")
                         .WithMany()
-                        .HasForeignKey("CourseID")
+                        .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

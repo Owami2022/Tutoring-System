@@ -29,7 +29,7 @@ namespace TBHAcademy.Controllers
         public AdminController(TBHAcademyContext db, INotyfService not, UserManager<TBHAcademyUser> userManager, IEmailSender emailSender, RoleManager<IdentityRole> roleManager, SignInManager<TBHAcademyUser> signInManager)
         {
             _db = db;
-            _notyf=not;
+            _notyf = not;
             _userManager = userManager;
             _emailSender = emailSender;
             _roleManager = roleManager;
@@ -110,7 +110,7 @@ namespace TBHAcademy.Controllers
         [HttpPost]
         public IActionResult Edit(Course course)
         {
-           
+
             if (ModelState.IsValid)
             {
                 if (course.CourseId == 0)
@@ -130,7 +130,7 @@ namespace TBHAcademy.Controllers
             {
                 ViewBag.Action = (course.CourseId == 0) ? "Add" : "Update";
                 ViewBag.Faculty = _db.Faculty.OrderBy(x => x.FacultyName).ToList();
-                
+
                 return View(course);
             }
 
@@ -141,7 +141,7 @@ namespace TBHAcademy.Controllers
         {
             //selecting the user that matches the id then gives me the first record
             var user = _db.Users.Where(x => x.Id == id).FirstOrDefault();
-           
+
             if (!string.IsNullOrEmpty(id))
             {
                 return View(user);
@@ -270,6 +270,29 @@ namespace TBHAcademy.Controllers
             return View();
         }
 
+        public IActionResult FAQs()
+        {
+            return View();
+        }
+
+        public IActionResult ListFAQs()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult InsertFAQ(FAQ fAQ)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.fAQs.Add(fAQ);
+                _db.SaveChanges();
+                return RedirectToAction("ListFAQs");
+            }
+            return View(fAQ);
+        }
     }
 }
            
