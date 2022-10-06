@@ -55,7 +55,7 @@ namespace TBHAcademy.Areas.Identity.Pages.Account
             [StringLength(20, MinimumLength = 5, ErrorMessage = "First Name Should be min 5 and max 20 length")]
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
-           
+
             [Required(ErrorMessage = "Date of birth is required")]
             [DataType(DataType.Date)]
             public DateTime DOB { get; set; }
@@ -105,12 +105,12 @@ namespace TBHAcademy.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new TBHAcademyUser { UserName = Input.Email, Email = Input.Email, FirstName = Input.FirstName, LastName = Input.LastName, DOB = Input.DOB, Gender = Input.Gender,Role = "Student", Status = "Active",date = DateTime.Today };
+                var user = new TBHAcademyUser { UserName = Input.Email, Email = Input.Email, FirstName = Input.FirstName, LastName = Input.LastName, DOB = Input.DOB, Gender = Input.Gender, Role = "Student", Status = "Active", date = DateTime.Today };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-                    
+
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
@@ -124,12 +124,12 @@ namespace TBHAcademy.Areas.Identity.Pages.Account
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
-                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl  });
+                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
                     }
                     else
                     {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
+
+                        return RedirectToPage("Login");
                     }
                 }
                 foreach (var error in result.Errors)
@@ -138,7 +138,7 @@ namespace TBHAcademy.Areas.Identity.Pages.Account
                 }
             }
 
-            
+
             return Page();
         }
     }
