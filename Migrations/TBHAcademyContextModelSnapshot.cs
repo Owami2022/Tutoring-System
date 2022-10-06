@@ -245,6 +245,25 @@ namespace TBHAcademy.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("TBHAcademy.Models.Announcement", b =>
+                {
+                    b.Property<int>("AnnouncementId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AnnouncementId");
+
+                    b.ToTable("Announcements");
+                });
+
             modelBuilder.Entity("TBHAcademy.Models.AssignModules", b =>
                 {
                     b.Property<int>("AssignedID")

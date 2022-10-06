@@ -27,6 +27,7 @@ namespace TBHAcademy.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Announcements = _db.Announcements.Count(x => x.AnnouncementId > 0);
             return View();
         }
         public IActionResult InsertModule()
@@ -40,11 +41,20 @@ namespace TBHAcademy.Controllers
 
             return View();
         }
+        public IActionResult CreateAnnouncement()
+        {
+            return View();
+        }
 
         public IActionResult ListFaculty()
         {
             IEnumerable<Faculty> FacultyList = _db.Faculty;
             return View(FacultyList);
+        }
+        public IActionResult Announcements()
+        {
+            IEnumerable<Announcements> Announcements = _db.Announcements;
+            return View(Announcements);
         }
         public IActionResult ListModules()
         {
@@ -79,6 +89,18 @@ namespace TBHAcademy.Controllers
                 return RedirectToAction("ListFaculty");
             }
             return View(faculty);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateAnnouncement(Announcements announcements)
+        {
+            if(ModelState.IsValid)
+            {
+                _db.Announcements.Add(announcements);
+                _db.SaveChanges();
+                return RedirectToAction("Announcements");
+            }
+            return View(announcements);
         }
         [HttpPost]
         public IActionResult DeleteModule(Modules modules)

@@ -33,6 +33,7 @@ namespace TBHAcademy.Data
         public DbSet<Content> Content { get; set; }
         //public DbSet<Topic> Topic { get; set; }
         public DbSet<TeamMark> TeamMark { get; set; }
-        public DbSet<FAQ> fAQs { get; set; }    
+        public DbSet<FAQ> fAQs { get; set; }  
+        public DbSet<Announcements> Announcements { get; set; }
     }
 }
