@@ -22,7 +22,7 @@ namespace TBHAcademy.Controllers
         private readonly SignInManager<TBHAcademyUser> _signInManager;
         public HodController(TBHAcademyContext db)
         {
-            _db = db;
+            _db = db; 
         }
 
         public IActionResult Index()
@@ -210,6 +210,7 @@ namespace TBHAcademy.Controllers
         }
         public IActionResult UpdateModule(int? id)
         {
+            ViewBag.Course = _db.Course.OrderBy(x => x.CourseName).ToList();
             if (id == null && id == 0)
             {
                 return NotFound();

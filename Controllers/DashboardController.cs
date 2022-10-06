@@ -37,5 +37,14 @@ namespace TBHAcademy.Controllers
 
             return View();
         }
+        public IActionResult Hod()
+        {
+            ViewBag.Faculty = _db.Faculty.Count(x => x.FacultyId > 0);
+            ViewBag.Course = _db.Course.Count(x => x.CourseId > 0);
+            ViewBag.Modules = _db.Modules.Count(x => x.ModuleId > 0);
+            ViewBag.Enroll = _db.Enroll.Count(x => x.EnrolledID > 0);
+            IEnumerable<Faculty> FacultyList = _db.Faculty;
+            return View(FacultyList);
+        }
     }
 }

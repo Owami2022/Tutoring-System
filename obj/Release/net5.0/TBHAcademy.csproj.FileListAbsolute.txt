@@ -2837,3 +2837,4 @@ C:\Users\koketso\Documents\Project\obj\Release\net5.0\TBHAcademy.genruntimeconfi
 C:\Users\koketso\Documents\Project\obj\Release\net5.0\ref\TBHAcademy.dll
 C:\Users\koketso\Documents\Project\obj\Release\net5.0\Razor\Views\Hod\CreateAnnouncement.cshtml.g.cs
 C:\Users\koketso\Documents\Project\obj\Release\net5.0\Razor\Views\Hod\Announcements.cshtml.g.cs
+C:\Users\koketso\Documents\Project\obj\Release\net5.0\Razor\Views\Dashboard\Hod.cshtml.g.cs

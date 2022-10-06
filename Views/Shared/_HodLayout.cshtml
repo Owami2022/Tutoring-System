@@ -51,7 +51,7 @@
                        <nav class="navbar navbar-light navbar-expand bg-light mb-4 topbar static-top" id="header">
                         <div class="container-fluid">
                             <button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
-                            <a class="button navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                            <a class="button navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="@Url.Action("Index","Hod")">
                         <div class="sidebar-brand-icon"><img src="~/css/log2 (2).png" style="width:70px" /></div>
                    
                           </a>
@@ -60,34 +60,9 @@
                                     <div class="nav-item dropdown no-arrow">
                                         <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="badge bg-danger badge-counter">@ViewBag.Announcements</span><i class='bx bxs-bell bx-tada-hover bx-sm' style="color:#4723D9 "></i></a>
                                         <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+                                            
                                             <h6 class="dropdown-header">Announcements</h6>
-                                            @*<a class="dropdown-item d-flex align-items-center" href="#">
-                                                <div class="me-3">
-                                                    <div class="bg-primary icon-circle"><i class="fas fa-file-alt text-white"></i></div>
-                                                </div>
-                                                <div>
-                                                    <span class="small text-gray-500">December 12, 2019</span>
-                                                    <p>A new monthly report is ready to download!</p>
-                                                </div>
-                                            </a>
-                                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                                <div class="me-3">
-                                                    <div class="bg-success icon-circle"><i class="fas fa-donate text-white"></i></div>
-                                                </div>
-                                                <div>
-                                                    <span class="small text-gray-500">December 7, 2019</span>
-                                                    <p>Head of department, here's your monthly update!</p>
-                                                </div>
-                                            </a>
-                                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                                <div class="me-3">
-                                                    <div class="bg-warning icon-circle"><i class="fas fa-exclamation-triangle text-white"></i></div>
-                                                </div>
-                                                <div>
-                                                    <span class="small text-gray-500">December 2, 2019</span>
-                                                    <p>Spending Alert: We've noticed unusually slow flow in the system network during daylight classes.</p>
-                                                </div>
-                                            </a>*@
+                                            
                                             <a class="dropdown-item text-center small text-gray-500" href="@Url.Action("Announcements","Hod")">Show All Alerts</a>
                                         </div>
                                     </div>
@@ -166,10 +141,10 @@
                     <i class='bx bx-menu bx-flashing-hover' id="header-toggle"></i>
                     </div>
                 <div class="nav_list"> 
-                    <a href="" class="button nav_link active"> <i class='bx bxs-grid-alt bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Dashboard</span> </a>
+                    <a href="@Url.Action("Hod","DashBoard")" class="button nav_link active"> <i class='bx bxs-grid-alt bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Dashboard</span> </a>
                     <a href="@Url.Action("ListFaculty","Hod")"  asp class="button nav_link"><i class='bx bxs-book-open bx-sm bx-flashing-hover'></i> <span class="nav_name">Manage Faculties</span> </a> 
                     <a href="@Url.Action("Calendar","Hod")" class="button nav_link"> <i class='bx bxs-calendar-event bx-sm bx-flashing-hover nav_icon '></i> <span class="nav_name">Appointments</span></a>
-                         <a href="" class="button nav_link"> <i class='bx bxs-calendar bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Activities</span> </a>
+                         <a href="@Url.Action("ListModules","Hod")" class="button nav_link"> <i class='bx bxs-calendar bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Activities</span> </a>
                         <a href="@Url.Action("Index","ComingSoonPage")" class="button nav_link"> <i class='bx bxs-report bx-sm bx-flashing-hover nav_icon'></i> <span class="nav_name">Faculty Report</span> </a>
                         <a href="@Url.Action("Index","ComingSoonPage")" class="button nav_link"> <i class='bx bxs-conversation bx-flashing-hover bx-sm nav_icon'></i> <span class="nav_name">Learning Update</span> </a>
                          <a href="@Url.Action("CreateAnnouncement","Hod")" class="button nav_link"> <i class='bx bxs-bell-plus bx-flashing-hover bx-sm nav_icon' style="font-size: 25px"></i> <span class="nav_name">Anouncements</span> </a>
