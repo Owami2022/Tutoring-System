@@ -5,15 +5,18 @@ namespace TBHAcademy.Models
 {
     public class Mark_Capture
     {
-        [key]
+         
+        [Key]
         public int MarkID { get; set; }
         [Required]
-        [Display(Name ="Student")]
-        public string  StudentID { get; set; }
-        public virtual TBHAcademyUser TBHAcademyUser { get; set; }
+        [Display(Name = "Student")]
+        public string StudentID { get; set; }
         [Display(Name = "Module")]
         [Required]
         public int ModuleID { get; set; }
+        [Required]
+        [Display(Name = "Assessment Description")]
+        public string Assessment { get; set; }
         [Required]
         [Display(Name = "Type")]
         public string Assessment_Type { get; set; }
@@ -26,6 +29,11 @@ namespace TBHAcademy.Models
         [Required]
         [Display(Name = "Mark Obtained")]
         public int mark_Obtained { get; set; }
+
+
+
+
+
 
     }
 }

@@ -25,6 +25,15 @@ namespace TBHAcademy.Controllers
         }
         public IActionResult Progress_Report()
         {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            //ViewBag.ProgressReport = from AM in _db.AssignModules
+            //                         join M in _db.Modules on AM.ModuleID equals M.ModuleId
+            //                         from E in _db.Enroll
+            //                         join U in _db.Users on E.StudentID equals U.Id
+            //                         from MC in _db.Mark_Capture
+            //                         where E.ModuleID == AM.ModuleID && AM.TutorID == U.Id 
+
+
             return View();
         }
         public IActionResult Enrolled_Modules_Report()
