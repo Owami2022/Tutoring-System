@@ -10,9 +10,11 @@ using TBHAcademy.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 using AspNetCoreHero.ToastNotification.Abstractions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TBHAcademy.Controllers
 {
+    [Authorize]
     public class ModuleController : Controller
     {
         private readonly UserManager<TBHAcademyUser> _userManager;
