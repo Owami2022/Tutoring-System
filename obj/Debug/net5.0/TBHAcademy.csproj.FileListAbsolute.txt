@@ -6118,3 +6118,10 @@ C:\Users\s220284059\Source\Repos\Final_Year_Project\obj\Debug\net5.0\refint\TBHA
 C:\Users\s220284059\Source\Repos\Final_Year_Project\obj\Debug\net5.0\TBHAcademy.pdb
 C:\Users\s220284059\Source\Repos\Final_Year_Project\obj\Debug\net5.0\TBHAcademy.genruntimeconfig.cache
 C:\Users\s220284059\Source\Repos\Final_Year_Project\obj\Debug\net5.0\ref\TBHAcademy.dll
+C:\Users\koketso mosena\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\FAQs.cshtml.g.cs
+C:\Users\koketso mosena\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\ListFAQs.cshtml.g.cs
+C:\Users\koketso mosena\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Dashboard\Hod.cshtml.g.cs
+C:\Users\koketso mosena\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\Announcements.cshtml.g.cs
+C:\Users\koketso mosena\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\CreateAnnouncement.cshtml.g.cs
+C:\Users\koketso mosena\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Reports\Enrolled_Modules_Report.cshtml.g.cs
+C:\Users\koketso mosena\Source\Repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Reports\Progress_Report.cshtml.g.cs

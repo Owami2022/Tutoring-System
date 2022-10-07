@@ -26,12 +26,14 @@ namespace TBHAcademy.Controllers
         public IActionResult Progress_Report()
         {
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            //ViewBag.ProgressReport = from AM in _db.AssignModules
-            //                         join M in _db.Modules on AM.ModuleID equals M.ModuleId
-            //                         from E in _db.Enroll
-            //                         join U in _db.Users on E.StudentID equals U.Id
-            //                         from MC in _db.Mark_Capture
-            //                         where E.ModuleID == AM.ModuleID && AM.TutorID == U.Id 
+            ViewBag.ProgressReport = (from AM in _db.AssignModules
+                                      join M in _db.Modules on AM.ModuleID equals M.ModuleId
+                                      from MC in _db.Mark_Capture
+                                      join U in _db.Users on MC.StudentID equals U.Id
+                                      where MC.StudentID == user && MC.ModuleID == AM.AssignedID 
+                                      select new Capture_Mark_Display {AssignModules = AM, TBHAcademyUser = U, Mark_Capture = MC, Modules = M }).ToList();
+
+                                     
 
 
             return View();
