@@ -245,6 +245,25 @@ namespace TBHAcademy.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("TBHAcademy.Models.Announcements", b =>
+                {
+                    b.Property<int>("AnnouncementId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AnnouncementId");
+
+                    b.ToTable("Announcements");
+                });
+
             modelBuilder.Entity("TBHAcademy.Models.AssignModules", b =>
                 {
                     b.Property<int>("AssignedID")
@@ -462,6 +481,46 @@ namespace TBHAcademy.Migrations
                     b.HasKey("FacultyId");
 
                     b.ToTable("Faculty");
+                });
+
+            modelBuilder.Entity("TBHAcademy.Models.Mark_Capture", b =>
+                {
+                    b.Property<int>("MarkID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Assessment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Assessment_Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DateOfAssessment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Mark_Percentage")
+                        .HasColumnType("float");
+
+                    b.Property<int>("ModuleID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Overall_Mark")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StudentID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("mark_Obtained")
+                        .HasColumnType("int");
+
+                    b.HasKey("MarkID");
+
+                    b.ToTable("Mark_Capture");
                 });
 
             modelBuilder.Entity("TBHAcademy.Models.Modules", b =>

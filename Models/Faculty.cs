@@ -14,8 +14,10 @@ namespace TBHAcademy.Models
         [Key]
         public int FacultyId { get; set; }
         [Required]
+        [Display (Name = "Faculty Name")]
         public string FacultyName { get; set; }
         [Required]
+        [Display (Name = "Faculty Description")]
         public string FacultyDescription { get; set; }
 
         public List<Course> Courses { get; set; }

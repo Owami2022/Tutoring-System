@@ -43,13 +43,13 @@
                             }
                             <td>
                                 <a asp-action="UpdateFaculty" class="button btn btn-outline-info  w-100" asp-route-id="@faculty.FacultyId">Update</a>
-                                <form asp-action="ActivateFaculty" method="post" asp-route-id="@faculty.FacultyId" class="d-inline w-100">
+                                @*<form asp-action="ActivateFaculty" method="post" asp-route-id="@faculty.FacultyId" class="d-inline w-100">
                                     <button type="submit" class="btn btn-success w-100">Activate</button>
                                 </form>
                                 
                                 <form asp-action="DeleteFaculty" method="post" asp-route-id="@faculty.FacultyId" class="d-inline w-100" id="_@faculty.FacultyId">
                                     <button type="button" class="btn btn-danger w-100" id="DeleteBtn" onclick="Confirmation(this,@faculty.FacultyId)">Deactivated</button>
-                                </form>
+                                </form>*@
                             </td>
                         </tr>
                     }

@@ -1,0 +1,28 @@
+﻿a {
+    text-decoration: none
+}
+#Report {
+    border: 2px;
+    border-style: solid;
+    border-color: dodgerblue;
+}
+.reportTitle{
+    text-align: center;
+    margin-top: 40px;
+}
+#HeaderDate{
+    text-align:end;
+}
+#headerID{
+    right: 0;
+}
+#Footer{
+    position: fixed;
+    background-color: black;
+}
+#Downloadbtn{
+    align-content:end;
+}
+#header12{
+    margin-top: 5px;
+}
