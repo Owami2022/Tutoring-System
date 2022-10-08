@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
@@ -16,7 +18,7 @@ using TBHAcademy.Models;
 
 namespace TBHAcademy.Controllers
 {
-    // [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Administrator")]
     public class AdminController : Controller
     {
         private readonly TBHAcademyContext _db;
@@ -272,26 +274,20 @@ namespace TBHAcademy.Controllers
 
         public IActionResult FAQs()
         {
+
             return View();
         }
 
         public IActionResult ListFAQs()
         {
-
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult InsertFAQ(FAQ fAQ)
-        {
-            if (ModelState.IsValid)
             {
-                _db.fAQs.Add(fAQ);
-                _db.SaveChanges();
-                return RedirectToAction("ListFAQs");
+                IEnumerable<FAQ> FAQsList = _db.fAQs;
+                return View(FAQsList);
             }
-            return View(fAQ);
+
+
+        
+        
         }
     }
 }
