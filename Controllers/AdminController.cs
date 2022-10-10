@@ -278,6 +278,19 @@ namespace TBHAcademy.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult FAQs(FAQ fAQ)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.fAQs.Add(fAQ);
+                _db.SaveChanges();
+                return RedirectToAction("ListFAQs");
+            }
+            return View(fAQ);
+        }
+
         public IActionResult ListFAQs()
         {
             {
@@ -286,8 +299,35 @@ namespace TBHAcademy.Controllers
             }
 
 
-        
-        
+
+
+        }
+        [HttpGet]
+        public IActionResult EditFAQs(int id)
+        {
+
+
+            ViewBag.Action = (id == 0) ? "Add" : "Update";
+            var fAQ = _db.fAQs.Find(id);
+            if (id > 0)
+            {
+                return View(fAQ);
+            }
+            else
+            {
+                return View(new FAQ());
+            }
+        }
+
+        public IActionResult ViewFAQs()
+        {
+            return View();
+        }
+
+
+        public IActionResult Calender()
+        {
+            return View();
         }
     }
 }
