@@ -36,7 +36,7 @@ namespace TBHAcademy.Controllers
                 if (result.Succeeded)
                 {
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("CreateRole", "Administration");
                 }
 
                 foreach (IdentityError error in result.Errors)
