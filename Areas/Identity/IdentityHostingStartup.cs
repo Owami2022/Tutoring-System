@@ -39,7 +39,11 @@ namespace TBHAcademy.Areas.Identity
 
             services.AddIdentity<TBHAcademyUser, IdentityRole>(options => 
             {
-                options.SignIn.RequireConfirmedAccount = false;
+                options.SignIn.RequireConfirmedAccount = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 8;
 
                 options.Lockout = lockoutOptions;
             })
