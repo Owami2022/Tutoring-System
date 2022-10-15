@@ -6,7 +6,10 @@ namespace TBHAcademy.Models
     {
         [Key]
         public int FAQId { get; set; }
+        [Required(ErrorMessage ="Please enter A Question")]
+
         public string Questions { get; set; }
+        [Required(ErrorMessage = "Please enter An Answer")]
         public string Answer { get; set; }
     }
 }

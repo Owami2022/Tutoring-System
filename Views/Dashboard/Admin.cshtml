@@ -1,0 +1,131 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using TBHAcademy.Areas.Identity.Data
+@using TBHAcademy.Models
+@model IEnumerable<TBHAcademy.Models.Course>
+
+@inject SignInManager<TBHAcademyUser> SignInManager
+@inject UserManager<TBHAcademyUser> UserManager
+
+@{
+    Layout = "_AdminLayout";
+}
+<header>
+    <style>
+                #dash-con, #AssessmentTable {
+            background: rgba( 0, 93, 255, 0.35 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 2.5px );
+            -webkit-backdrop-filter: blur( 2.5px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+        #dash-con:hover{
+            background: rgba( 0, 93, 255, 0.65 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 12px );
+        -webkit-backdrop-filter: blur( 12px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+    </style>
+</header>
+<div class="w-100 mb-2  " style="background: rgba(6, 73, 181,0.5)">
+    <div class="pt-1 m-0 row">
+        <h5 class="text-white text-center ">Admin Dashboard</h5>
+    </div>
+</div>
+<div class="container-fluid pt-4 px-4">
+    <!--Button to trigger the modal-->
+<!-- ********************************************FACULTY MODAL************************************************************************** -->
+    <div class="row g-4">
+        <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+               
+                <img src="~/css/Courses.svg" style="width: 90px" />
+                <div class="ms-3">
+                    <h4 class="mb-2">Courses <span class="badge bg-primary rounded-pill text-white">@ViewBag.Course</span></h4>
+
+                </div>
+            </div>
+        </div>
+   
+<!-- ********************************************FACULTY MODAL CONTENT************************************************************************** -->
+        <div class="modal fade" id="exampleModal" tabindex="=-1" aria-labelledby="exempleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background: rgba(6, 73, 181,0.5)">
+                        <h5 class="text-black text-center">Available Course</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CourseName)
+                                    </th>                                                            
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var course in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => course.CourseName)
+                                        </td>                                    
+                                        <td>
+                                            <a asp-controller="Admin" asp-action="Edit" class="button btn btn-outline-info  w-100" asp-route-id="@course.CourseName">Edit</a>
+                                            
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+
+                                <a asp-controller="Admin" asp-action="ListCourse" style="font-size: 15px" asp-route-Id="CourseId" style="color:white" class=" button btn btn-outlined-info text-center btn-block btn-small" data-bs-toggle="tooltip" data-bs-placement="right" title="List">Go To List</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+     <!-- ********************************************COURSE Modal CONTENT End************************************************************************** -->
+
+     <!-- ********************************************FACULTY Modal************************************************************************** -->
+     <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+  
+        <div class=" col-sm-6 col-xl-3">
+            <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                 <img src="~/css/Faculty.svg" style="width: 90px" />
+                <div class="ms-3">
+                    <h4 class="mb-2">Faculties <span class="badge bg-primary rounded-pill text-white">@ViewBag.Faculty</span></h4>
+                </div>
+            </div>
+        </div>
+  
+  <!-- ********************************************FACULTY  Modal END ***********************************************************************************-->
+ 
+
+  <!-- ********************************************MODULE MODAL ************************************************************************** -->
+  <div class=" col-sm-6 col-xl-3">
+            <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                <img src="~/css/ModulesHod.svg" style="width: 90px" />
+                <div class="ms-3">
+                    <h4 class="mb-2">Modules <span class="badge bg-primary rounded-pill text-white">@ViewBag.Modules</span></h4>
+                </div>
+            </div>
+   </div>
+  
+ <!-- ********************************************MODULE Modal END************************************************************************** -->
+ <div class=" col-sm-6 col-xl-3">
+            <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                <img src="~/css/Enroll.svg" style="width: 90px" />
+                <div class="ms-3">
+                    <h4 class="mb-2">Enrollment <span class="badge bg-primary rounded-pill text-white">@ViewBag.Enroll</span></h4>
+                </div>
+            </div>
+ </div>
+</div>
+</div>
