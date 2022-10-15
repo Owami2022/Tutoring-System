@@ -1,0 +1,186 @@
+﻿@model TBHAcademy.Models.QuestionModel
+
+@{
+    ViewData["Title"] = "Quiz";
+    Layout = "_StudentLayout - Copy";
+}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        document.getElementById('btnSave').style.visibility = "Hidden";
+
+        $("#btnAddOption").click(function() {
+            AddOptionintoList();
+        });
+        $("#btnSave").click(function() {
+            SaveData();
+        });
+    });
+    function SaveData() {
+        //txtOptionName
+        //tblOption
+        var Answer = "";
+        var answerV = undefined;
+        $.each($("#tblOption tr"),
+            function() {
+                Answer = $(this).find("td:eq(0) input[type=radio]:checked").val();
+                if (Answer !== undefined) {
+                    answerV = Answer;
+                }
+            });
+        if (answerV === undefined) {
+            alert("Please select the correct Answer from the Options Saved.");
+            return false;
+        }
+        var ListofOptions = [];
+        var answerTextData = "";
+        var QuestionModel = {};
+        var Optiontxt = "";
+        $.each($("#tblOption tr"),
+            function() {
+                Answer = $(this).find("td:eq(0) input[type=radio]:checked").val();
+                Optiontxt = $(this).find("td:eq(0) input[type=radio]").val();
+                if (Answer !== undefined) {
+                    answerTextData = Answer;
+                }
+                ListofOptions.push(Optiontxt);
+            });
+
+        QuestionModel.ListofOptions = ListofOptions;
+        QuestionModel.QueAnswerTxt = answerTextData;
+        QuestionModel.QuestionNum = $("#QNum").val();
+        QuestionModel.QuestionDes = $("#QDes").val();
+        QuestionModel.QuizID = 1;
+
+        $.ajax({
+           
+            type: 'POST',
+            
+            url: '/Quiz/Add_Quiz_Question',
+            data: QuestionModel,
+            
+            success: function(data) {
+                if (data.success === true) {
+                    alert(data.message);
+                    $("#QNum").val() === "";
+                    $("#QDes").val() === "";
+                     $("#txtOptionName").val() === "";
+                    $("#tblOption tr").remove();
+                    $("#QNum").focus();
+
+                } else {
+                    alert(data.message);
+                }
+            },
+            error: function() {
+                alert("Error while processing the Quiz Information please try again.");
+            }
+
+
+        });
+
+    }
+    function AddOptionintoList() {
+        //txtOptionName
+        //tblOption
+        if ($("#tblOption tr").length === 3) {
+            document.getElementById('btnSave').style.visibility = "visible";
+        }
+        if ($("#QNum").val() === "") {
+            alert("Please Enter the Question Number.");
+            $("#QNum").focus();
+            return false;
+        }
+        if ($("#QDes").val() === "") {
+            alert("Please Enter the  Question Description.");
+            $("#QDes").focus();
+            return false;
+        }
+
+        if ($("#txtOptionName").val() === "") {
+            alert("Please Enter the option for the Question.");
+            $("#txtOptionName").focus();
+            return false;
+        }
+
+        if ($("#tblOption tr").length === 4) {
+            $("#txtOptionName").focus();
+            $("#txtOptionName").val(' ');
+            alert("Please Note that Only 4 Option are allowed Per Question.");
+            return false;
+        }
+        var listedValue = "";
+        var isSuccess = false;
+        $.each($("#tblOption tr"),
+            function() {
+                listedValue = $(this).find("td:eq(0) input[type=radio]").val();
+                if (listedValue === $("#txtOptionName").val()) {
+                    $("#txtOptionName").focus();
+                    $("#txtOptionName").val(' ');
+                    alert("Please Note that this Option is already Added.");
+                    isSuccess = true;
+                }
+            });
+        if (isSuccess === true) {
+            return false;
+        }
+
+        var OptionName = $("#txtOptionName").val();
+        var rowAdded = "<tr><td> <input type='radio' value = " + OptionName + " name='OptionName' /> " + OptionName + "</td></tr>";
+        $("#tblOption").append(rowAdded);
+        $("#txtOptionName").focus();
+        $("#txtOptionName").val(' ');
+    }
+</script>
+<!------------------------------------------------- Header --------------------------------------------------------------------------------------->
+<div id="ViewHeader" class="header w-100 mb-3 " style="background: rgba(6, 73, 181,0.5)">
+    <div class="pt-1 m-0 row">
+        <h5 class="text-white text-center ">@ViewBag.Message</h5>
+    </div>
+</div>
+<div class="container row col-12">
+    <div class="container-fluid pt-2 col-6" style="background-color: white">
+        <div class="col-md-6 col-sm-12">
+            <form method="post" asp-action="Add_Quiz_Question">
+                <input type="hidden" asp-for="QuizID" />
+                <div class="form-group">
+                    <label class="text-black font-weight-bold" asp-for="QuestionNum"></label>
+                    <input id="QNum" placeholder="E.g Question 1" asp-for="QuestionNum" class="form-control" />
+                    <span asp-validation-for="QuestionNum" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="text-black font-weight-bold" asp-for="QuestionDes"></label>
+                    <textarea id="QDes" asp-for="QuestionDes" class="form-control"></textarea>
+                    <span asp-validation-for="QuestionDes" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="text-black font-weight-bold" asp-for="ListofOptions"></label>
+                    <input id="txtOptionName" asp-for="ListofOptions" class="form-control" />
+                    <span asp-validation-for="ListofOptions" class="text-danger"></span>
+                </div>
+                <!--change this to use model values -->
+                <div class="form-group mt-2">
+
+                    <input id="btnAddOption" type="button" class="btn btn-primary" name="Option" value="Add Option" />
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container-fluid pt-2 col-6" style="background-color: white">
+        <div>
+            <table id="tblOption" class="table table-condensed caption-top" style="width: 100%">
+                <caption>Saved Options</caption>
+            </table>
+            <div class="form-group mt-3">
+                <input id="btnSave" class="btn btn-primary" type="button" value="Save Question" name="save" />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

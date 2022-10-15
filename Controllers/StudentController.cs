@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 using System.Runtime.CompilerServices;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace TBHAcademy.Controllers
 {
@@ -20,11 +21,13 @@ namespace TBHAcademy.Controllers
         private readonly UserManager<TBHAcademyUser> _userManager;
         private readonly SignInManager<TBHAcademyUser> _signInManager;
         private readonly TBHAcademyContext _db;
+        private readonly IEmailSender _emailSender;
 
-        public StudentController(TBHAcademyContext db)
+        public StudentController(TBHAcademyContext db, IEmailSender emailSender)
         {
             _db = db;
-            
+            _emailSender = emailSender;
+
         }
         //public IActionResult Index()
         //{
@@ -44,7 +47,7 @@ namespace TBHAcademy.Controllers
         //    return View(" ",Modules.ToList());
 
         //}
-      
+
         public IActionResult Index1()
         {
             return View();
@@ -52,6 +55,7 @@ namespace TBHAcademy.Controllers
 
         public IActionResult Index()
         {
+            //To get student Modules
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
             ViewBag.Modules = (from m in _db.Modules
                            join A in _db.AssignModules on m.ModuleId equals A.ModuleID
@@ -59,6 +63,7 @@ namespace TBHAcademy.Controllers
                            join U in _db.Users on E.StudentID equals U.Id
                            where A.AssignedID == E.ModuleID && E.StudentID == user
                            select new MyModules { AssignModulesVM = A, ModulesVM = m, EnrollVM = E}).ToList();
+       
 
             return View();
         }
@@ -82,8 +87,7 @@ namespace TBHAcademy.Controllers
                                 from U in _db.Users
                                 join AU in _db.AssignModules on U.Id equals AU.TutorID
                                 
-                                where AU.ModuleID == m.ModuleId
-                               
+                                where AU.ModuleID == m.ModuleId                    
                                 select new ModuleDisplay { ModulesVM = m, CourseVM = c, UserVM = U, AssignModulesVM = AU}).ToList();
             
 
@@ -110,7 +114,7 @@ namespace TBHAcademy.Controllers
         //}
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Enrolled(Enroll enroll,int iD)
+        public async Task<IActionResult> Enrolled(Enroll enroll,int iD)
         {
 
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -129,15 +133,20 @@ namespace TBHAcademy.Controllers
             enroll.DateErolled = DateTime.Today;
             enroll.ModuleID = iD;
             enroll.StudentID = user;
-            if (ViewBag.test != null)
+            if (ViewBag.test == null)
             {
                 return RedirectToAction("Enroll");
+                await _emailSender.SendEmailAsync("mosenakoketso2018@gmail.com", "Enrollement Notification",
+                     $"PleaseNote you have alreaddy for the module");
                 ViewBag.TestResult = " Already Enrolled Module";
             }
             else
             {
+
                 _db.Enroll.Add(enroll);
                 _db.SaveChanges();
+                await _emailSender.SendEmailAsync("mosenakoketso2018@gmail.com", "Enrollement Notification",
+                      $"Thank you for Enrolling with us");
                 return RedirectToAction("Enroll");
             }
 
@@ -157,5 +166,16 @@ namespace TBHAcademy.Controllers
         {
             return View();
         }
+        public IActionResult Find_Mates()
+        {
+            ViewBag.Studets = from R in _db.Roles
+                              join UR in _db.UserRoles on R.Id equals UR.RoleId
+                              from U in _db.Users
+                              join ur in _db.UserRoles on U.Id equals ur.UserId
+                              where R.Name == "Student" && U.Id == UR.UserId
+                              select U;
+            return View();
+        }
+
     }
 }

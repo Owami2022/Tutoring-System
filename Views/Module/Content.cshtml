@@ -11,152 +11,209 @@
         <h5 class="text-white text-center ">@ViewBag.Header</h5>
     </div>
 </div>
-@if(Layout == "~/Views/Shared/_TutorLayoutcshtml.cshtml"){
-    <div class="container mt-3">
-  <button type="button" id="Add" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-    Add new Content
-  </button>
+@if (Layout == "~/Views/Shared/_TutorLayoutcshtml.cshtml")
 
-</div>
-<script defer>
-$(document).ready(function() {
-    $("#Add").click(function() {
-        $('#Display').load("/Module/Add");
-    });
-});
-</script>
+{
+    <div class="container mt-3">
+        <button type="button" id="Add" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+            Add new Content
+        </button>
+
+    </div>
+    <script defer>
+        $(document).ready(function() {
+            $("#Add").click(function() {
+                $('#Display').load("/Module/Add");
+            });
+        });
+    </script>
 }
 
+<!--Quizes button-->
+<div id="QuizesButton" class="w-100">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Active Quizes</button>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="QuizModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg  modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="QuizModal">Active Quizes</h4>
+                    <a class="btn btn-primary" asp-controller="Quiz" asp-action="Create_Quiz">Create New Quiz</a>
+                </div>
+                <div class="modal-body">
+                    <div id="QmodalBody" class="w-100">
+                        <div class="table-responsive">
+                            <table class="table text-start align-middle table-borderless table-hover mb-0">
+
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Quize Name</th>
+                                        <th>Active Date</th>
+                                        <th>Due Date&Time</th>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td><a asp-controller="Quize" asp-action="#" asp-route-id="1">Quize 1</a></td>
+                                        <td><a asp-controller="Quize" asp-action="#" asp-route-id="1">21 October 2022 23:55</a></td>
+                                        <td><a asp-controller="Quize" asp-action="#" asp-route-id="1">22 October 2022 23:55</a></td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                    </tr>
+
+                                </tbody>
+
+
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- The Modal -->
 <div class="modal" id="myModal">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <!-- Modal body -->
-      <div class="modal-body">
-        <div id="Display"></div>
-      </div>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div id="Display"></div>
+            </div>
             <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-      </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+            </div>
 
+        </div>
     </div>
-  </div>
 </div>
 <!--Displaying the conetne-->
 <div id="accordion" class="pt-2">
-    @if(ViewBag.Bool != null)
+    @if (ViewBag.Bool != null)
     {
-         @foreach (var item in Model)
-    {
-         <h2>
-            <a href="#">
-                @item.Title
-            </a>
-        </h2>
-        <div>
+        @foreach (var item in Model)
+        {
+            <h2>
+                <a href="#">
+                    @item.Title
+                </a>
+            </h2>
             <div>
-                <div class="pb-2 fw-bold">
-                  <a class="text-primary" href="#">@item.TopicDescription</a>
-                </div>
-                <div class="pb-2 fw-bold">
-                    <a class="text-primary" href="#">@item.DocumentDescription1</a>
+                <div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.TopicDescription</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.DocumentDescription1</a>
 
-                </div>
-                <div class="pb-2 fw-bold">
-                   <a class="text-primary" href="#">@item.Document1</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.Document1</a>
 
-                </div>
-                <div class="pb-2 fw-bold">
-                    <a class="text-primary" href="#">@item.DocumentDescription2</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.DocumentDescription2</a>
 
-                </div>
-                <div class="pb-2 fw-bold">
-                   <a class="text-primary" href="#">@item.Document2</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.Document2</a>
 
-                </div>
-                <div class="pb-2 fw-bold">
-                    <a class="text-primary" href="#">@item.DocumentDescription3</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.DocumentDescription3</a>
 
-                </div>
-                <div class="pb-2 fw-bold">
-                   <a class="text-primary" href="#">@item.Document3</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.Document3</a>
 
-                </div>
-                 <div class="pb-2 fw-bold">
-                    <a class="text-primary" href="#">@item.DocumentDescription4</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.DocumentDescription4</a>
 
-                </div>
-                <div class="pb-2 fw-bold">
-                   <a class="text-primary" href="#">@item.Document5</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.Document5</a>
 
-                </div>
-                 <div class="pb-2 fw-bold">
-                    <a class="text-primary" href="#">@item.DocumentDescription5</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.DocumentDescription5</a>
 
-                </div>
-                <div class="pb-2 fw-bold">
-                   <a class="text-primary" href="#">@item.LinkDescription1</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.LinkDescription1</a>
 
-                </div>
-                 <div class="pb-2 fw-bold">
-                    <a class="text-primary" href="#">@item.Link1</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.Link1</a>
 
-                </div>
-                         <div class="pb-2 fw-bold">
-                   <a class="text-primary" href="#">@item.LinkDescription1</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.LinkDescription1</a>
 
-                </div>
-                 <div class="pb-2 fw-bold">
-                    <a class="text-primary" href="#">@item.Link2</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.Link2</a>
 
-                </div>
-                         <div class="pb-2 fw-bold">
-                   <a class="text-primary" href="#">@item.LinkDescription2</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.LinkDescription2</a>
 
-                </div>
-                 <div class="pb-2 fw-bold">
-                    <a class="text-primary" href="#">@item.Link3</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.Link3</a>
 
-                </div>
-                           <div class="pb-2 fw-bold">
-                   <a class="text-primary" href="#">@item.LinkDescription3</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.LinkDescription3</a>
 
-                </div>
-                 <div class="pb-2 fw-bold">
-                    <a class="text-primary" href="#">@item.Link4</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.Link4</a>
 
-                </div>
-                           <div class="pb-2 fw-bold">
-                   <a class="text-primary" href="#">@item.LinkDescription5</a>
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.LinkDescription5</a>
 
-                </div>
-                 <div class="pb-2 fw-bold">
-                    <a class="text-primary" href="#">@item.Link2</a>
-                </div>
-                @if(Layout == "~/Views/Shared/_TutorLayoutcshtml.cshtml")
+                    </div>
+                    <div class="pb-2 fw-bold">
+                        <a class="text-primary" href="#">@item.Link2</a>
+                    </div>
+                    @if (Layout == "~/Views/Shared/_TutorLayoutcshtml.cshtml")
                     {
-                                            <div class="modal-footer">
-                           <a asp-controller="#" asp-action="#" asp-route-ID="@item.ContentId" name="Update" class="btn btn-primary">Update</a>
-                                
-                      <button type="button" class="btn btn-outline-danger text-mute" data-dismiss="modal">Delete</button>
+                        <div class="modal-footer">
+                            <a asp-controller="#" asp-action="#" asp-route-ID="@item.ContentId" name="Update" class="btn btn-primary">Update</a>
 
-                  </div>
+
+                            <button type="button" class="btn btn-outline-danger text-mute" data-dismiss="modal">Delete</button>
+
+                        </div>
                     }
 
+                </div>
             </div>
-        </div>
-        
+
         }
-        
+
     }
-   else
-        {
-            <h3>No Content uploaded yet, Please be patient</h3>
-        }
-   
-   
+    else
+    {
+        <h3>No Content uploaded yet, Please be patient</h3>
+    }
+
+
 </div>
 @*<div class="accordion" id="regularAccordionRobots">
 
@@ -173,7 +230,7 @@ $(document).ready(function() {
     </div>
   </div>
 
-  <div class="accordion-item"> 
+  <div class="accordion-item">
     <h2 class="accordion-header" id="regularHeadingSecond">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#regularCollapseSecond" aria-expanded="false" aria-controls="regularCollapseSecond">
         The Social Impact of Collective Artificial Intelligence

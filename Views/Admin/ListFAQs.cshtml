@@ -1,36 +1,11 @@
 ﻿@model IEnumerable<FAQ>
 
 @{
-    ViewData["Title"] = "ListCourse";
+    ViewData["Title"] = "List Of Frequently Questions";
     Layout = "_AdminLayout";
 }
 
-@*<div>
-    <h4>FAQ</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Questions)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Questions)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Answer)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Answer)
-        </dd>
-    </dl>
-</div>*@
-
-
+ 
 
 <div>
     <div class="w-100 mb-2  " style="background: rgba(6, 73, 181,0.5)">
@@ -38,6 +13,15 @@
         <h5 class="text-white text-center ">Frequently Asked Questions</h5>
     </div>
 </div>
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="@Url.Action("FAQs","Admin")">Home</a></li>
+    <li class="breadcrumb-item"> </li>
+    <li class="breadcrumb-item active" aria-current="page">FAQs List</li>
+  </ol>
+</nav>
+
     <div class="pl-3 pr-3">
         
         <a asp-action="FAQs" class="btn btn-outline-info ml-1 mb-2">Add Q & A</a>
@@ -50,6 +34,7 @@
                      <th>Options</th>
                   
                 </tr>
+                </thead>
                  <tbody>
                 @if (Model != null)
                 {
@@ -58,19 +43,19 @@
                         <tr>
                             <td>@FAQ.Questions</td>
                             <td style="">@FAQ.Answer</td>
+                            <td>
+                                <a asp-action="EditFAQs" class="btn btn-outline-info  w-25" asp-route-id="@FAQ.FAQId">Edit</a>
+                                <a asp-action="DeleteFAQs">
+        <input type="submit" value="Delete" class="button btn btn-danger" /></a>
+        
+
                                        </tr>
                     }
                 }
             </tbody>
         </table>
-                           
-            </thead>
-            <tbody>
-             
-                    
-                
-            </tbody>
-        </table>
+        
+  
     </div>
 </div>
 

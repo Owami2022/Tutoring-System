@@ -6,7 +6,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>C:\Users\koketso mosena\OneDrive\Desktop\Published</_PublishTargetUrl>
-    <History>True|2022-10-13T23:54:40.7024106Z;True|2022-10-14T01:52:39.8905553+02:00;True|2022-10-11T12:20:29.7036344+02:00;True|2022-10-10T23:39:03.0655113+02:00;True|2022-10-10T23:37:25.0425768+02:00;True|2022-09-14T16:52:57.8582899+02:00;True|2022-06-10T23:54:10.0887246+02:00;True|2022-06-10T08:52:56.4431786+02:00;True|2022-06-09T02:42:43.2155234+02:00;True|2022-06-07T20:07:50.5649598+02:00;True|2022-06-05T04:40:41.8693559+02:00;True|2022-06-05T01:51:09.6226929+02:00;True|2022-06-05T01:35:23.2890954+02:00;True|2022-06-04T00:12:03.5904501+02:00;True|2022-06-03T23:58:11.5339752+02:00;True|2022-06-03T23:03:49.0199625+02:00;True|2022-06-01T23:58:24.2417089+02:00;</History>
+    <History>True|2022-10-15T12:33:43.1265973Z;True|2022-10-14T21:57:57.1215029+02:00;False|2022-10-14T21:56:04.7883941+02:00;True|2022-09-14T16:52:57.8582899+02:00;True|2022-06-10T23:54:10.0887246+02:00;True|2022-06-10T08:52:56.4431786+02:00;True|2022-06-09T02:42:43.2155234+02:00;True|2022-06-07T20:07:50.5649598+02:00;True|2022-06-05T04:40:41.8693559+02:00;True|2022-06-05T01:51:09.6226929+02:00;True|2022-06-05T01:35:23.2890954+02:00;True|2022-06-04T00:12:03.5904501+02:00;True|2022-06-03T23:58:11.5339752+02:00;True|2022-06-03T23:03:49.0199625+02:00;True|2022-06-01T23:58:24.2417089+02:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include=".editorconfig">
@@ -16,7 +16,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="appsettings.json">
-      <publishTime>10/12/2022 01:18:05</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Areas/Identity/Data/TBHAcademyContext.cs">
       <publishTime>10/07/2022 23:26:20</publishTime>
@@ -25,7 +25,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Areas/Identity/IdentityHostingStartup.cs">
-      <publishTime>10/12/2022 02:10:19</publishTime>
+      <publishTime>10/15/2022 13:13:08</publishTime>
     </File>
     <File Include="Areas/Identity/Pages/Account/AccessDenied.cshtml">
       <publishTime>10/07/2022 23:26:20</publishTime>
@@ -52,13 +52,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Areas/Identity/Pages/Account/ForgotPassword.cshtml">
-      <publishTime>10/07/2022 23:26:20</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Areas/Identity/Pages/Account/ForgotPassword.cshtml.cs">
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml">
-      <publishTime>10/07/2022 23:26:20</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml.cs">
       <publishTime>10/07/2022 23:26:20</publishTime>
@@ -73,7 +73,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Areas/Identity/Pages/Account/Login.cshtml.cs">
-      <publishTime>10/12/2022 02:10:18</publishTime>
+      <publishTime>10/14/2022 13:37:43</publishTime>
     </File>
     <File Include="Areas/Identity/Pages/Account/LoginWith2fa.cshtml">
       <publishTime>10/07/2022 23:26:20</publishTime>
@@ -196,13 +196,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Areas/Identity/Pages/Account/Register.cshtml.cs">
-      <publishTime>10/14/2022 01:49:57</publishTime>
+      <publishTime>10/14/2022 12:04:28</publishTime>
     </File>
     <File Include="Areas/Identity/Pages/Account/RegisterConfirmation.cshtml">
       <publishTime>10/12/2022 02:10:19</publishTime>
     </File>
     <File Include="Areas/Identity/Pages/Account/RegisterConfirmation.cshtml.cs">
-      <publishTime>10/14/2022 01:31:26</publishTime>
+      <publishTime>10/15/2022 13:13:14</publishTime>
     </File>
     <File Include="Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml">
       <publishTime>10/07/2022 23:26:20</publishTime>
@@ -661,10 +661,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/07/2022 23:26:25</publishTime>
     </File>
     <File Include="Controllers/AdminController.cs">
-      <publishTime>10/11/2022 02:00:15</publishTime>
+      <publishTime>10/15/2022 13:14:08</publishTime>
     </File>
     <File Include="Controllers/AdministrationController.cs">
-      <publishTime>10/07/2022 23:26:20</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Controllers/ComingSoonPage.cs">
       <publishTime>10/11/2022 02:00:15</publishTime>
@@ -676,7 +676,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Controllers/DashboardController.cs">
-      <publishTime>10/12/2022 02:14:00</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Controllers/Enrolled_Module_Display.cs">
       <publishTime>10/07/2022 23:26:20</publishTime>
@@ -690,11 +690,14 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Controllers/ModuleController.cs">
       <publishTime>10/11/2022 02:00:15</publishTime>
     </File>
+    <File Include="Controllers/PasswordLink.cs">
+      <publishTime>10/15/2022 13:10:39</publishTime>
+    </File>
     <File Include="Controllers/ReportController.cs">
-      <publishTime>10/11/2022 02:00:16</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Controllers/StudentController.cs">
-      <publishTime>10/11/2022 22:51:19</publishTime>
+      <publishTime>10/15/2022 14:03:08</publishTime>
     </File>
     <File Include="Controllers/TutorController.cs">
       <publishTime>10/11/2022 01:51:55</publishTime>
@@ -799,7 +802,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Models/FAQ.cs">
-      <publishTime>10/07/2022 23:26:20</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Models/keyAttribute.cs">
       <publishTime>10/07/2022 23:26:20</publishTime>
@@ -843,17 +846,23 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="ScaffoldingReadMe.txt">
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
-    <File Include="Services/emailSender.cs">
-      <publishTime>10/14/2022 01:53:56</publishTime>
+    <File Include="Services/EmailSender.cs">
+      <publishTime>10/14/2022 21:28:39</publishTime>
     </File>
     <File Include="Startup.cs">
-      <publishTime>10/12/2022 01:35:50</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
+    </File>
+    <File Include="Views/Admin/Calender.cshtml">
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Views/Admin/Edit.cshtml">
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
+    <File Include="Views/Admin/EditFAQs.cshtml">
+      <publishTime>10/15/2022 13:10:39</publishTime>
+    </File>
     <File Include="Views/Admin/FAQs.cshtml">
-      <publishTime>10/07/2022 23:26:20</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Views/Admin/Index.cshtml">
       <publishTime>10/07/2022 23:26:20</publishTime>
@@ -868,7 +877,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Views/Admin/ListFAQs.cshtml">
-      <publishTime>10/07/2022 23:26:20</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Views/Admin/Statistics.cshtml">
       <publishTime>10/07/2022 23:26:20</publishTime>
@@ -877,13 +886,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Views/Administration/ListRoles.cshtml">
-      <publishTime>10/07/2022 23:26:20</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Views/ComingSoonPage/Index.cshtml">
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Views/ContactUs/Index.cshtml">
       <publishTime>10/07/2022 23:26:20</publishTime>
+    </File>
+    <File Include="Views/Dashboard/Admin.cshtml">
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Views/Dashboard/Hod.cshtml">
       <publishTime>10/07/2022 23:26:20</publishTime>
@@ -967,7 +979,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Views/Shared/_AdminLayout.cshtml">
-      <publishTime>10/07/2022 23:26:20</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Views/Shared/_Fake.cshtml">
       <publishTime>10/07/2022 23:26:20</publishTime>
@@ -982,7 +994,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
-      <publishTime>10/11/2022 02:18:40</publishTime>
+      <publishTime>10/15/2022 13:52:45</publishTime>
     </File>
     <File Include="Views/Shared/_StudentLayout - Copy.cshtml">
       <publishTime>10/12/2022 02:14:01</publishTime>
@@ -1048,7 +1060,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Views/UserRoles/UserRoleIndex.cshtml">
-      <publishTime>10/07/2022 23:26:20</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Views/_ViewImports.cshtml">
       <publishTime>10/07/2022 23:26:20</publishTime>

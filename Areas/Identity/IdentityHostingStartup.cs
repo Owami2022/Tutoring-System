@@ -3,14 +3,12 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TBHAcademy.Areas.Identity.Data;
 using TBHAcademy.Data;
-using TBHAcademy.Services;
 
 [assembly: HostingStartup(typeof(TBHAcademy.Areas.Identity.IdentityHostingStartup))]
 namespace TBHAcademy.Areas.Identity
@@ -38,16 +36,14 @@ namespace TBHAcademy.Areas.Identity
 
 
             };
-               
-                services.AddIdentity<TBHAcademyUser, IdentityRole>(options => 
+
+            services.AddIdentity<TBHAcademyUser, IdentityRole>(options => 
             {
                 options.SignIn.RequireConfirmedAccount = true;
-                options.SignIn.RequireConfirmedEmail = true;
                 options.Password.RequireLowercase = true;
                 options.Password.RequireUppercase = true;
                 options.Password.RequireDigit = true;
                 options.Password.RequiredLength = 8;
-
 
                 options.Lockout = lockoutOptions;
             })
