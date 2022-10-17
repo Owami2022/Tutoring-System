@@ -8,9 +8,11 @@ namespace TBHAcademy.Models
 {
     public class QuestionOptions
     {
-        [key]
+        [Key]
         public int OpID { get; set; }
+        [Required]
         public string OpName { get; set; }
+        [Required]
         public int Qid { get; set; }
     }
 }

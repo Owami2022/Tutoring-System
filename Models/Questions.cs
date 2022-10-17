@@ -9,7 +9,7 @@ namespace TBHAcademy.Models
 {
     public class Questions
     {
-        [key]
+        [Key]
         public int QId { get; set; }
         [Required(ErrorMessage = "Question Number is Required")]
         [DisplayName("Question Number")]

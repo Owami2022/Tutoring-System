@@ -31,6 +31,7 @@ namespace TBHAcademy.Data
         public DbSet<Modules> Modules { get; set; }
         public DbSet<AssignModules> AssignModules { get; set; }
         public DbSet<Content> Content { get; set; }
+        public DbSet<Attempt> Attempt { get; set; }
         public DbSet<Quiz> Quiz { get; set; }
         public DbSet<Questions> Questions { get; set; }
         public DbSet<QuestionOptions> QuestionOptions { get; set; }
@@ -38,8 +39,10 @@ namespace TBHAcademy.Data
         public DbSet<TeamMark> TeamMark { get; set; }
         public DbSet<Mark_Capture> Mark_Capture { get; set; }
         public DbSet<Announcements> Announcements { get; set; }
-        public DbSet<FAQ> fAQs { get; set; }
-    
+        public DbSet<FAQ> fAQs { get; set; }  
+        public DbSet<Marks> Marks { get; set; }
+        public DbSet<Comment> Comment { get; set; }
+        public DbSet<ScheduleMeeting> ScheduleMeeting { get; set; }
 
     }
 }

@@ -8,7 +8,7 @@ namespace TBHAcademy.Models
 {
     public class Quiz
     {
-        [key]
+        [Key]
 
         public int QuizID { get; set; }
         [Required]

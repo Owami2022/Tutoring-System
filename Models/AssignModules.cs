@@ -17,6 +17,5 @@ namespace TBHAcademy.Models
         public virtual TBHAcademyUser TBHAcademyUser { get; set; }
         public virtual Modules Modules { get; set; }
 
-
     }
 }

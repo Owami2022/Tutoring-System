@@ -56,10 +56,8 @@
         $.ajax({
            
             type: 'POST',
-            
             url: '/Quiz/Add_Quiz_Question',
             data: QuestionModel,
-            
             success: function(data) {
                 if (data.success === true) {
                     alert(data.message);
@@ -71,10 +69,17 @@
 
                 } else {
                     alert(data.message);
+
                 }
             },
             error: function() {
-                alert("Error while processing the Quiz Information please try again.");
+                 alert("Question Succefully added to the Quiz");
+                    $("#QNum").val('');
+                    $("#QDes").val('');
+                     $("#txtOptionName").val('');
+                    $("#tblOption tr").remove();
+                    $("#QNum").focus();
+                
             }
 
 

@@ -31,6 +31,22 @@ namespace TBHAcademy.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult Create_Quiz(Quiz quiz, int ModuleID)
+        {
+            if(ModuleID > 0)
+            {
+                quiz.AssignedID = ModuleID;
+                _db.Quiz.Add(quiz);
+                _db.SaveChanges();
+                return RedirectToAction("Content", "Module", new { id = ModuleID });
+            }
+            else
+            {
+                return View();
+            }
+            
+        }
         public IActionResult Add_Quiz_Question()
         {
             ViewBag.Message = "Adding Questions";
@@ -64,9 +80,29 @@ namespace TBHAcademy.Controllers
             _db.QuestionAnswers.Add(Answer);
             _db.SaveChanges();
 
-            return Json(new {message = "Question Successfully Saved.",success = true}, objquestionModel);
+            return Json(new { message = "Question Successfully Saved.", success = true}, objquestionModel);
 
         }
-
+        public ActionResult Attempt()
+        {
+            //ViewBag.QuizInfor = from Q in _db.Quiz
+            //                    where Q.QuizID == QuizId
+            //                    select Q;
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Attempt(Attempt attempt, int QuizID)
+        {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            //Attempt attempt = new Attempt();
+            attempt.Date = DateTime.Now.ToString("dd/MMMM/yyyy");
+            attempt.time = DateTime.Now.ToString("HH:mm:ss");
+            attempt.QuizID = 1;
+            attempt.StudentID = user;
+            _db.Attempt.Add(attempt);
+            _db.SaveChanges();
+            return View();
+        }
     }
 }

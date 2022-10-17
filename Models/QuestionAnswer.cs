@@ -9,9 +9,11 @@ namespace TBHAcademy.Models
 {
     public class QuestionAnswer
     {
-        [key]
+        [Key]
         public int AnsID { get; set; }
+        [Required]
         public string AnsText { get; set; }
+        [Required]
         public int Qid { get; set; }
     }
 }

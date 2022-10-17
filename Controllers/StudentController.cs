@@ -29,6 +29,7 @@ namespace TBHAcademy.Controllers
             _emailSender = emailSender;
 
         }
+
         //public IActionResult Index()
         //{
         //    IEnumerable<Enroll> List1 = _db.Enroll;
@@ -124,6 +125,12 @@ namespace TBHAcademy.Controllers
                                join U in _db.Users on E.StudentID equals U.Id
                                where A.AssignedID == E.ModuleID && E.StudentID == user
                                select new MyModules { AssignModulesVM = A, ModulesVM = m, EnrollVM = E }).ToList();
+
+
+
+
+
+
             ViewBag.test = (from m in _db.Modules
                             join A in _db.AssignModules on m.ModuleId equals A.ModuleID
                             from E in _db.Enroll
