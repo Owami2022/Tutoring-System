@@ -2,9 +2,11 @@
 using System.Net.Mail;
 using System;
 using TBHAcademy.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TBHAcademy.Controllers
 {
+    [Authorize]
     public class ContactUs : Controller
     {
         [HttpGet]

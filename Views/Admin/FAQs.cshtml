@@ -2,7 +2,7 @@
 @{
 
     Layout = "_AdminLayout";
-    string title = ViewBag.Action + " Course";
+    string title = ViewBag.Action + " FAQ";
     ViewBag.Title = title.ToUpper();
 }
 
@@ -12,6 +12,8 @@
         <h5 class="text-white text-center ">FAQs</h5>
     </div>
 </div>
+
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -24,11 +26,17 @@
                 <input asp-for="Questions" class="form-control" />
                 <span asp-validation-for="Questions" class="text-danger"></span>
             </div>
-            <div class="form-group">
+          @*  <div class="form-group">
                 <label asp-for="Answer" class="control-label"></label>
                 <input asp-for="Answer" class="form-control" />
                 <span asp-validation-for="Answer" class="text-danger"></span>
-            </div>
+            </div>*@
+             <div class="form-group">  
+                 <label asp-for="Answer" ></label>   
+                 <textarea class="form-control"  asp-for="Answer" rows="3"> </textarea>
+                  <span asp-validation-for="Answer" class="text-danger"></span>
+             </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

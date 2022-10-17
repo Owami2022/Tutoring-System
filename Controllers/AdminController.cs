@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
@@ -16,7 +18,7 @@ using TBHAcademy.Models;
 
 namespace TBHAcademy.Controllers
 {
-    // [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Administrator")]
     public class AdminController : Controller
     {
         private readonly TBHAcademyContext _db;
@@ -272,18 +274,13 @@ namespace TBHAcademy.Controllers
 
         public IActionResult FAQs()
         {
-            return View();
-        }
-
-        public IActionResult ListFAQs()
-        {
 
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult InsertFAQ(FAQ fAQ)
+        public IActionResult FAQs(FAQ fAQ)
         {
             if (ModelState.IsValid)
             {
@@ -292,6 +289,45 @@ namespace TBHAcademy.Controllers
                 return RedirectToAction("ListFAQs");
             }
             return View(fAQ);
+        }
+
+        public IActionResult ListFAQs()
+        {
+            {
+                IEnumerable<FAQ> FAQsList = _db.fAQs;
+                return View(FAQsList);
+            }
+
+
+
+
+        }
+        [HttpGet]
+        public IActionResult EditFAQs(int id)
+        {
+
+
+            ViewBag.Action = (id == 0) ? "Add" : "Update";
+            var fAQ = _db.fAQs.Find(id);
+            if (id > 0)
+            {
+                return View(fAQ);
+            }
+            else
+            {
+                return View(new FAQ());
+            }
+        }
+
+        public IActionResult ViewFAQs()
+        {
+            return View();
+        }
+
+
+        public IActionResult Calender()
+        {
+            return View();
         }
     }
 }

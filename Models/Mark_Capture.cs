@@ -29,6 +29,7 @@ namespace TBHAcademy.Models
         [Required]
         [Display(Name = "Mark Obtained")]
         public int mark_Obtained { get; set; }
+        public double Mark_Percentage { get; set; }
 
 
 

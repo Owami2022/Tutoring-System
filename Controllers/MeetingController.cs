@@ -112,10 +112,10 @@ namespace TBHAcademy.Controllers
         // GET: MeetingController/Edit/5
 
 
-        public IActionResult UpdateMeeting(int id)
-        {
+        //public IActionResult UpdateMeeting(int id)
+        //{
             
-        }
+        //}
 
 
 

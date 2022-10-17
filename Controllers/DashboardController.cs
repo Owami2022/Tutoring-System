@@ -10,13 +10,14 @@ using TBHAcademy.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 using System.Runtime.CompilerServices;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TBHAcademy.Controllers
 {
+    [Authorize]
     public class DashboardController : Controller
     {
-        private readonly UserManager<TBHAcademyUser> _userManager;
-        private readonly SignInManager<TBHAcademyUser> _signInManager;
+
         private readonly TBHAcademyContext _db;
 
         public DashboardController(TBHAcademyContext db)
@@ -33,6 +34,15 @@ namespace TBHAcademy.Controllers
                                join U in _db.Users on E.StudentID equals U.Id
                                where A.AssignedID == E.ModuleID && E.StudentID == user
                                select new MyModules { AssignModulesVM = A, ModulesVM = m, EnrollVM = E }).ToList();
+            ViewBag.Message = "Progress Report";
+          
+            ViewBag.ProgressReport = (from AM in _db.AssignModules
+                                      join M in _db.Modules on AM.ModuleID equals M.ModuleId
+                                      from MC in _db.Mark_Capture
+                                      join U in _db.Users on MC.StudentID equals U.Id
+                                      where MC.StudentID == user && MC.ModuleID == AM.AssignedID
+                                      select new Capture_Mark_Display { AssignModules = AM, TBHAcademyUser = U, Mark_Capture = MC, Modules = M }).ToList();
+
 
 
             return View();
@@ -45,6 +55,18 @@ namespace TBHAcademy.Controllers
             ViewBag.Enroll = _db.Enroll.Count(x => x.EnrolledID > 0);
             IEnumerable<Faculty> FacultyList = _db.Faculty;
             return View(FacultyList);
+        }
+
+        public IActionResult Admin()
+        {
+            ViewBag.Course = _db.Course.Count(x => x.CourseId > 0);
+            ViewBag.Faculty = _db.Faculty.Count(x => x.FacultyId > 0);
+            //ViewBag.Users = _db.Users.Count(x => x.AccessFailedCount > 0);
+            ViewBag.Modules = _db.Modules.Count(x => x.ModuleId > 0);
+            ViewBag.Enroll = _db.Enroll.Count(x => x.EnrolledID >= 0);
+            IEnumerable<Course> CourseList = _db.Course;
+            return View(CourseList);
+
         }
     }
 }

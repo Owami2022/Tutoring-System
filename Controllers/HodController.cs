@@ -1,4 +1,5 @@
 ﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -12,14 +13,15 @@ using TBHAcademy.Models;
 
 namespace TBHAcademy.Controllers
 {
+    [Authorize(Roles = "Head of Department")]
     public class HodController : Controller
     {
         private readonly TBHAcademyContext _db;
-        private readonly INotyfService _notyf;
-        private readonly IEmailSender _emailSender;
-        private readonly UserManager<TBHAcademyUser> _userManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly SignInManager<TBHAcademyUser> _signInManager;
+        //private readonly INotyfService _notyf;
+        //private readonly IEmailSender _emailSender;
+        //private readonly UserManager<TBHAcademyUser> _userManager;
+        //private readonly RoleManager<IdentityRole> _roleManager;
+        //private readonly SignInManager<TBHAcademyUser> _signInManager;
         public HodController(TBHAcademyContext db)
         {
             _db = db; 
@@ -131,12 +133,12 @@ namespace TBHAcademy.Controllers
             var faculty = await _db.Faculty.FirstOrDefaultAsync(s => s.FacultyId == id);
             if (faculty.Status == (int)CourseStatus.Inactive)
             {
-                _notyf.Warning("This course is already Inactive");
+                //_notyf.Warning("This course is already Inactive");
             }
             else
             {
                 faculty.Status = (int)CourseStatus.Inactive;
-                _notyf.Success("Course Deactivated");
+                //_notyf.Success("Course Deactivated");
                 await _db.SaveChangesAsync();
             }
             return RedirectToAction(nameof(ListFaculty));
@@ -153,12 +155,12 @@ namespace TBHAcademy.Controllers
             var faculty = await _db.Faculty.FirstOrDefaultAsync(s => s.FacultyId == id);
             if (faculty.Status == (int)CourseStatus.Active)
             {
-                _notyf.Warning("Faculty already active");
+                //_notyf.Warning("Faculty already active");
             }
             else
             {
                 faculty.Status = (int)CourseStatus.Active;
-                _notyf.Success("Faculty Activated");
+                //_notyf.Success("Faculty Activated");
                 await _db.SaveChangesAsync();
             }
 

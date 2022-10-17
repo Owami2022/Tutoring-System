@@ -33,7 +33,11 @@
             <td>
                 <a class="btn btn-primary" asp-controller="UserRoles" asp-action="Manage" asp-route-userId="@user.UserId">Manage Roles</a>
             </td>
+            <td> 
+        <a class="button nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/ForgotPassword">Reset Password link</a>
+    </td>
         </tr>
         }
     </tbody>
 </table>
+

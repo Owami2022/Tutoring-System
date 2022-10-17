@@ -518,6 +518,9 @@ namespace TBHAcademy.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("Mark_Percentage")
+                        .HasColumnType("float");
+
                     b.Property<int>("ModuleID")
                         .HasColumnType("int");
 
