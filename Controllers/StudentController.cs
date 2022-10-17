@@ -24,6 +24,7 @@ namespace TBHAcademy.Controllers
             _db = db;
             
         }
+
         //public IActionResult Index()
         //{
         //    IEnumerable<Enroll> List1 = _db.Enroll;
