@@ -4454,3 +4454,9 @@ C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\TBHAcademy.pd
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\TBHAcademy.genruntimeconfig.cache
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\ref\TBHAcademy.dll
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Shared\_AdminLayoutNew.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Marks\Create.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Marks\ListMarks.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\AddMeeting.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\Create.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\Index.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\ListMeetings.cshtml.g.cs
