@@ -134,7 +134,16 @@ namespace TBHAcademy.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult UpdateMeeting(ScheduleMeeting scheduleMeeting)
         {
-            _db.ScheduleMeeting.Update(scheduleMeeting);
+            ScheduleMeeting schedule = new ScheduleMeeting();
+            schedule = _db.ScheduleMeeting.Where(x=>x.ScheduleMeetingID == scheduleMeeting.ScheduleMeetingID).FirstOrDefault();
+            //schedule.Description = scheduleMeeting.Description;
+            //schedule.AppointmentDate = scheduleMeeting.AppointmentDate;
+            //schedule.StudentId = scheduleMeeting.StudentId;
+            //schedule.Link = scheduleMeeting.Link;
+
+            schedule = scheduleMeeting;
+
+            _db.ScheduleMeeting.Update(schedule);
             _db.SaveChanges();
             return RedirectToAction("ListMeetings");
         }

@@ -466,9 +466,11 @@ namespace TBHAcademy.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Answer")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("FAQId");
@@ -550,7 +552,6 @@ namespace TBHAcademy.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("MarksComment")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MarksDescription")

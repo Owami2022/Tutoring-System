@@ -35,7 +35,7 @@ namespace TBHAcademy.Controllers
                                where A.AssignedID == E.ModuleID && E.StudentID == user
                                select new MyModules { AssignModulesVM = A, ModulesVM = m, EnrollVM = E }).ToList();
             ViewBag.Message = "Progress Report";
-          
+
             ViewBag.ProgressReport = (from AM in _db.AssignModules
                                       join M in _db.Modules on AM.ModuleID equals M.ModuleId
                                       from MC in _db.Mark_Capture
@@ -67,6 +67,10 @@ namespace TBHAcademy.Controllers
             IEnumerable<Course> CourseList = _db.Course;
             return View(CourseList);
 
+        }
+        public IActionResult Tutor()
+        {
+            return View();
         }
     }
 }

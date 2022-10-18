@@ -324,7 +324,6 @@ namespace TBHAcademy.Controllers
             return View();
         }
 
-
         public IActionResult Calender()
         {
             return View();

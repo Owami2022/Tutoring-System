@@ -349,11 +349,13 @@
 
                 <li class="nav-item  ">
 
-                    <a href="#" id="Dashboard" class="button nav-link" style="color:white"><i data-feather="package" style="color:white"></i><span>Dashboard</span></a>
+                    <a href="@Url.Action("Dashboard","Tutor")" id="Dashboard" class="button nav-link" style="color:white"><i data-feather="package" style="color:white"></i><span>Dashboard</span></a>
                 </li>
 
-                <li class="nav-item" style="color:white"><a href="" style="color:white" class="nav-link"><i data-feather="edit-3" style="color:white"></i><span>Content</span></a></li>
-                <li class="nav-item" style="color:white"><a href="" style="color:white" class="nav-link"><i data-feather="monitor" style="color:white"></i><span>Schedule Meet</span></a></li>
+               @* --------------------------------Nav bar href----------------------------------------*@
+
+                <li class="nav-item" style="color:white"><a asp-controller="Module" asp-action="Content" style="color:white" class="nav-link"><i data-feather="edit-3" style="color:white"></i><span>Content</span></a></li>
+                <li class="nav-item" style="color:white"><a href="@Url.Action("ListMeeting","Meeting")" style="color:white" class="nav-link"><i data-feather="monitor" style="color:white"></i><span>Schedule Meet</span></a></li>
                 <li class="nav-item">
 
                     @*-------------------Add Marks-----------------------*@

@@ -23,8 +23,8 @@ namespace TBHAcademy.Models
         public int ObtainedMark { get; set; }
 
         //[Required]
-        //[Display(Name ="Comment")]
-        //public string MarksComment { get; set; }
+        [Display(Name ="Comment")]
+        public string MarksComment { get; set; }
 
         [Required]
         [Display(Name ="Assessment Date")]
