@@ -7669,36 +7669,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\koketso mosena\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Owami\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\koketso mosena\\OneDrive\\Desktop\\Latest\\TBHAcademy.csproj",
+      "projectUniqueName": "C:\\Users\\Owami\\source\\15-10 Final Final project\\TBHAcademy.csproj",
       "projectName": "TBHAcademy",
-      "projectPath": "C:\\Users\\koketso mosena\\OneDrive\\Desktop\\Latest\\TBHAcademy.csproj",
-      "packagesPath": "C:\\Users\\koketso mosena\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\koketso mosena\\OneDrive\\Desktop\\Latest\\obj\\",
+      "projectPath": "C:\\Users\\Owami\\source\\15-10 Final Final project\\TBHAcademy.csproj",
+      "packagesPath": "C:\\Users\\Owami\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Owami\\source\\15-10 Final Final project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\koketso mosena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Owami\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.telerik.com/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
@@ -7769,7 +7765,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.305\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
