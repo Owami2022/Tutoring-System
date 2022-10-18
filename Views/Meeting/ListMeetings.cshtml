@@ -68,7 +68,7 @@
                 <th>Appointment Date</th>
                 <th>Meet purpose</th>
                 <th>Join Meeting</th>
-                <th></th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -83,9 +83,11 @@
                             <a class="button btn btn-outline-info  w-100" href="@scheduleMeeting.Link">Join Meeting</a>
                         </td>
                         <td>
-                            <a asp-action="UpdateFaculty" class="button btn btn-outline-info  w-100" asp-route-id="">Update</a>@* @faculty.FacultyId*@
+                            <a asp-action="UpdateMeeting" class="button btn btn-outline-info  w-100" asp-route-id="@scheduleMeeting.ScheduleMeetingID">Update</a>@* @faculty.FacultyId*@
                         </td>
-  
+                        <td>
+                            <a asp-action="Delete" class="button btn btn-outline-info  w-100" asp-route-id="@scheduleMeeting.ScheduleMeetingID">Delete</a>@* @faculty.FacultyId*@
+                        </td>
                     </tr>
                 }
             }

@@ -26,10 +26,10 @@ namespace TBHAcademy.Controllers
         }
 
         // List meetings
-        public ActionResult Index()
-        {
-            return View();
-        }
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
 
         //public IActionResult ListFaculty()
         //{
@@ -73,7 +73,7 @@ namespace TBHAcademy.Controllers
             {
                 _db.ScheduleMeeting.Add(schedule);
                 _db.SaveChanges();
-                return RedirectToAction("");
+                return RedirectToAction("ListMeetings");
             }
             return View(schedule);
         }
@@ -112,34 +112,32 @@ namespace TBHAcademy.Controllers
         // GET: MeetingController/Edit/5
 
 
-        //public IActionResult UpdateMeeting(int id)
-        //{
-            
-        //}
+        public IActionResult UpdateMeeting(int id)
+        {
+            ViewBag.Student = from R in _db.Roles
+                              join UR in _db.UserRoles on R.Id equals UR.RoleId
+                              from U in _db.Users
+                              join ur in _db.UserRoles on U.Id equals ur.UserId
+                              where R.Name == "Student" && U.Id == UR.UserId
+                              select U;
 
+            var ScheduleMeeting = _db.ScheduleMeeting.Find(id);
 
+            if (ScheduleMeeting == null)
+            {
+                return NotFound();
+            }
+            return View(ScheduleMeeting);
+        }
 
-        //public IActionResult UpdateFaculty(int? id)
-        //{
-        //    if (id == null && id == 0)
-        //    {
-        //        return NotFound();
-        //    }
-        //    var faculty = _db.Faculty.Find(id);
-        //    if (faculty == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(faculty);
-        //}
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult UpdateFaculty(Faculty faculty)
-        //{
-        //    _db.Faculty.Update(faculty);
-        //    _db.SaveChanges();
-        //    return RedirectToAction("ListFaculty");
-        //}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdateMeeting(ScheduleMeeting scheduleMeeting)
+        {
+            _db.ScheduleMeeting.Update(scheduleMeeting);
+            _db.SaveChanges();
+            return RedirectToAction("ListMeetings");
+        }
 
         public ActionResult Edit(int id)
         {
@@ -147,19 +145,19 @@ namespace TBHAcademy.Controllers
         }
 
         // POST: MeetingController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Edit(int id, IFormCollection collection)
+        //{
+        //    try
+        //    {
+        //        return RedirectToAction(nameof(ListMeetings));
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
+        //}
 
         // GET: MeetingController/Delete/5
         public ActionResult Delete(int id)
@@ -174,7 +172,7 @@ namespace TBHAcademy.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(ListMeetings));
             }
             catch
             {

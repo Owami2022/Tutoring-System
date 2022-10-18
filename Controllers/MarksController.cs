@@ -60,7 +60,9 @@ namespace TBHAcademy.Controllers
                               join ur in _db.UserRoles on U.Id equals ur.UserId
                               where R.Name == "Student" && U.Id == UR.UserId
                               select U;
+
             ViewBag.Modules = _db.Modules.OrderBy(x => x.ModuleName).ToList();
+
             ViewBag.Comment = _db.Comment.OrderBy(x => x.CommentText).ToList();
 
             return View();
