@@ -6664,3 +6664,8 @@ C:\Users\koketso mosena\OneDrive\Desktop\Latest\obj\Debug\net5.0\refint\TBHAcade
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\obj\Debug\net5.0\TBHAcademy.pdb
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\obj\Debug\net5.0\TBHAcademy.genruntimeconfig.cache
 C:\Users\koketso mosena\OneDrive\Desktop\Latest\obj\Debug\net5.0\ref\TBHAcademy.dll
+C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\SendGrid.dll
+C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\StarkbankEcdsa.dll
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\Calender.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\EditFAQs.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Dashboard\Admin.cshtml.g.cs
