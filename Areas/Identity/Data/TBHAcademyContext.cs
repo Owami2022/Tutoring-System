@@ -35,7 +35,8 @@ namespace TBHAcademy.Data
         public DbSet<TeamMark> TeamMark { get; set; }
         public DbSet<Mark_Capture> Mark_Capture { get; set; }
         public DbSet<Announcements> Announcements { get; set; }
-        public DbSet<FAQ> fAQs { get; set; }  
-        
+        public DbSet<FAQ> fAQs { get; set; }
+        public DbSet<CalendarEvent> Events { get; set; }
+
     }
 }

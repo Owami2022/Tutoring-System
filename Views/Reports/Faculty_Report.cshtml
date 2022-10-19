@@ -1,0 +1,98 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using TBHAcademy.Areas.Identity.Data
+@using TBHAcademy.Models
+@model TBHAcademy.Models.Faculties_Display;
+@inject SignInManager<TBHAcademyUser> SignInManager
+@inject UserManager<TBHAcademyUser> UserManager
+@{
+    Layout = "_HodLayout";
+}
+<div class="container-fluid col-12">
+    <button id="Downloadbtn" class="btn btn-primary">Print</button>
+</div>
+<div id="Report" class="container-fluid ">
+    <div id="header12" class="container-fluid  row col-12">
+        <div id="headerID" class="container-fluid  col-6">
+            <img src="~/css/log2 (2).png" style="width:90px" class="m-0 p-0" />
+        </div>
+        <div id="HeaderDate" class="container-fluid col-6 m-0 p-0">
+            Date: @ViewBag.date <br />
+          
+        </div>
+
+    </div>
+    <div id="StudentInfo" class="col-6">
+        <h4>Head Of Department</h4>
+        First Name: @UserManager.GetUserAsync(User).Result.FirstName <br />
+        Last  Name:  @UserManager.GetUserAsync(User).Result.LastName<br />
+    </div>
+    <h3 class="reportTitle">Faculty Report</h3>
+    @*<div class="form-group">
+            <label class="text-black" font-weight-bold  asp-for="FacultyId">Faculties</label>
+            <div class="dropdown">
+                <select asp-for="FacultyId" class="form-control">
+                    @foreach (Faculty item in ViewBag.Faculties)
+                    {
+                        <option value="@item.FacultyId">@item.FacultyName</option>
+                    }
+
+                </select>
+            </div>
+    <div>*@
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Faculty Name </td>
+                    <td>Course Name </td>
+                    <td>Number Of Modules </td>
+
+                </tr>
+            </thead>
+            <tbody>
+                
+                @foreach (Faculties_Display E in ViewBag.Faculties)
+                {
+                    <tr>
+                        <td>@E.Faculty.FacultyName</td>
+                        <td>@E.Course.CourseName</td>
+                        <td>@ViewBag.Modules</td>
+                    </tr>
+                }
+                
+            </tbody>
+
+        </table>
+
+</div>
+
+<script defer>
+    window.onload = function() {
+        document.getElementById('StudentInfo').style.visibility = "hidden";
+        document.getElementById('header12').style.visibility = "hidden";
+        document.getElementById('Report').setAttribute("id", "report");
+
+    }
+    const DownloadBtn = document.getElementById('Downloadbtn');
+    DownloadBtn.addEventListener("click", myFunction);
+
+    function myFunction() {
+        document.getElementById('Downloadbtn').style.visibility = "hidden";
+        document.getElementById('btnUp').style.visibility = "hidden"
+        document.getElementById('header').style.visibility = "hidden";
+        document.getElementById('header12').style.visibility = "visible";
+        document.getElementById('report').setAttribute("id", "Report")
+        document.getElementById('StudentInfo').style.visibility = "visible";
+        window.print();
+        document.getElementById('StudentInfo').style.visibility = "hidden";
+        document.getElementById('header').style.visibility = "visible";
+        document.getElementById('btnUp').style.visibility = "visible"
+        document.getElementById('Downloadbtn').style.visibility = "visible";
+        document.getElementById('header12').style.visibility = "hidden";
+        document.getElementById('Report').setAttribute("id", "report");
+
+
+    }
+
+
+
+</script>

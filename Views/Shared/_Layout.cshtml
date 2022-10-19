@@ -33,6 +33,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home"style="color:#7b96d4" asp-action="Demo">About us</a>
                         </li>
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" style="color:#7b96d4" asp-action="Chat">Help</a>
+                        </li>
                         <partial name = "_LoginPartial.cshtml" />
                     </ul>
 
@@ -40,6 +43,35 @@
             </div>
         </nav>
     </header>
+
+    @*<div class="form-container">
+
+        <div class="form-head-container">
+          <img id="help-icon">
+          <p id="contact-us-label" color="white">Need help</p>
+        </div>
+        <table>
+          <tbody>
+
+          </tbody>
+        </table>
+
+        <form>
+          <label class="form-item" for="fname">First Name</label>
+          <input type="text" id="fname" name="FirstName" placeholder="Your First Name" value="">
+          <br><br>
+
+          <label class="form-item" for="lname">Last Name</label>
+          <input type="text" id="lname" name="LastName" placeholder="Your Last Name" value="">
+          <br><br>
+
+          <label class="form-item" for="subject">Subject</label>
+          <textarea id="subject" name="FirstName" placeholder="How can we help?" value=""></textarea>
+          <br><br>
+          <input type="submit" name="" value="Submit" id="submit-btn">
+        </form>
+    </div>*@
+
     <div class="container-fluid">
         <main role="main" class="pb-0">
             @RenderBody()

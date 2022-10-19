@@ -14,6 +14,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TBHAcademy.Areas.Identity.Data;
 using TBHAcademy.Data;
+using TBHAcademy.Hubs;
 using TBHAcademy.Services;
 
 namespace TBHAcademy
@@ -34,7 +35,7 @@ namespace TBHAcademy
             services.AddRazorPages();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddNotyf(config => { config.DurationInSeconds = 5; config.IsDismissable = false; config.Position = NotyfPosition.TopCenter; });
-
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,6 +64,7 @@ namespace TBHAcademy
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+                endpoints.MapHub<ChatHub>("/chathub");
             });
         }
     }

@@ -39,6 +39,20 @@ namespace TBHAcademy.Controllers
         }
         public IActionResult Hod()
         {
+            ViewBag.Tutors = from R in _db.Roles
+                             join UR in _db.UserRoles on R.Id equals UR.RoleId
+                             from U in _db.Users
+                             join ur in _db.UserRoles on U.Id equals ur.UserId
+                             where R.Name == "Tutor" && U.Id == UR.UserId
+                             select U;
+
+            ViewBag.Students = from R in _db.Roles
+                             join UR in _db.UserRoles on R.Id equals UR.RoleId
+                             from U in _db.Users
+                             join ur in _db.UserRoles on U.Id equals ur.UserId
+                             where R.Name == "Student" && U.Id == UR.UserId
+                             select U;
+
             ViewBag.Faculty = _db.Faculty.Count(x => x.FacultyId > 0);
             ViewBag.Course = _db.Course.Count(x => x.CourseId > 0);
             ViewBag.Modules = _db.Modules.Count(x => x.ModuleId > 0);

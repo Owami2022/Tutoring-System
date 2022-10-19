@@ -54,6 +54,25 @@ namespace TBHAcademy.Controllers
 
             return View();
         }
+        public IActionResult Faculty_Report()
+        {
+            ViewBag.Modules = _db.Modules.Count(x => x.ModuleId > 0);
+            ViewBag.date = DateTime.Now.ToString("dd-MMM-yyyy");
+            ViewBag.Faculties = _db.Faculty.OrderBy(x => x.FacultyName).ToList();
+            ViewBag.Courses = _db.Course.OrderBy(x => x.CourseName).ToList();
+
+            ViewBag.Faculties = (from f in _db.Faculty
+                                 join C in _db.Course on f.FacultyId equals C.CourseId
+                                 where C.FacultyId == f.FacultyId
+                                 select new Faculties_Display { Faculty = f, Course = C }).ToList();
+            return View();
+        }
+        public IActionResult Modules_Report()
+        {
+            IEnumerable<Modules> ModulesList = _db.Modules;
+            ViewBag.date = DateTime.Now.ToString("dd-MMM-yyyy");
+            return View(ModulesList);
+        }
 
 
     }
