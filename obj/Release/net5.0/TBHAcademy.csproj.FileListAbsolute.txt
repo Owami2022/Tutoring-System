@@ -4387,7 +4387,6 @@ C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\A
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Admin\ListCourse.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Admin\ListFAQs.cshtml.g.cs
-C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Admin\Statistics.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\ComingSoonPage\Index.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\ContactUs\Index.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Dashboard\Admin.cshtml.g.cs
@@ -4460,3 +4459,6 @@ C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\M
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\Create.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\Index.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\ListMeetings.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\Course_Info_Report.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\FAQ\DiplayFAQs.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\Academic_Info_Report.cshtml.g.cs

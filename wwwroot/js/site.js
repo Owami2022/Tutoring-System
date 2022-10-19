@@ -61,3 +61,17 @@ $(document).ready(function () {
         }]
     });
 });
+
+$(document).ready(function () {
+    $('#Table').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+           
+
+        ],
+        columnDefs: [{
+            targets: -1,
+            visible: true
+        }]
+    });
+});
