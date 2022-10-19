@@ -3284,6 +3284,7 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\Microsoft.Extensions.Configuration.Xml.dll
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -3406,6 +3407,7 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\System.Resources.Reader.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\System.Resources.ResourceManager.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\System.Resources.Writer.dll
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\System.Runtime.CompilerServices.VisualC.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\System.Runtime.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\System.Runtime.Extensions.dll
@@ -3426,7 +3428,6 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\System.Security.Cryptography.Cng.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\System.Security.Cryptography.Csp.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\System.Security.Cryptography.Encoding.dll
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\System.Security.Cryptography.Pkcs.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\System.Security.Cryptography.Primitives.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\System.Security.Cryptography.X509Certificates.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\refs\System.Security.Cryptography.Xml.dll
@@ -3476,7 +3477,6 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\AspNetCoreHero.ToastNotification.Views.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\AspNetCoreHero.ToastNotification.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Humanizer.dll
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\MailKit.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -3497,7 +3497,6 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Microsoft.Extensions.Identity.Core.dll
@@ -3516,10 +3515,7 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\MimeKit.dll
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\NETCore.MailKit.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\Newtonsoft.Json.dll
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\BouncyCastle.Crypto.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\SendGrid.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\StarkbankEcdsa.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\System.Composition.AttributedModel.dll
@@ -3531,7 +3527,6 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\System.Diagnostics.DiagnosticSource.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\System.Runtime.Caching.dll
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\PubTmp\Out\de\Microsoft.CodeAnalysis.resources.dll

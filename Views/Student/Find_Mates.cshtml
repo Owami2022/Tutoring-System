@@ -1,0 +1,17 @@
+﻿@using TBHAcademy.Areas.Identity.Data
+@model TBHAcademy.Models.Enroll
+ <form>
+     <div class="form-group">
+          <label class="text-black font-weight-bold" asp-for="StudentID">Below Are Only Students</label>
+      <div class="dropdown">
+                 <select asp-for="StudentID" class="form-control">
+                     @foreach (TBHAcademyUser U in ViewBag.Studets)
+                     {
+                         <option value="@U.Id">@U.FirstName @U.LastName</option>
+                     }
+                 </select>
+                 
+             </div>
+             </div>
+ </form>
+            

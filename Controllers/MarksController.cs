@@ -49,9 +49,43 @@ namespace TBHAcademy.Controllers
             return View();
         }
 
-        // GET: MarksController/Create
-        // Marks
-        //[HttpGet]
+        //    <-------------------------Add/Capture Student Result------------------------->
+        public IActionResult AddMark()
+        {
+            ViewBag.Student = from R in _db.Roles
+                              join UR in _db.UserRoles on R.Id equals UR.RoleId
+                              from U in _db.Users
+                              join ur in _db.UserRoles on U.Id equals ur.UserId
+                              where R.Name == "Student" && U.Id == UR.UserId
+                              select U;
+
+            ViewBag.Modules = _db.Modules.OrderBy(x => x.ModuleName).ToList();
+
+            return View();
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AddMark(Mark_Capture mark)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Mark_Capture.Add(mark);
+                _db.SaveChanges();
+                return RedirectToAction("ListMarks");
+            }
+            return View(mark);
+
+        }
+        //    <-----------End of --------------Add/Capture Student Result------------------------->
+
+
+
+
+
+
+
         public IActionResult Create()
         {
             ViewBag.Student = from R in _db.Roles

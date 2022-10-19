@@ -41,7 +41,6 @@ namespace TBHAcademy.Controllers
 
             var Id = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-
             if (User.IsInRole("Student"))
             {
                 ViewBag.Layout = "_StudentLayout - Copy";
