@@ -267,11 +267,7 @@ namespace TBHAcademy.Controllers
             }
 
         }
-        public IActionResult Statistics()
-        {
-            return View();
-        }
-
+     
         public IActionResult FAQs()
         {
 
@@ -322,7 +318,11 @@ namespace TBHAcademy.Controllers
         public IActionResult ViewFAQs()
         {
             return View();
+
         }
+
+      
+
 
 
         public IActionResult Calender()

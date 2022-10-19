@@ -6603,7 +6603,6 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\V
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\ListCourse.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\ListFAQs.cshtml.g.cs
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\Statistics.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\ComingSoonPage\Index.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\ContactUs\Index.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Dashboard\Admin.cshtml.g.cs
@@ -6679,3 +6678,7 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\refint\
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\TBHAcademy.pdb
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\TBHAcademy.genruntimeconfig.cache
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\ref\TBHAcademy.dll
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\FAQ\DiplayFAQs.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Reports\Academic_Info_Report.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Reports\Course_Info_Report.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayoutNew.cshtml.g.cs
