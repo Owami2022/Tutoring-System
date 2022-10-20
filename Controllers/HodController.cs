@@ -274,5 +274,10 @@ namespace TBHAcademy.Controllers
         {
             return View();
         }
+
+        public IActionResult FAQ_Display()
+        {
+            return View();
+        }
     }
 }
