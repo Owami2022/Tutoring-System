@@ -43,6 +43,7 @@ namespace TBHAcademy.Data
         public DbSet<Marks> Marks { get; set; }
         public DbSet<Comment> Comment { get; set; }
         public DbSet<ScheduleMeeting> ScheduleMeeting { get; set; }
+        public DbSet<SubModel> subModel { get; set; }
 
     }
 }
