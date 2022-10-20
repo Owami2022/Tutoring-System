@@ -3925,7 +3925,6 @@ C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\refint\TBHAca
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\TBHAcademy.pdb
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\TBHAcademy.genruntimeconfig.cache
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\ref\TBHAcademy.dll
-C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Shared\_AdminLayoutNew.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Marks\Create.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Marks\ListMarks.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\AddMeeting.cshtml.g.cs
@@ -3933,17 +3932,13 @@ C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\M
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\Index.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\ListMeetings.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\Course_Info_Report.cshtml.g.cs
-C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\FAQ\DiplayFAQs.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\Academic_Info_Report.cshtml.g.cs
-C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.csproj.AssemblyReference.cache
-C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.AssemblyInfoInputs.cache
-C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.AssemblyInfo.cs
-C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.csproj.CoreCompileInputs.cache
-C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.RazorAssemblyInfo.cache
-C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.RazorAssemblyInfo.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Quiz\Add_Quiz_Question.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Quiz\Attempt.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Quiz\Create_Quiz.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Student\Find_Mates.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Shared\_AdminLayoutOld.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Admin\DiplayFAQs.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\bin\Release\net5.0\appsettings.Development.json
 C:\Users\koketso\Desktop\New folder (2)\bin\Release\net5.0\appsettings.json
 C:\Users\koketso\Desktop\New folder (2)\bin\Release\net5.0\bundleconfig.json
@@ -4355,6 +4350,15 @@ C:\Users\koketso\Desktop\New folder (2)\bin\Release\net5.0\runtimes\win-arm\lib\
 C:\Users\koketso\Desktop\New folder (2)\bin\Release\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\koketso\Desktop\New folder (2)\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\koketso\Desktop\New folder (2)\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.csproj.AssemblyReference.cache
+C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.AssemblyInfoInputs.cache
+C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.AssemblyInfo.cs
+C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.csproj.CoreCompileInputs.cache
+C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.RazorAssemblyInfo.cache
+C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.RazorAssemblyInfo.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\scopedcss\bundle\TBHAcademy.styles.css
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\staticwebassets\TBHAcademy.StaticWebAssets.Manifest.cache
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\staticwebassets\TBHAcademy.StaticWebAssets.xml
@@ -4404,6 +4408,7 @@ C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Areas\Identity\
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Administration\CreateRole.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Administration\ListRoles.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Admin\Calender.cshtml.g.cs
+C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Admin\DiplayFAQs.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Admin\Edit.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Admin\EditFAQs.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Admin\FAQs.cshtml.g.cs
@@ -4415,7 +4420,6 @@ C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\ContactUs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Dashboard\Admin.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Dashboard\Hod.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Dashboard\Student.cshtml.g.cs
-C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\FAQ\DiplayFAQs.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Hod\Activities.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Hod\Announcements.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Hod\Assign.cshtml.g.cs
@@ -4423,6 +4427,7 @@ C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Hod\Assig
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Hod\Calendar.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Hod\CreateAnnouncement.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Hod\DeleteModule.cshtml.g.cs
+C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Hod\FAQ_Display.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Hod\Index.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Hod\InsertFaculty.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Hod\InsertModule.cshtml.g.cs
@@ -4456,7 +4461,7 @@ C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Reports\M
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Reports\Progress_Report.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
-C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Shared\_AdminLayoutNew.cshtml.g.cs
+C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Shared\_AdminLayoutOld.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Shared\_Fake.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Shared\_HodLayout.cshtml.g.cs
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -4493,4 +4498,3 @@ C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\refint\TBHAcademy.dll
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.pdb
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\TBHAcademy.genruntimeconfig.cache
 C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\ref\TBHAcademy.dll
-C:\Users\koketso\Desktop\New folder (2)\obj\Release\net5.0\Razor\Views\Hod\FAQ_Display.cshtml.g.cs
