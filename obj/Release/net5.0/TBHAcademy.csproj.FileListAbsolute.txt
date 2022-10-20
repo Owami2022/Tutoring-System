@@ -3925,7 +3925,6 @@ C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\refint\TBHAca
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\TBHAcademy.pdb
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\TBHAcademy.genruntimeconfig.cache
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\ref\TBHAcademy.dll
-C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Shared\_AdminLayoutNew.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Marks\Create.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Marks\ListMarks.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\AddMeeting.cshtml.g.cs
@@ -3933,8 +3932,13 @@ C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\M
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\Index.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\ListMeetings.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\Course_Info_Report.cshtml.g.cs
-C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\FAQ\DiplayFAQs.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\Academic_Info_Report.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Quiz\Add_Quiz_Question.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Quiz\Attempt.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Quiz\Create_Quiz.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Student\Find_Mates.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Shared\_AdminLayoutOld.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Admin\DiplayFAQs.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Release\net5.0\appsettings.Development.json
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Release\net5.0\appsettings.json
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Release\net5.0\bundleconfig.json
@@ -4402,6 +4406,7 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Administration\CreateRole.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Administration\ListRoles.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Admin\Calender.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Admin\DiplayFAQs.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Admin\Edit.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Admin\EditFAQs.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Admin\FAQs.cshtml.g.cs
@@ -4413,7 +4418,6 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Dashboard\Admin.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Dashboard\Hod.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Dashboard\Student.cshtml.g.cs
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\FAQ\DiplayFAQs.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Hod\Activities.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Hod\Announcements.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Hod\Assign.cshtml.g.cs
@@ -4439,8 +4443,10 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Module\Add.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Module\AddContent.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Module\AddTopics.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Module\Attempt.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Module\Content.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Module\InsertModule.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Module\Submit.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Quiz\Add_Quiz_Question.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Quiz\Create_Quiz.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Reports\Academic_Info_Report.cshtml.g.cs
@@ -4449,7 +4455,7 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Reports\Progress_Report.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Shared\_AdminLayoutNew.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Shared\_AdminLayoutOld.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Shared\_Fake.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Shared\_HodLayout.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -4486,5 +4492,3 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\refin
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\TBHAcademy.pdb
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\TBHAcademy.genruntimeconfig.cache
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\ref\TBHAcademy.dll
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Module\Attempt.cshtml.g.cs
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Release\net5.0\Razor\Views\Module\Submit.cshtml.g.cs

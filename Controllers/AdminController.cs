@@ -315,13 +315,15 @@ namespace TBHAcademy.Controllers
             }
         }
 
-        public IActionResult ViewFAQs()
+      
+        public IActionResult DiplayFAQs()
         {
-            return View();
+            IEnumerable<FAQ> DiplayFAQs = _db.fAQs;
+            return View(DiplayFAQs);
 
         }
 
-      
+
 
 
 

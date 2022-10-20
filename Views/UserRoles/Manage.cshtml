@@ -1,7 +1,7 @@
 ﻿@model List<ManageUserRolesViewModel>
 @{
     ViewData["Title"] = "Manage";
-       Layout = "_AdminLayoutNew";
+       Layout = "_AdminLayout";
 }
 <form method="post">
     <div class="card">
@@ -31,7 +31,7 @@
         <div class="card-footer">
             <input type="submit" value="Update" class="btn btn-primary"
                    style="width:auto" />
-            <a asp-action="EditUser" asp-route-id="@ViewBag.userId"
+            <a asp-action="UserRoleIndex" asp-route-id="@ViewBag.userId"
                class="btn btn-primary" style="width:auto">Cancel</a>
         </div>
     </div>
