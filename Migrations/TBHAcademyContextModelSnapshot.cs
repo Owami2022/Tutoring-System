@@ -466,9 +466,11 @@ namespace TBHAcademy.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Answer")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("FAQId");
@@ -617,6 +619,107 @@ namespace TBHAcademy.Migrations
                     b.HasIndex("CourseId");
 
                     b.ToTable("Modules");
+                });
+
+            modelBuilder.Entity("TBHAcademy.Models.QuestionAnswer", b =>
+                {
+                    b.Property<int>("AnsID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AnsText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Qid")
+                        .HasColumnType("int");
+
+                    b.HasKey("AnsID");
+
+                    b.ToTable("QuestionAnswers");
+                });
+
+            modelBuilder.Entity("TBHAcademy.Models.QuestionOptions", b =>
+                {
+                    b.Property<int>("OpID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("OpName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Qid")
+                        .HasColumnType("int");
+
+                    b.HasKey("OpID");
+
+                    b.ToTable("QuestionOptions");
+                });
+
+            modelBuilder.Entity("TBHAcademy.Models.Questions", b =>
+                {
+                    b.Property<int>("QId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("IsMultiple")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("QNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QuesDes")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("QuizID")
+                        .HasColumnType("int");
+
+                    b.HasKey("QId");
+
+                    b.ToTable("Questions");
+                });
+
+            modelBuilder.Entity("TBHAcademy.Models.Quiz", b =>
+                {
+                    b.Property<int>("QuizID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("AssignModulesAssignedID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AssignedID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Attempts")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DActive")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("QDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Time")
+                        .HasColumnType("int");
+
+                    b.HasKey("QuizID");
+
+                    b.HasIndex("AssignModulesAssignedID");
+
+                    b.ToTable("Quiz");
                 });
 
             modelBuilder.Entity("TBHAcademy.Models.ScheduleMeeting", b =>
@@ -810,6 +913,15 @@ namespace TBHAcademy.Migrations
                         .IsRequired();
 
                     b.Navigation("Course");
+                });
+
+            modelBuilder.Entity("TBHAcademy.Models.Quiz", b =>
+                {
+                    b.HasOne("TBHAcademy.Models.AssignModules", "AssignModules")
+                        .WithMany()
+                        .HasForeignKey("AssignModulesAssignedID");
+
+                    b.Navigation("AssignModules");
                 });
 
             modelBuilder.Entity("TBHAcademy.Models.ScheduleMeeting", b =>

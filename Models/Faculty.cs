@@ -23,5 +23,7 @@ namespace TBHAcademy.Models
         public List<Course> Courses { get; set; }
         
         public int Status { get; set; }
+
+        
     }
 }

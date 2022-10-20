@@ -30,3 +30,10 @@
 .header {
     margin-bottom: 5px;
 }
+#QuizesButton{
+    text-align:end;
+    margin-top: 5px;
+}
+#QmodalBody {
+    text-align: center;
+}

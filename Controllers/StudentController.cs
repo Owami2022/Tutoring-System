@@ -56,6 +56,7 @@ namespace TBHAcademy.Controllers
 
         public IActionResult Index()
         {
+            //To get student Modules
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
             ViewBag.Modules = (from m in _db.Modules
                            join A in _db.AssignModules on m.ModuleId equals A.ModuleID
@@ -63,6 +64,7 @@ namespace TBHAcademy.Controllers
                            join U in _db.Users on E.StudentID equals U.Id
                            where A.AssignedID == E.ModuleID && E.StudentID == user
                            select new MyModules { AssignModulesVM = A, ModulesVM = m, EnrollVM = E}).ToList();
+       
 
             return View();
         }
@@ -86,8 +88,7 @@ namespace TBHAcademy.Controllers
                                 from U in _db.Users
                                 join AU in _db.AssignModules on U.Id equals AU.TutorID
                                 
-                                where AU.ModuleID == m.ModuleId
-                               
+                                where AU.ModuleID == m.ModuleId                    
                                 select new ModuleDisplay { ModulesVM = m, CourseVM = c, UserVM = U, AssignModulesVM = AU}).ToList();
             
 
@@ -124,6 +125,12 @@ namespace TBHAcademy.Controllers
                                join U in _db.Users on E.StudentID equals U.Id
                                where A.AssignedID == E.ModuleID && E.StudentID == user
                                select new MyModules { AssignModulesVM = A, ModulesVM = m, EnrollVM = E }).ToList();
+
+
+
+
+
+
             ViewBag.test = (from m in _db.Modules
                             join A in _db.AssignModules on m.ModuleId equals A.ModuleID
                             from E in _db.Enroll
@@ -166,5 +173,16 @@ namespace TBHAcademy.Controllers
         {
             return View();
         }
+        public IActionResult Find_Mates()
+        {
+            ViewBag.Studets = from R in _db.Roles
+                              join UR in _db.UserRoles on R.Id equals UR.RoleId
+                              from U in _db.Users
+                              join ur in _db.UserRoles on U.Id equals ur.UserId
+                              where R.Name == "Student" && U.Id == UR.UserId
+                              select U;
+            return View();
+        }
+
     }
 }
