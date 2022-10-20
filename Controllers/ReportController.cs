@@ -10,8 +10,11 @@ using TBHAcademy.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 using System.Runtime.CompilerServices;
+using Microsoft.AspNetCore.Authorization;
+
 namespace TBHAcademy.Controllers
 {
+    [Authorize]
     public class ReportsController : Controller
     {
         private readonly UserManager<TBHAcademyUser> _userManager;
@@ -26,6 +29,13 @@ namespace TBHAcademy.Controllers
         public IActionResult Progress_Report()
         {
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewBag.Modules = (from m in _db.Modules
+                               join A in _db.AssignModules on m.ModuleId equals A.ModuleID
+                               from E in _db.Enroll
+                               join U in _db.Users on E.StudentID equals U.Id
+                               where A.AssignedID == E.ModuleID && E.StudentID == user
+                               select new MyModules { AssignModulesVM = A, ModulesVM = m, EnrollVM = E }).ToList();
+            ViewBag.Message = "Progress Report";
             ViewBag.ProgressReport = (from AM in _db.AssignModules
                                       join M in _db.Modules on AM.ModuleID equals M.ModuleId
                                       from MC in _db.Mark_Capture
@@ -41,6 +51,14 @@ namespace TBHAcademy.Controllers
         public IActionResult Enrolled_Modules_Report()
         {
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewBag.Modules = (from m in _db.Modules
+                               join A in _db.AssignModules on m.ModuleId equals A.ModuleID
+                               from E in _db.Enroll
+                               join U in _db.Users on E.StudentID equals U.Id
+                               where A.AssignedID == E.ModuleID && E.StudentID == user
+                               select new MyModules { AssignModulesVM = A, ModulesVM = m, EnrollVM = E }).ToList();
+            ViewBag.Message = "Enrolled Modules Report";
+            
             ViewBag.date = DateTime.Now.ToString("dd-MMMM-yyyy");
             ViewBag.Enrolled = (from c in _db.Course
                                 join C in _db.Modules on c.CourseId equals C.CourseId
@@ -72,6 +90,44 @@ namespace TBHAcademy.Controllers
             IEnumerable<Modules> ModulesList = _db.Modules;
             ViewBag.date = DateTime.Now.ToString("dd-MMM-yyyy");
             return View(ModulesList);
+        }
+
+
+        public IActionResult Course_Info_Report()
+        {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewBag.date = DateTime.Now.ToString("dd-MMMM-yyyy");
+            ViewBag.Course = (from c in _db.Course
+                              join F in _db.Faculty on c.CourseId equals F.FacultyId
+                              select new Course_Info_Display { Course = c, Faculty = F }).ToList();
+
+
+            return View();
+        }
+
+        public IActionResult Academic_Info_Report()
+        {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewBag.Modules = (from m in _db.Modules
+                               join A in _db.AssignModules on m.ModuleId equals A.ModuleID
+                               from E in _db.Enroll
+                               join U in _db.Users on E.StudentID equals U.Id
+                               where A.AssignedID == E.ModuleID && E.StudentID == user
+                               select new MyModules { AssignModulesVM = A, ModulesVM = m, EnrollVM = E }).ToList();
+            ViewBag.Message = "TBH Academy Info";
+
+            ViewBag.date = DateTime.Now.ToString("dd-MMMM-yyyy");
+            ViewBag.Enrolled = (from c in _db.Course
+                                join C in _db.Modules on c.CourseId equals C.CourseId
+                                from U in _db.Users
+                                join AM in _db.AssignModules on U.Id equals AM.TutorID
+                                from E in _db.Enroll
+                                join std in _db.Users on E.StudentID equals std.Id
+                                where E.StudentID == user && AM.ModuleID == C.ModuleId && E.ModuleID == AM.AssignedID
+                                select new Academic_Info_Display { AssignModules = AM, Course = c, Enroll = E, Modules = C, TBHAcademyUser = U }).ToList();
+
+
+            return View();
         }
 
 

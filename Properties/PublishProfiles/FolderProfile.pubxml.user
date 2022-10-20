@@ -823,43 +823,43 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/14/2022 20:31:14</publishTime>
     </File>
     <File Include="Models/Modules.cs">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Models/MyModules.cs">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Models/TeamMark.cs">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Models/Topic.cs">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Models/TutorModule.cs">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Models/UserRolesViewModel.cs">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Program.cs">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="ScaffoldingReadMe.txt">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Services/EmailSender.cs">
-      <publishTime>10/14/2022 21:03:02</publishTime>
+      <publishTime>10/14/2022 21:28:39</publishTime>
     </File>
     <File Include="Startup.cs">
-      <publishTime>10/14/2022 21:03:02</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Views/Admin/Calender.cshtml">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Views/Admin/Edit.cshtml">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Views/Admin/EditFAQs.cshtml">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Views/Admin/FAQs.cshtml">
       <publishTime>10/14/2022 20:31:14</publishTime>
@@ -877,22 +877,22 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/14/2022 20:31:14</publishTime>
     </File>
     <File Include="Views/Admin/ListFAQs.cshtml">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Views/Admin/Statistics.cshtml">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Views/Administration/CreateRole.cshtml">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Views/Administration/ListRoles.cshtml">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/15/2022 13:10:39</publishTime>
     </File>
     <File Include="Views/ComingSoonPage/Index.cshtml">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Views/ContactUs/Index.cshtml">
-      <publishTime>10/14/2022 20:31:14</publishTime>
+      <publishTime>10/07/2022 23:26:20</publishTime>
     </File>
     <File Include="Views/Dashboard/Admin.cshtml">
       <publishTime>10/14/2022 20:31:14</publishTime>

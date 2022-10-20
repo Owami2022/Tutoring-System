@@ -65,7 +65,7 @@ using TBHAcademy.Models;
 #line 4 "C:\Users\koketso\Desktop\New folder (2)\Views\Student\Enroll.cshtml"
   
     ViewData["Title"] = "Enroll";
-  Layout = "_StudentLayout - Copy";
+    Layout = "_StudentLayout - Copy";
 
 #line default
 #line hidden
@@ -299,7 +299,7 @@ WriteAttributeValue("", 2386, item.ModulesVM.ModuleCode, 2386, 26, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral(@"
-                                
+
                                 <button type=""button"" class=""btn btn-outline-danger text-mute"" data-dismiss=""modal"">Cancel</button>
 
                             </div>
@@ -319,6 +319,30 @@ WriteAttributeValue("", 2386, item.ModulesVM.ModuleCode, 2386, 26, false);
 #line hidden
 #nullable disable
             WriteLiteral("</div>\r\n");
+#nullable restore
+#line 108 "C:\Users\koketso mosena\source\repos\Final_Year_Project\Views\Student\Enroll.cshtml"
+ if (ViewBag.TestResult != null)
+{
+
+#line default
+#line hidden
+#nullable disable
+            WriteLiteral("    <script type=\"text/javascript\" defer>\r\n        window.onload = function() {\r\n            alert(\"");
+#nullable restore
+#line 112 "C:\Users\koketso mosena\source\repos\Final_Year_Project\Views\Student\Enroll.cshtml"
+              Write(ViewBag.TestResult);
+
+#line default
+#line hidden
+#nullable disable
+            WriteLiteral("\");\r\n\r\n        };\r\n\r\n    </script>\r\n");
+#nullable restore
+#line 117 "C:\Users\koketso mosena\source\repos\Final_Year_Project\Views\Student\Enroll.cshtml"
+}
+
+#line default
+#line hidden
+#nullable disable
         }
         #pragma warning restore 1998
         #nullable restore

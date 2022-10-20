@@ -33,6 +33,7 @@ namespace TBHAcademy
         {
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddRazorPages();
+            services.AddTransient<IEmailSender, EmailSender>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddNotyf(config => { config.DurationInSeconds = 5; config.IsDismissable = false; config.Position = NotyfPosition.TopCenter; });
             services.AddSignalR();

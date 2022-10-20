@@ -26,3 +26,14 @@
 #header12{
     margin-top: 5px;
 }
+
+.header {
+    margin-bottom: 5px;
+}
+#QuizesButton{
+    text-align:end;
+    margin-top: 5px;
+}
+#QmodalBody {
+    text-align: center;
+}

@@ -1,0 +1,119 @@
+﻿@model IEnumerable<TBHAcademy.Models.ScheduleMeeting>
+
+@{
+    ViewData["Title"] = "ListMeetings";
+    Layout = "~/Views/Shared/_TutorLayoutcshtml.cshtml";
+}
+
+<h1>ListMeetings</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ScheduleMeetingID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AppointmentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Link)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScheduleMeetingID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppointmentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Link)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@
+
+<div class="pl-3 pr-3">
+
+    <table id="myTable" class="table table-bordered table-hover ">
+        <thead class="thead-dark">
+            <tr>
+                <th>Appointment Date</th>
+                <th>Meet purpose</th>
+                <th>Join Meeting</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                @foreach (var scheduleMeeting in Model)
+                {
+                    <tr>
+                        <td>@scheduleMeeting.AppointmentDate</td>
+                        <td>@scheduleMeeting.Description</td>
+                        <td>
+                            <a class="button btn btn-outline-info  w-100" href="@scheduleMeeting.Link">Join Meeting</a>
+                        </td>
+                        <td>
+                            <a asp-action="UpdateFaculty" class="button btn btn-outline-info  w-100" asp-route-id="">Update</a>@* @faculty.FacultyId*@
+                        </td>
+  
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<script type="text/javascript">
+    function Confirmation(event, FacultyId) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You want to delete this faculty ?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Confirm',
+            preConfirm: false
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Success!',
+                    'Faculty Deleted',
+                    'success'
+                ).then(result => {
+                    document.querySelector(`#_${FacultyId}`).submit();
+                })
+            }
+        })
+    }
+</script>

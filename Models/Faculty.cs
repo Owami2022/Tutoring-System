@@ -25,5 +25,7 @@ namespace TBHAcademy.Models
         
         
         public int Status { get; set; }
+
+        
     }
 }

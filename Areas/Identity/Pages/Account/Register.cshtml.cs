@@ -25,16 +25,19 @@ namespace TBHAcademy.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
+
         public RegisterModel(
             UserManager<TBHAcademyUser> userManager,
             SignInManager<TBHAcademyUser> signInManager,
             ILogger<RegisterModel> logger,
+
             IEmailSender emailSender)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+           
         }
 
         [BindProperty]
@@ -128,7 +131,7 @@ namespace TBHAcademy.Areas.Identity.Pages.Account
                     }
                     else
                     {
-
+                       
                         return RedirectToPage("Login");
                     }
                 }
@@ -141,5 +144,21 @@ namespace TBHAcademy.Areas.Identity.Pages.Account
 
             return Page();
         }
+        public async Task<IActionResult> VerifyEmail(string userId, string code)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null) return BadRequest();
+
+            var result = await _userManager.ConfirmEmailAsync(user, code);
+
+            if (result.Succeeded)
+            {
+                return RedirectToPage("Login");
+            }
+
+            return BadRequest();
+        }
+
     }
 }
