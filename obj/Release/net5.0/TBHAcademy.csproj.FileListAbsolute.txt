@@ -4462,3 +4462,4 @@ C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\M
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\Course_Info_Report.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\FAQ\DiplayFAQs.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\Academic_Info_Report.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Shared\Ad.cshtml.g.cs
