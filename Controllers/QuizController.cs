@@ -104,5 +104,17 @@ namespace TBHAcademy.Controllers
             _db.SaveChanges();
             return View();
         }
+        public async Task<IActionResult> Quiz([Bind("QuizID,QDescription,DActive,Attempts,Time,IsActive,AssignedID")] Quiz quiz)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Add(quiz);
+                await _db.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(quiz);
+        }
+
     }
 }
+

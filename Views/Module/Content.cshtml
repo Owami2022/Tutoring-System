@@ -1,5 +1,4 @@
-﻿@model IEnumerable<TBHAcademy.Models.Content>
-
+﻿@using TBHAcademy.Models
 @{
     ViewData["Title"] = @ViewBag.Tittle;
     Layout = ViewBag.Layout;
@@ -20,15 +19,19 @@
         </button>
 
     </div>
-    <script defer>
-        $(document).ready(function() {
-            $("#Add").click(function() {
-                $('#Display').load("/Module/Add");
-            });
-        });
-    </script>
-}
 
+}
+<script defer>
+    $(document).ready(function() {
+        $('#ActiveBody').load("/Module/Upload1");
+        $('#Attempt').load("/Module/Attempt");
+        $('#SubBody').load("/Module/Submit");
+        $('#UploadBody').load("/Module/Upload");
+        $("#Add").click(function() {
+            $('#Display').load("/Module/Add");
+        });
+    });
+</script>
 <!--Quizes button-->
 <div id="QuizesButton" class="w-100">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Active Quizes</button> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Sub">Active Submissions</button>
@@ -57,11 +60,14 @@
                                 <tbody>
 
                                     <tr>
-                                        <td><a asp-controller="Quiz" asp-action="Attempt" asp-route-ID="1"name="1" >Quize 1</a></td>
-                                        <td><a asp-controller="Quiz" asp-action="Attempt" asp-route-ID="1" name="1" >21 October 2022 23:55</a></td>
-                                        <td><a asp-controller="Quiz" asp-action="Attempt" asp-route-ID="1" name="1" >22 October 2022 23:55</a></td>
-                           
-                                        <td></td>
+                                        <td><a asp-controller="Quiz" asp-action="Attempt" asp-route-ID="1" name="1">Quize 1</a></td>
+                                        <td><a asp-controller="Quiz" asp-action="Attempt" asp-route-ID="1" name="1">21 October 2022 23:55</a></td>
+                                        <td><a asp-controller="Quiz" asp-action="Attempt" asp-route-ID="1" name="1">22 October 2022 23:55</a></td>
+
+                                        <td>
+                                            <div id="Attempt">
+                                            </div>
+                                        </td>
                                     </tr>
 
 
@@ -86,49 +92,39 @@
         </div>
     </div>
 </div>
+<!--Active Sudmibbion-->
+<div class="modal fade" id="Sub" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Submodal" aria-hidden="true">
+    <div class="modal-dialog modal-lg  modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="QuizModal">Active Assignmnets</h4>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Asignmnet">Create New Assignmnet</button>
+            </div>
+            <div class="modal-body">
+                <div id="ActiveBody" class="w-100">
+                    
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
- <div class="modal fade" id="Sub" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Submodal" aria-hidden="true">
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--Submission Modal-->
+ <div class="modal fade" id="Upload" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="QuizModal" aria-hidden="true">
         <div class="modal-dialog modal-lg  modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="QuizModal">Active Quizes</h4>
-                    <a class="btn btn-primary" asp-controller="Quiz" asp-action="Create_Quiz">Create New Quiz</a>
+                    <h4 class="modal-title" id="QuizModal">Upload Your Assignment</</h4>
                 </div>
                 <div class="modal-body">
-                    <div id="QmodalBody" class="w-100">
-                        <div class="table-responsive">
-                            <table class="table text-start align-middle table-borderless table-hover mb-0">
-
-                                <thead class="table-light">
-                                    <tr>
-                                        <th>Quize Name</th>
-                                        <th>Active Date</th>
-                                        <th>Due Date&Time</th>
-                                        <th></th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <tr>
-                                        <td><a asp-controller="Quiz" asp-action="Attempt" asp-route-ID="1"name="1" >Quize 1</a></td>
-                                        <td><a asp-controller="Quiz" asp-action="Attempt" asp-route-ID="1" name="1" >21 October 2022 23:55</a></td>
-                                        <td><a asp-controller="Quiz" asp-action="Attempt" asp-route-ID="1" name="1" >22 October 2022 23:55</a></td>
-                           
-                                        <td></td>
-                                    </tr>
-
-
-
-                                    <tr>
-                                    </tr>
-
-                                </tbody>
-
-
-
-                            </table>
-                        </div>
+                    <div id="SubBody" class="w-100">
+                        
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -139,8 +135,26 @@
             </div>
         </div>
     </div>
-</div>
+    <!--Create Assignmenet-->
+    <div class="modal fade" id="Asignmnet" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="QuizModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg  modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="QuizModal">Create New Assignmnet</</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="UploadBody" class="w-100">
+                       
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
+
+                </div>
+            </div>
+        </div>
+    </div>
 <!-- The Modal -->
 <div class="modal" id="myModal">
     <div class="modal-dialog modal-lg">
@@ -157,117 +171,120 @@
         </div>
     </div>
 </div>
+<di>
+
+</di>
 <!--Displaying the conetne-->
-<div id="accordion" class="pt-2">
+<div id="accordion" class="pt-2 ml-2 mr-2">
     @if (ViewBag.Bool != null)
     {
-        @foreach (var item in Model)
-        {
-            <h2>
-                <a href="#">
-                    @item.Title
-                </a>
-            </h2>
-            <div>
-                <div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.TopicDescription</a>
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.DocumentDescription1</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.Document1</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.DocumentDescription2</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.Document2</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.DocumentDescription3</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.Document3</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.DocumentDescription4</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.Document5</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.DocumentDescription5</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.LinkDescription1</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.Link1</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.LinkDescription1</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.Link2</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.LinkDescription2</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.Link3</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.LinkDescription3</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.Link4</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.LinkDescription5</a>
-
-                    </div>
-                    <div class="pb-2 fw-bold">
-                        <a class="text-primary" href="#">@item.Link2</a>
-                    </div>
-                    @if (Layout == "~/Views/Shared/_TutorLayoutcshtml.cshtml")
-                    {
-                        <div class="modal-footer">
-                            <a asp-controller="#" asp-action="#" asp-route-ID="@item.ContentId" name="Update" class="btn btn-primary">Update</a>
-
-
-                            <button type="button" class="btn btn-outline-danger text-mute" data-dismiss="modal">Delete</button>
-
-                        </div>
-                    }
-
-                </div>
+    @foreach (Content item in ViewBag.Content)
+    {
+    <h2>
+        <a href="#">
+            @item.Title
+        </a>
+    </h2>
+    <div>
+        <div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.TopicDescription</a>
             </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.DocumentDescription1</a>
 
-        }
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.Document1</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.DocumentDescription2</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.Document2</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.DocumentDescription3</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.Document3</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.DocumentDescription4</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.Document5</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.DocumentDescription5</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.LinkDescription1</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.Link1</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.LinkDescription1</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.Link2</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.LinkDescription2</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.Link3</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.LinkDescription3</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.Link4</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.LinkDescription5</a>
+
+            </div>
+            <div class="pb-2 fw-bold">
+                <a class="text-primary" href="#">@item.Link2</a>
+            </div>
+            @if (Layout == "~/Views/Shared/_TutorLayoutcshtml.cshtml")
+            {
+            <div class="modal-footer">
+                <a asp-controller="#" asp-action="#" asp-route-ID="@item.ContentId" name="Update" class="btn btn-primary">Update</a>
+
+
+                <button type="button" class="btn btn-outline-danger text-mute" data-dismiss="modal">Delete</button>
+
+            </div>
+            }
+
+        </div>
+    </div>
+
+    }
 
     }
     else
     {
-        <h3>No Content uploaded yet, Please be patient</h3>
+    <h3>No Content uploaded yet, Please be patient</h3>
     }
 
 

@@ -602,7 +602,6 @@ namespace TBHAcademy.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("MarksComment")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MarksDescription")
@@ -782,6 +781,9 @@ namespace TBHAcademy.Migrations
                     b.Property<DateTime>("AppointmentDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CreatorID")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -790,18 +792,60 @@ namespace TBHAcademy.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("StudentId")
-                        .IsRequired()
+                    b.Property<string>("MemberId")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ModuleID")
+                        .HasColumnType("int");
 
                     b.Property<string>("TBHAcademyUserId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ScheduleMeetingID");
 
                     b.HasIndex("TBHAcademyUserId");
 
                     b.ToTable("ScheduleMeeting");
+                });
+
+            modelBuilder.Entity("TBHAcademy.Models.SubModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AssignmentID")
+                        .HasColumnType("int");
+
+                    b.Property<byte[]>("Data")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("DateOfSub")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Extension")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StudentID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SubModel");
                 });
 
             modelBuilder.Entity("TBHAcademy.Models.TeamMark", b =>
@@ -834,6 +878,43 @@ namespace TBHAcademy.Migrations
                     b.HasKey("Teamid");
 
                     b.ToTable("TeamMark");
+                });
+
+            modelBuilder.Entity("TBHAcademy.Models.Upload", b =>
+                {
+                    b.Property<int>("AssignmnetID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AssignmentDes")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedDate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("Data")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Extension")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ModuleID")
+                        .HasColumnType("int");
+
+                    b.HasKey("AssignmnetID");
+
+                    b.ToTable("Upload");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

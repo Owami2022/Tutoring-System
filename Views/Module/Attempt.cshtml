@@ -1,0 +1,32 @@
+﻿@model TBHAcademy.Models.Attempt
+@{
+    Layout = null;
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Attempt">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input asp-for="StudentID" type="hidden" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input asp-for="QuizID" type="hidden"  class="form-control" />
+
+            </div>
+            <div class="form-group">
+
+                <input asp-for="Date" type="hidden" class="form-control" />
+
+            </div>
+            <div class="form-group">
+
+                <input asp-for="time"  type="hidden"  class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Attempt" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
