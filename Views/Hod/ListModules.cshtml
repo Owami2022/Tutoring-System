@@ -2,19 +2,19 @@
 
 @{
     ViewData["Title"] = "ListModules";
-    Layout = "~/Views/Shared/_HodLayout.cshtml";
+    Layout = "_HodLayout";
 }
 
 <div>
-    <div class="w-100 mb-2  " style="background: rgba(6, 73, 181,0.5)">
+<div class="w-100 mb-2  " style="background: rgba(6, 73, 181,0.5)">
     <div class="pt-1 m-0 row">
         <h5 class="text-white text-center ">List Of Modules</h5>
     </div>
 </div>
 
-
-<table class="table">
-    <thead>
+<div class="pl-3 pr-3">
+<table id="myTable" class="table table-bordered table-hover">
+    <thead class="thead-dark">
         <tr>
             
             <th>
@@ -31,7 +31,7 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var modules in Model) {
+      @foreach (var modules in Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => modules.ModuleCode)
@@ -42,32 +42,21 @@
             <td>
                 @Html.DisplayFor(modelItem => modules.Year)
             </td>
-            
-            @*<td>@modules.Course.CourseName</td>*@
-                @*@if (modules.Status == (int)CourseStatus.Inactive)
-                {
-                    <td>Deactivated</td>
-                }
-                else if (modules.Status == (int)CourseStatus.Active)
-                {
-                    <td>Active</td>
-                }*@
-            <td>
-                @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                       
+            <td>               
                 <a asp-action="UpdateModule" class="button btn btn-outline-info  w-100" asp-route-id="@modules.ModuleId">Update</a>
-                 @*<form asp-action="ActivateCourse" method="post" asp-route-id="@course.CourseId" class="d-inline ">
-                   <button type="submit" class="btn btn-success">Activate</button>
-                   </form>
-                   <form asp-action="DeleteModule" method="post" asp-route-id="@course.CourseId" class="d-inline w-50" id="_@course.CourseId">
-                   <button type="button" class="btn btn-danger " id="DeleteBtn" onclick="Confirmation(this,@course.CourseId)">Deactivate</button>
-                   </form>*@
+                <br>
+                <a asp-action="DeleteModule" class="button btn btn-outline-info  w-100" asp-route-id="@modules.ModuleId">Delete</a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>
+</div>
+</div>
 <p>
     <a asp-action="InsertModule" class="button btn btn-outline-info">Add New Module</a>
+</p>
+<p>
+    <a asp-action="Assign" class="button btn btn-outline-info">Assign Tutor</a>
 </p>
