@@ -98,11 +98,11 @@ namespace TBHAcademy.Controllers
         {
 
             ViewBag.Message = "Meeting History";
-            //ViewBag.DisplayMeeting = (from m in _db.ScheduleMeeting
-            //                          join U in _db.Users on m.StudentId equals U.Id
-            //                          where m.StudentId == U.Id
-            //                          select new MyMeeting { ScheduleMeetingVM = m, UserVM = U }
-            //       ).ToList();
+            ViewBag.DisplayMeeting = (from m in _db.ScheduleMeeting
+                                      join U in _db.Users on m.MemberId equals U.Id
+                                      where m.MemberId == U.Id
+                                      select new MyMeeting { ScheduleMeetingVM = m, UserVM = U }
+                   ).ToList();
 
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
 

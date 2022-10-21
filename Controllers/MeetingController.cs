@@ -40,6 +40,23 @@ namespace TBHAcademy.Controllers
         //}
         public IActionResult ListMeetings()
         {
+            if (User.IsInRole("Student"))
+            {
+                ViewBag.Layout = "_StudentLayout - Copy";
+            }
+            else if (User.IsInRole("Tutor"))
+            {
+                ViewBag.Layout = "_TutorLayoutcshtml";
+            }
+            else if (User.IsInRole("Head of Department"))
+            {
+                ViewBag.Layout = "_HodLayout";
+            }
+            else if (User.IsInRole("Administrator"))
+            {
+                ViewBag.Layout = "_AdminLayout";
+            }
+
             IEnumerable<ScheduleMeeting> meetings = _db.ScheduleMeeting;
             return View(meetings);
         }
