@@ -64,6 +64,8 @@ namespace TBHAcademy.Controllers
             //ViewBag.Users = _db.Users.Count(x => x.AccessFailedCount > 0);
             ViewBag.Modules = _db.Modules.Count(x => x.ModuleId > 0);
             ViewBag.Enroll = _db.Enroll.Count(x => x.EnrolledID >= 0);
+          
+            ViewBag.Users=_db.Users;
             IEnumerable<Course> CourseList = _db.Course;
             return View(CourseList);
 

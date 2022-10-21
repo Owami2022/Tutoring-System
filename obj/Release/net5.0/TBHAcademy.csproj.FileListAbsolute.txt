@@ -3939,3 +3939,4 @@ C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Q
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Student\Find_Mates.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Shared\_AdminLayoutOld.cshtml.g.cs
 C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Admin\DiplayFAQs.cshtml.g.cs
+C:\Users\Owami\source\15-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\Users_Info_Report.cshtml.g.cs
