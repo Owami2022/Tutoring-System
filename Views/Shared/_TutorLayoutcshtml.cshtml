@@ -349,13 +349,13 @@
 
                 <li class="nav-item  ">
 
-                    <a href="@Url.Action("Dashboard","Tutor")" id="Dashboard" class="button nav-link" style="color:white"><i data-feather="package" style="color:white"></i><span>Dashboard</span></a>
+                    <a  id="Dashboard" class="button nav-link" style="color:white"><i data-feather="package" style="color:white"></i><span>Dashboard</span></a>
                 </li>
 
                @* --------------------------------Nav bar href----------------------------------------*@
 
-                <li class="nav-item" style="color:white"><a asp-controller="Module" asp-action="Content" style="color:white" class="nav-link"><i data-feather="edit-3" style="color:white"></i><span>Content</span></a></li>
-                <li class="nav-item" style="color:white"><a href="@Url.Action("ListMeeting","Meeting")" style="color:white" class="nav-link"><i data-feather="monitor" style="color:white"></i><span>Schedule Meet</span></a></li>
+                <li class="nav-item" style="color:white"><a id="Content" style="color:white" class="nav-link"><i data-feather="edit-3" style="color:white"></i><span>Content</span></a></li>
+                <li class="nav-item" style="color:white"><a id="Meeting" style="color:white" class="nav-link"><i data-feather="monitor" style="color:white"></i><span>Schedule Meeting</span></a></li>
                 <li class="nav-item">
 
                     @*-------------------Add Marks-----------------------*@
@@ -370,28 +370,6 @@
                 <li class="nav-item"><a href="" style="color:white" class="nav-link"><i data-feather="briefcase" style="color:white"></i><span>Create Assessment</span></a></li>
 
             </ul>
-
- @*           <hr>
-
-            <ul class="nav-sidebar">
-                <li class="nav-item">
-                    <a href="" style="color:white" class="nav-link with-sub"><i data-feather="users" style="color:white"></i><span>Manage Accounts</span></a>
-                    <nav class="nav-sub">
-                        <a href="" class="sub-link" style="color:white">User Privacy</a>
-                        <a href="" class="sub-link" style="color:white">Subscriptions</a>
-                    </nav>
-                </li>
-                <li class="nav-item">
-                    <a href="" style="color:white" class="nav-link"><i data-feather="package" style="color:white"></i><span>Resources</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="" style="color:white" class="nav-link with-sub"><i data-feather="file-text" style="color:white"></i><span>Find Mates</span></a>
-                    <nav class="nav-sub">
-                        <a href="" class="sub-link" style="color:white">For My Modules</a>
-                        <a href="" class="sub-link" style="color:white">All Mates</a>
-                    </nav>
-                </li>
-            </ul>*@
 
             <hr>
 
@@ -595,8 +573,14 @@
     @*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
 <script type="text/javascript">
     $('#Dashboard').click(function () {
-        document.location = '@Url.Action("Student","Dashboard")';
+        document.location = '@Url.Action("Tutor","Dashboard")';
     });
+    $('#Content').click(function () {
+            document.location = '@Url.Action("Content","Module")';
+    });
+    //$('#Meeting').click(function () {
+    //        document.location = '@Url.Action("Module","Content")';
+    // });
 
 </script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -6682,6 +6682,7 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\ref\TBH
 C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\appsettings.json
 C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\bundleconfig.json
+C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\libman.json
 C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\TBHAcademy.StaticWebAssets.xml
 C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\TBHAcademy.exe
 C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\TBHAcademy.deps.json
@@ -6969,6 +6970,7 @@ C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\TBHAcademy.Views.dll
 C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\TBHAcademy.Views.pdb
 C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\AspNetCoreHero.ToastNotification.Views.dll
 C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\AspNetCoreHero.ToastNotification.dll
+C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\DayPilot.dll
 C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\Humanizer.dll
 C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Ernest\3D Objects\Project 2022\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -7146,6 +7148,7 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Areas\Identity\Pa
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Administration\CreateRole.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Administration\ListRoles.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\Calender.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\DiplayFAQs.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\Edit.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\EditFAQs.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\FAQs.cshtml.g.cs
@@ -7158,13 +7161,14 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Dashboard\A
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Dashboard\Hod.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Dashboard\Student.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Dashboard\Tutor.cshtml.g.cs
-C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\FAQ\DiplayFAQs.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Activities.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Announcements.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Assign.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Assigned_Tutors.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Calendar.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\CreateAnnouncement.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\DeleteModule.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\FAQ_Display.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Index.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\InsertFaculty.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\InsertModule.cshtml.g.cs
@@ -7172,10 +7176,12 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\ListFac
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\ListModules.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\UpdateFaculty.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\UpdateModule.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Home\Chat.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Home\demo.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Marks\AddMark.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Marks\ListMarks.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Meeting\AddMeeting.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Meeting\Create.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Meeting\Delete.cshtml.g.cs
@@ -7193,11 +7199,13 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Quiz\Create
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Academic_Info_Report.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Course_Info_Report.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Enrolled_Modules_Report.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Faculty_Report.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\MeetingHistory.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Modules_Report.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Progress_Report.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
-C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayoutNew.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayoutOld.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Shared\_Fake.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Shared\_HodLayout.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -7234,4 +7242,4 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\refint\TBHAcademy.dll
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\TBHAcademy.pdb
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\TBHAcademy.genruntimeconfig.cache
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\ref\TBHAcademy.dll
-C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Marks\ListMarks.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Marks\UpdateMark.cshtml.g.cs

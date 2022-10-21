@@ -1,12 +1,17 @@
 ﻿@using TBHAcademy.Areas.Identity.Data;
 @model TBHAcademy.Models.Mark_Capture
 
+
 @{
     ViewData["Title"] = "AddMark";
     Layout = "~/Views/Shared/_TutorLayoutcshtml.cshtml";
 }
 
-<h1>AddMark</h1>
+<div class="w-100 " style="background: rgba(6, 73, 181,0.5)">
+    <div class="pt-1 m-0 row">
+        <h5 class="text-white text-center ">Cupture Mark</h5>
+    </div>
+</div>
 
 <hr />
 <div class="row">
@@ -85,6 +90,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="AddMark">Back to List</a>
 </div>
 

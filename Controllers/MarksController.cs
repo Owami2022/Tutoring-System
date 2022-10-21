@@ -106,6 +106,38 @@ namespace TBHAcademy.Controllers
             return View();
 
         }
+        
+        public IActionResult UpdateMark(int? id)
+        {
+            ViewBag.Student = from R in _db.Roles
+                              join UR in _db.UserRoles on R.Id equals UR.RoleId
+                              from U in _db.Users
+                              join ur in _db.UserRoles on U.Id equals ur.UserId
+                              where R.Name == "Student" && U.Id == UR.UserId
+                              select U;
+
+            ViewBag.Action = (id == 0) ? "Add" : "Update";
+            var obj = _db.Mark_Capture.Find(id);
+            if (id > 0)
+            {
+                return View(obj);
+            }
+            else
+            {
+                return View(new Mark_Capture());
+            }
+        }
+
+        [HttpGet]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdateMark(Mark_Capture mark_Capture)
+        {
+            _db.Mark_Capture.Update(mark_Capture);
+            _db.SaveChanges();
+            return RedirectToAction("ListMarks", "Marks");
+        }
+
+
 
 
 
