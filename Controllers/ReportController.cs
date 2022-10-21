@@ -87,11 +87,11 @@ namespace TBHAcademy.Controllers
         }
         public IActionResult Modules_Report()
         {
+
             IEnumerable<Modules> ModulesList = _db.Modules;
             ViewBag.date = DateTime.Now.ToString("dd-MMM-yyyy");
             return View(ModulesList);
         }
-
 
         public IActionResult Course_Info_Report()
         {
