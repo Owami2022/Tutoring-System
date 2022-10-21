@@ -26,6 +26,11 @@ namespace TBHAcademy.Controllers
         {
             _db = db; 
         }
+        public List<Faculty> Faculties()
+        {
+            List<Faculty> faculties = _db.Faculty.ToList();
+            return faculties;
+        }
 
         public IActionResult Index()
         {
@@ -105,6 +110,7 @@ namespace TBHAcademy.Controllers
             return View(announcements);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult DeleteModule(Modules modules)
         {
             ViewBag.Message = modules.ModuleName + "Will be Deleted!";
@@ -235,15 +241,41 @@ namespace TBHAcademy.Controllers
         //****************************************TUTOR MODULE********************
         public IActionResult Assign()
         {
-            var assignedtutor = (from m in _db.AssignModules
-                                 join u in _db.Users on m.TutorID equals u.Id
-                                 from c in _db.Course
-                                 join o in _db.Modules on c.CourseId equals o.CourseId
-                                 where m.ModuleID == o.ModuleId
-                                 select new TutorModule { CourseTM = c, ModulesTM = o, AssignTM = m, UserTM = u });
-            return View(assignedtutor);
+            ViewBag.Tutors =  from R in _db.Roles
+                              join UR in _db.UserRoles on R.Id equals UR.RoleId
+                              from U in _db.Users
+                              join ur in _db.UserRoles on U.Id equals ur.UserId
+                              where R.Name == "Tutor" && U.Id == UR.UserId
+                              select U;
+            ViewBag.Modules = _db.Modules.OrderBy(x => x.ModuleName).ToList();         
+
+
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Assign(AssignModules assign)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.AssignModules.Add(assign);
+                _db.SaveChanges();
+                return RedirectToAction("Assigned_Tutors");
+            }
+            return View();
+        }
+        public IActionResult Assigned_Tutors()
+        {
+            IEnumerable<AssignModules> AssignedList = _db.AssignModules;
+            return View(AssignedList);
+           
         }
         public IActionResult Calendar()
+        {
+            return View();
+        }
+
+        public IActionResult FAQ_Display()
         {
             return View();
         }
