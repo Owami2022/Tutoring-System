@@ -13,6 +13,8 @@ using AspNetCoreHero.ToastNotification.Abstractions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using System.IO;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace TBHAcademy.Controllers
 {
@@ -24,10 +26,12 @@ namespace TBHAcademy.Controllers
         private readonly TBHAcademyContext _db;
         private readonly INotyfService _notyf;
         public const string SessionModule = "_Name";
+        private readonly IEmailSender _emailSender;
 
-        public ModuleController(TBHAcademyContext db, INotyfService not)
+        public ModuleController(TBHAcademyContext db, IEmailSender emailSender)
         {
             _db = db;
+            _emailSender = emailSender;
 
         }
         public IActionResult Index()
@@ -173,6 +177,7 @@ namespace TBHAcademy.Controllers
         [HttpPost]
         public async Task<IActionResult> UploadToDatabase(List<IFormFile> files, string description)
         {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
             foreach (var file in files)
             {
                 var fileName = Path.GetFileNameWithoutExtension(file.FileName);
@@ -183,23 +188,117 @@ namespace TBHAcademy.Controllers
                     FileType = file.ContentType,
                     Extension = extension,
                     Description = fileName,
-                    Name = description
+                    Name = description,
+                    StudentID = user,
+                    AssignmentID = Convert.ToInt32(HttpContext.Session.GetInt32(SessionModule)),
+                    
                 };
                 using (var dataStream = new MemoryStream())
                 {
                     await file.CopyToAsync(dataStream);
                     fileModel.Data = dataStream.ToArray();
                 }
-                _db.subModel.Add(fileModel);
+                _db.SubModel.Add(fileModel);
                 _db.SaveChanges();
+                var User = _db.Users.FirstOrDefault(X => X.Id == user);
+
+
+                await _emailSender.SendEmailAsync(User.Email, "Assignment Submission",
+                    $"<h3>Assignment Submitted</h3> <br/> File Name: "+description+" <br/> Date: "+fileModel.DateOfSub+".");
             }
+           
             TempData["Message"] = "File successfully uploaded to Database";
-            return RedirectToAction("Index");
+            return  RedirectToAction("Content", new { id = 2 });
+
         }
         public ActionResult Submit()
         {
 
             return View();
         }
+        public ActionResult Upload()
+        {
+
+            return View();
+        }
+        public async Task<IActionResult> DownloadFile(int id)
+        {
+
+            var file = await _db.Upload.Where(x => x.AssignmnetID == id).FirstOrDefaultAsync();
+            if (file == null) return null;
+            return File(file.Data, file.FileType, file.AssignmentDes + file.Extension);
+        }
+        public async Task<ActionResult> Upload1()
+        {
+            var SubViewModel = await LoadAllFiles1();
+            ViewBag.Message = TempData["Message"];
+            return View(SubViewModel);
+            
+        }
+        private async Task<UploadVM> LoadAllFiles1()
+        {
+            var viewModel = new UploadVM();
+            viewModel.File = await _db.Upload.ToListAsync();
+
+            return viewModel;
+        }
+        public async Task<ActionResult> Submit1()
+        {
+             var SubViewModel = await LoadAllFiles();
+            ViewBag.Message = TempData["Message"];
+            return View(SubViewModel);
+        }
+        private async Task<SubViewModel> LoadAllFiles()
+        {
+            var viewModel = new SubViewModel();
+            viewModel.File = await _db.SubModel.ToListAsync();
+            
+            return viewModel;
+        }
+
+        public async Task<IActionResult> DownloadFileFromDatabase(int id)
+        {
+
+            var file = await _db.SubModel.Where(x => x.Id == id).FirstOrDefaultAsync();
+            if (file == null) return null;
+            return File(file.Data, file.FileType, file.Name + file.Extension);
+        }
+        public async Task<IActionResult> UploadAssignmnet(List<IFormFile> files, Upload upload)
+        {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            foreach (var file in files)
+            {
+                var fileName = Path.GetFileNameWithoutExtension(file.FileName);
+                var extension = Path.GetExtension(file.FileName);
+                var fileModel = new Upload
+                {
+                    CreatedDate = DateTime.Now.ToString("dd/MMMM/yyyy/ HH:mm:ss"),
+                    FileType = file.ContentType,
+                    Extension = extension,
+                    FileName = fileName,
+                    DueDate = upload.DueDate,
+                    AssignmentDes = upload.AssignmentDes,
+                    ModuleID = Convert.ToInt32(HttpContext.Session.GetInt32(SessionModule)),
+
+                };
+                using (var dataStream = new MemoryStream())
+                {
+                    await file.CopyToAsync(dataStream);
+                    fileModel.Data = dataStream.ToArray();
+                }
+                _db.Upload.Add(fileModel);
+                _db.SaveChanges();
+                var User = _db.Users.FirstOrDefault(X => X.Id == user);
+
+
+                await _emailSender.SendEmailAsync(User.Email, "Assignment Uploaded",
+                    $"<h3>Assignment Due Information</h3> <br/> File Name: " + fileModel.AssignmentDes + " <br/> Date: " + fileModel.DueDate + ".");
+            }
+
+            TempData["Message"] = "File successfully uploaded to Database";
+            return RedirectToAction("Content", new { id = 2 });
+
+        }
+
     }
 }

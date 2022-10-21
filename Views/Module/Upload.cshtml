@@ -1,0 +1,34 @@
+﻿@model Upload
+@{
+   
+    Layout = null;
+}
+
+<hr />
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success alert-dismissible" style="margin-top:20px">
+        @ViewBag.Message
+    </div>
+}
+<form method="post" enctype="multipart/form-data">
+     <div class="form-group">
+                 <label class="text-black font-weight-bold"  asp-for="AssignmentDes"></label>
+                 <input asp-for="AssignmentDes" class="form-control" placeholder="Enter Assigment Description"  required />
+                 <span asp-validation-for="AssignmentDes" class="text-danger"></span>
+             </div>
+             <div class="form-group pt-2">
+                <label class="text-black" asp-for="DueDate"></label>
+                 <input asp-for="DueDate" class="form-control" placeholder="dd/mm/yyyy hh:mm:ss" required/>
+                <span asp-validation-for="DueDate" class="text-danger"></span>
+            </div>
+    <input type="file" class="form-control  w-50 pt-3" name="files" multiple required /> <br />
+
+  @*  <input type="text" class="form-control pt-2 w-25" autocomplete="off" placeholder="Enter Assig Description" name="description" required />
+   <input type="text" class="form-control pt-2 w-25" autocomplete="off" placeholder="Enter File Description" name="description" required />*@
+    <div class="pt-2 form-group">
+         <button class="btn btn-success " type="submit" asp-controller="Module" asp-action="UploadAssignmnet">Save</button>
+    </div>
+   
+</form>
+<hr />

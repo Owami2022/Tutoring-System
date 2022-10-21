@@ -25,6 +25,15 @@
           "buildMultiTargeting/AspNetCoreHero.ToastNotification.props": {}
         }
       },
+      "DayPilot/5.0.303": {
+        "type": "package",
+        "compile": {
+          "lib/DayPilot.dll": {}
+        },
+        "runtime": {
+          "lib/DayPilot.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -2241,6 +2250,18 @@
         "staticwebassets/notyf.min.js",
         "staticwebassets/toastify.css",
         "staticwebassets/toastify.js"
+      ]
+    },
+    "DayPilot/5.0.303": {
+      "sha512": "TpgkBj9kliqpqHR1w3uLY7XgmTccB2zZFCr/koTh3lghDUCNRB7h0xWYKz52MHJkA80pFh0CRBrG27vZN+ylvA==",
+      "type": "package",
+      "path": "daypilot/5.0.303",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "daypilot.5.0.303.nupkg.sha512",
+        "daypilot.nuspec",
+        "lib/DayPilot.dll"
       ]
     },
     "Humanizer.Core/2.8.26": {
@@ -7659,6 +7680,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "AspNetCoreHero.ToastNotification >= 1.1.0",
+      "DayPilot >= 5.0.303",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.17",
       "Microsoft.AspNetCore.Identity.UI >= 5.0.17",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 5.0.17",
@@ -7720,6 +7742,10 @@
             "target": "Package",
             "version": "[1.1.0, )"
           },
+          "DayPilot": {
+            "target": "Package",
+            "version": "[5.0.303, )"
+          },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
             "version": "[5.0.17, )"
@@ -7772,5 +7798,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.305\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'DayPilot 5.0.303' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "DayPilot",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

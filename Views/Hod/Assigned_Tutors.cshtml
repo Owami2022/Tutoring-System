@@ -1,0 +1,55 @@
+﻿@model IEnumerable<TBHAcademy.Models.AssignModules>
+
+@{
+    ViewData["Title"] = "Assigned_Tutors";
+    Layout = "_HodLayout";
+}
+<div>
+<div class="w-100 mb-2  " style="background: rgba(6, 73, 181,0.5)">
+    <div class="pt-1 m-0 row">
+        <h5 class="text-white text-center ">Assigned Tutors</h5>
+    </div>
+</div>
+
+<table id="myTable" class="table table-bordered table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TutorID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModuleID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateAssigned)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TutorID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModuleID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateAssigned)
+            </td>
+            <td>
+                  <a asp-action="UpdateAssigned" class="button btn btn-outline-info  w-100" asp-route-id="@item.AssignedID">Update</a>
+                 @*
+                   <form asp-action="DeleteFaculty" method="post" asp-route-id="@faculty.FacultyId" class="d-inline w-100" id="_@item.AssignedId">
+                       <button type="button" class="btn btn-danger w-100" id="DeleteBtn" onclick="Confirmation(this,@faculty.FacultyId)">Deactivated</button>
+                   </form>*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+<p>
+    <a asp-action="Assign" class="button btn btn-outline-info  w-100">Assign</a>
+</p>

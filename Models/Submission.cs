@@ -13,7 +13,6 @@ namespace TBHAcademy.Models
         public string FileType { get; set; }
         public string Extension { get; set; }
         public string StudentID { get; set; }
-        public int ModuleID { get; set; }
         public int AssignmentID { get; set; }
 
 

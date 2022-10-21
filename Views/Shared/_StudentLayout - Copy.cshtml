@@ -125,17 +125,16 @@
 
                     </nav>
                 </li>
-                <li class="nav-item" style="color:white"><a href="" style="color:white" class="nav-link"><i data-feather="layout" style="color:white"></i><span>Upcoming Events</span></a></li>
+                <li class="nav-item" id="Meetings" style="color:white"><a style="color:white" class="nav-link"><i data-feather="layout" style="color:white"></i><span>Schedule Meeting</span></a></li>
                 <li class="nav-item">
                     <a href="" style="color:white" class="nav-link with-sub"><i data-feather="file-text" style="color:white"></i><span>Reports</span></a>
                     <nav class="nav-sub">
                         <a class="button" href="@Url.Action("Enrolled_Modules_Report","Reports")" style="color:white">Enrolled Modules Report</a>
                         <a class="button" href="@Url.Action("Progress_Report","Reports")"  style="color:white">Progress Report</a>
-                        <a class="button"  href=""  style="color:white">Articles</a>
+                        
                     </nav>
                 </li>
-                <li class="nav-item"><a href="" style="color:white" class="nav-link"><i data-feather="calendar" style="color:white"></i><span>Calendar</span></a></li>
-                <li class="nav-item"><a href="" style="color:white" class="nav-link"><i data-feather="briefcase" style="color:white"></i><span>Progress Report</span></a></li>
+                <li class="nav-item"><a href="@Url.Action("Calendar","Hod")" id="Calendar" style="color:white" class="nav-link"><i data-feather="calendar" style="color:white"></i><span>Calendar</span></a></li>
                 <li class="nav-item"><a href="" style="color:white" class="nav-link"><i data-feather="briefcase" style="color:white"></i><span>Question Forum</span></a></li>
 
             </ul>
@@ -365,6 +364,9 @@
 <script type="text/javascript">
     $('#Dashboard').click(function () {
         document.location = '@Url.Action("Student","Dashboard")';
+    });
+    $('#Meetings').click(function () {
+        document.location = '@Url.Action("Create","Meeting")';
     });
 
 </script>
