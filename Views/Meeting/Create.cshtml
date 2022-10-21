@@ -5,7 +5,7 @@
 
 @{
     ViewData["Title"] = "Create";
-    Layout = "~/Views/Shared/_TutorLayoutcshtml.cshtml";
+    Layout = ViewBag.Layout;
 }
 
 <h1>Create</h1>
@@ -16,62 +16,81 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-@*            <div class="form-group">
-                <label asp-for="ScheduleMeetingID" class="control-label"></label>
-                <input asp-for="ScheduleMeetingID" class="form-control" />
-                <span asp-validation-for="ScheduleMeetingID" class="text-danger"></span>
-            </div>*@
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <textarea class="form-control" asp-for="Description" rows="3"> </textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="AppointmentDate" class="control-label"></label>
                 <input asp-for="AppointmentDate" class="form-control" />
                 <span asp-validation-for="AppointmentDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Link" class="control-label"></label>
+                <label asp-for="Link" class="control-label mr-4"></label><a class="mr-5" data-bs-toggle="tooltip" data-bs-placement="top" title="CLICK ME FOR HELP"><i data-feather="help-circle" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color:Red; "></i></a>
                 <input asp-for="Link" class="form-control" />
                 <span asp-validation-for="Link" class="text-danger"></span>
             </div>
 
-           @* <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
+            @* <div class="form-group">
+            <label asp-for="Description" class="control-label"></label>
+            <input asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
             </div>*@
 
-            <div class="form-group">
-                <label asp-for="Description"></label>
-                <textarea class="form-control" asp-for="Description" rows="3"> </textarea>
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
+
 
             @*<div class="form-group">
-                <label asp-for="StudentId" class="control-label"></label>
-                <input asp-for="StudentId" class="form-control" />
-                <span asp-validation-for="StudentId" class="text-danger"></span>
+            <label asp-for="StudentId" class="control-label"></label>
+            <input asp-for="StudentId" class="form-control" />
+            <span asp-validation-for="StudentId" class="text-danger"></span>
             </div>*@
 
 
-           @* ---------Start of Drop down list------------*@
-           <div class="from-group">
+            @* ---------Start of Drop down list------------*@
+            <div class="from-group">
 
-                <label class="text-black font-weight-bold" asp-for="StudentId"></label>
+                <label class="text-black font-weight-bold" asp-for="MemberId"></label>
 
                 <div class="dropdown">
-                    <select asp-for="StudentId" class="form-control">
-                        @foreach (TBHAcademyUser U in ViewBag.Student)
+                    
+                    <select asp-for="MemberId" class="form-control">
+                        <option value=0>None</option>
+                        @foreach (TBHAcademyUser U in ViewBag.Users)
                         {
                             <option value="@U.Id">@U.FirstName @U.LastName</option>
                         }
                     </select>
-                    <span asp-validation-for="StudentId" class="text-danger"></span>
+                    <span asp-validation-for="MemberId" class="text-danger"></span>
                 </div>
 
-           </div>
+            </div>
+            <div class="from-group">
+
+                <label class="text-black font-weight-bold" asp-for="ModuleID"></label>
+
+                <div class="dropdown">
+                   
+                    <select asp-for="ModuleID" class="form-control">
+                         <option value=0>None</option>
+                        @foreach (ModuleDisplay U in ViewBag.Modules)
+                        {
+                            <option value="@U.AssignModulesVM.AssignedID">@U.ModulesVM.ModuleName</option>
+                        }
+                    </select>
+                    <span asp-validation-for="MemberId" class="text-danger"></span>
+                </div>
+
+            </div>
 
 
-
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <div class="form-group mt-2">
+                <input type="submit" value="Create Meeting" class="btn btn-primary" />
             </div>
         </form>
     </div>
@@ -80,4 +99,26 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Creating Meeting Links PlugIns</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="w-100">
+            <a href="https://www.microsoft.com/en-za/microsoft-teams/log-in"> <img src="~/css/Teams.svg" style="width:30px" class="mr-2" />   <h6>Microsot Teams</h6> </a>
+        </div>
+                <div class="mt-2 w-100">
+            <a href="https://www.microsoft.com/en-za/microsoft-teams/log-in"> <img src="~/css/Zoom.svg" style="width:30px" class="mr-2" />     <h6>Zoom</h6></a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

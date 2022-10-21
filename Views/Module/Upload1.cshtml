@@ -1,0 +1,40 @@
+﻿@model UploadVM
+@{
+    
+    Layout = null;
+}
+
+@if (Model.File.Count == 0)
+{
+    <caption>No Records Found</caption>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Assignmnet Description</th>
+                <th>Uploaded Date</th>
+                <th>Due Date</th>
+                <th></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var file in Model.File)
+            {
+                <tr>
+                    <th>@file.AssignmentDes</th>
+                    <td>@file.CreatedDate</td>
+                    <td>@file.DueDate</td>
+
+                    <td>
+                        <a type="button" class="btn btn-primary" asp-controller="Module" asp-action="DownloadFile" asp-route-id="@file.AssignmnetID">Download</a>
+                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Upload">Submit</button>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}

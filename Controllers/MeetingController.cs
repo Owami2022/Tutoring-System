@@ -8,6 +8,8 @@ using TBHAcademy.Data;
 using System.Linq;
 using TBHAcademy.Models;
 using System.Collections.Generic;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace TBHAcademy.Controllers
 {
@@ -52,13 +54,31 @@ namespace TBHAcademy.Controllers
         //[HttpPost]
         public IActionResult Create()
         {
+             if (User.IsInRole("Student"))
+            {
+                ViewBag.Layout = "_StudentLayout - Copy";
+            }
+            else if (User.IsInRole("Tutor"))
+            {
+                ViewBag.Layout = "_TutorLayoutcshtml.cshtml";
+            }
+            else if (User.IsInRole("Head of Department"))
+            {
+                ViewBag.Layout = "_HodLayout";
+            }
+            else if (User.IsInRole("Administrator"))
+            {
+                ViewBag.Layout = "_AdminLayout";
+            }
             //ViewBag.User = _db.Users.OrderBy(x=>x.UserName).ToList();
-            ViewBag.Student = from R in _db.Roles
-                              join UR in _db.UserRoles on R.Id equals UR.RoleId
-                              from U in _db.Users
-                              join ur in _db.UserRoles on U.Id equals ur.UserId
-                              where R.Name == "Student" && U.Id == UR.UserId
-                              select U;
+            ViewBag.Users = from u in _db.Users
+                            select u;
+            ViewBag.Modules = (from M in _db.Modules
+                              join A in _db.AssignModules on M.ModuleId
+                              equals A.ModuleID
+                              select new ModuleDisplay { ModulesVM = M, AssignModulesVM = A}).ToList();
+                              
+
 
             return View();
         }
@@ -66,15 +86,40 @@ namespace TBHAcademy.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(ScheduleMeeting schedule)
+        public async Task<IActionResult> Create(ScheduleMeeting schedule)
         {
-
-            if (ModelState.IsValid)
-            {
-                _db.ScheduleMeeting.Add(schedule);
+           
+           schedule.CreatorID =  User.FindFirstValue(ClaimTypes.NameIdentifier);
+            _db.ScheduleMeeting.Add(schedule);
                 _db.SaveChanges();
-                return RedirectToAction("");
+            var user = _db.Users.FirstOrDefault(X => X.Id == schedule.CreatorID);
+            var user2 = _db.Users.FirstOrDefault(X => X.Id == schedule.MemberId);
+            if (schedule.ModuleID != 0)
+            {
+                List<TBHAcademyUser> User = new List<TBHAcademyUser>();
+                User = (from AS in _db.AssignModules
+                       join E in _db.Enroll on AS.ModuleID equals E.ModuleID
+                       join U in _db.Users on E.StudentID equals U.Id
+                       where AS.ModuleID == schedule.ModuleID
+                       select U).ToList();
+                
+                foreach (var obj in User)
+                {
+                    await _emailSender.SendEmailAsync(obj.Email, "Meeting Invitation",
+                    $"<h3>Hey"+user.FirstName+ user.LastName + "</h3> <br/><h5>You Have Been Inivited To A Meeting</h5><br/>Below is the Meeting Information <br/>Meeting Host: "+ user.FirstName + user.LastName + "<br/>" +
+                    "Meeting Title: "+schedule.Title+"<br/> Meeting Description: "+ schedule.Description+"<br/>Meeting Date: "+schedule.AppointmentDate+" <br/> Meeting Link: " + "<a href='schedule.Link'>join</a>.");
+                }
+
             }
+            if(schedule.MemberId != "0")
+            {
+                
+                await _emailSender.SendEmailAsync(user2.Email,"Meeting Invitation",
+                    $"<h3>Hey" + user.FirstName + user.LastName + "</h3> <br/><h5>You Have Been Inivited To A Meeting</h5><br/>Below is the Meeting Information <br/>Meeting Host: " + user.FirstName + user.LastName + "<br/>" +
+                    "Meeting Title: " + schedule.Title + "<br/> Meeting Description: " + schedule.Description + "<br/>Meeting Date: " + schedule.AppointmentDate + " <br/> Meeting Link: " + "<a href='schedule.Link'>join</a>.");
+
+            }   
+            
             return View(schedule);
         }
 

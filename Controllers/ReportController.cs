@@ -58,7 +58,8 @@ namespace TBHAcademy.Controllers
                                join U in _db.Users on E.StudentID equals U.Id
                                where A.AssignedID == E.ModuleID && E.StudentID == user
                                select new MyModules { AssignModulesVM = A, ModulesVM = m, EnrollVM = E }).ToList();
-            ViewBag.Message = "Enrolled Modules Report";
+
+             ViewBag.Message = "Enrolled Modules Report";
             
             ViewBag.date = DateTime.Now.ToString("dd-MMMM-yyyy");
             ViewBag.Enrolled = (from c in _db.Course
@@ -70,9 +71,21 @@ namespace TBHAcademy.Controllers
                                 where E.StudentID == user && AM.ModuleID == C.ModuleId && E.ModuleID == AM.AssignedID
                                 select new Enrolled_Module_Display { AssignModules = AM, Course = c, Enroll = E, Modules = C, TBHAcademyUser = U }).ToList();
 
-
             return View();
         }
+
+        //public IActionResult MeetingHistory()
+        //{
+        //    ViewBag.Message = "Meeting History";
+        //    ViewBag.DisplayMeeting = (from m in _db.ScheduleMeeting
+        //                       join U in _db.Users on m.StudentId equals U.Id
+        //                       where m.StudentId == U.Id
+        //                       select new MyMeeting { ScheduleMeetingVM = m, UserVM = U }
+        //           ).ToList();
+
+        //    return View();
+
+        //}
         public IActionResult Faculty_Report()
         {
             ViewBag.Modules = _db.Modules.Count(x => x.ModuleId > 0);
