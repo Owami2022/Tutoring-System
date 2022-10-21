@@ -4439,7 +4439,6 @@ C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\H
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Home\demo.cshtml.g.cs
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Marks\Create.cshtml.g.cs
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Marks\ListMarks.cshtml.g.cs
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\AddMeeting.cshtml.g.cs
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\Create.cshtml.g.cs
@@ -4451,7 +4450,6 @@ C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\M
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Module\Content.cshtml.g.cs
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Module\InsertModule.cshtml.g.cs
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Quiz\Add_Quiz_Question.cshtml.g.cs
-C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Quiz\Attempt.cshtml.g.cs
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Quiz\Create_Quiz.cshtml.g.cs
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\Academic_Info_Report.cshtml.g.cs
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\Course_Info_Report.cshtml.g.cs
@@ -4499,3 +4497,17 @@ C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\refint\TBHAca
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\TBHAcademy.pdb
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\TBHAcademy.genruntimeconfig.cache
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\ref\TBHAcademy.dll
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Announcements\Index.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Dashboard\Tutor.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Hod\DeleteFaculty.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Marks\AddMark.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Marks\UpdateMark.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\Delete.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Meeting\UpdateMeeting.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Module\Attempt.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Module\Submit.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Module\Submit1.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Module\Upload.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Module\Upload1.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\Faculty_Update_Report.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\MeetingHistory.cshtml.g.cs
