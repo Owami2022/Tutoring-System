@@ -25,11 +25,11 @@ namespace TBHAcademy.Controllers
             }
             else if (User.IsInRole("Tutor"))
             {
-                ViewBag.Layout = "~/Views/Shared/_TutorLayoutcshtml.cshtml";
+                ViewBag.Layout = "_TutorLayout";
             }
             else if (User.IsInRole("Administrator"))
             {
-                ViewBag.Layout = "~/Views/Shared/_AdminLayoutcshtml.cshtml";
+                ViewBag.Layout = "_AdminLayout";
             }
             else if (User.IsInRole("Head of Department"))
             {
