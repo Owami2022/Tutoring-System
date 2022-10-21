@@ -5,7 +5,7 @@ namespace TBHAcademy.Models
     public class MyMark
     {
         public Modules ModulesVM { get; set; }
-        public Comment CommentVM { get; set; }
+        public Mark_Capture Mark_CaptureVM { get; set; }
         public TBHAcademyUser UserVM { get; set; }
     }
 }

@@ -8,17 +8,11 @@
 
 <h1>AddMark</h1>
 
-<h4>Mark_Capture</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="AddMark">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-@*            <div class="form-group">
-                <label asp-for="MarkID" class="control-label"></label>
-                <input asp-for="MarkID" class="form-control" />
-                <span asp-validation-for="MarkID" class="text-danger"></span>
-            </div>*@
 
             @* ---------Start of Drop down list------------*@
             <div class="from-group">
@@ -32,21 +26,13 @@
                                 <option value="@U.Id">@U.FirstName @U.LastName</option>
                         }
                     </select>
-                    <span asp-validation-for="StudentID" class="text-danger"></span>
+                    @*<span asp-validation-for="StudentID" class="text-danger"></span>*@
                 </div>
 
             </div>
 
-@*            <div class="form-group">
-                <label asp-for="ModuleID" class="control-label"></label>
-                <input asp-for="ModuleID" class="form-control" />
-                <span asp-validation-for="ModuleID" class="text-danger"></span>
-            </div>*@
-
              <div>
-
                 <label class="text-black font-weight-bold" asp-for="ModuleID"></label>
-
                 <div class="dropdown">
                     <select asp-for="ModuleID" class="form-control">
                         @foreach (Modules p in ViewBag.Modules)
@@ -54,7 +40,8 @@
                                 <option value="@p.ModuleId">@p.ModuleName</option>
                         }
                     </select>
-                    @*<span asp-validation-for="Mark_Capture.ModuleID" class="text-danger"></span>*@
+                    <span asp-validation-for="ModuleID" class="text-danger"></span>
+                   
                 </div>
 
             </div>
