@@ -27,6 +27,17 @@
         border: 1px solid rgba( 255, 255, 255, 0.18 );
         }
     </style>
+    <script defer>
+    $(document).ready(function() {
+        $('#AssigmnetBody').load("/Module/Upload1");
+        $('#Attempt').load("/Module/Attempt");
+        $('#SubBody').load("/Module/Submit");
+        $('#UploadBody').load("/Module/Upload");
+        $("#Add").click(function() {
+            $('#Display').load("/Module/Add");
+        });
+    });
+</script>
 </header>
 <h2>Student Dash-Board</h2>
 <div class="container-fluid pt-4 px-4">
@@ -86,21 +97,21 @@
             <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
                 <img src="~/css/Overall.svg" style="width: 90px" />
                 <div class="ms-3">
-                    <h4 class="mb-2">New Activities</h4>
+                    <h4 class="mb-2">Pending Assigmnets</h4>
 
                 </div>
             </div>
         </div>
         <!--Modal-->
         <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg  modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">New Activities</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Pending Assigments</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        Mot Working yet
+                    <div id="AssigmnetBody" class="modal-body">
+                        
 
 
 
@@ -130,6 +141,26 @@
         </div>
     </div>
 </div>
+<!--Submission Modal-->
+ <div class="modal fade" id="Upload" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="QuizModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg  modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="QuizModal">Upload Your Assignment</</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="SubBody" class="w-100">
+                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 <!-- Recent Sales Start -->
 <div class="container-fluid pt-4 px-4">
     <div class="AssessmentTable text-center rounded p-4" id="AssessmentTable">

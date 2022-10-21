@@ -31,8 +31,18 @@ namespace TBHAcademy
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(5);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddRazorPages();
+            services.AddMvc();
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddNotyf(config => { config.DurationInSeconds = 5; config.IsDismissable = false; config.Position = NotyfPosition.TopCenter; });
@@ -54,7 +64,7 @@ namespace TBHAcademy
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession(); 
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

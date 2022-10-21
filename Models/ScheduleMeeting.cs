@@ -11,21 +11,27 @@ namespace TBHAcademy.Models
         public int ScheduleMeetingID { get; set; }
 
         [Required]
-        [Display(Name = "Appointment Date")]
+        [Display(Name = "Meeting Title")]
+        public string Title { get; set; }
+        [Required]
+        [Display(Name = "Meet purpose")]
+        public string Description { get; set; }
+
+        [Display(Name = "Meeting Date")]
         public DateTime AppointmentDate { get; set; }
 
         [Required]
         [Display(Name = "Meet link")]
         public string Link { get; set; }
 
-        [Required]
-        [Display(Name ="Meet purpose")]
-        public string Description { get; set; }
 
-        [Required]
-        [Display(Name = "Select Student")]
-        public string StudentId { get; set; }
-
+        
+        [Display(Name = "Select Individual Member")]
+        public string MemberId { get; set; }
+        [Display(Name = "Invite Student For: ")]
+        public int ModuleID { get; set; }
+        [Display(Name = "Meeting Hoster")]
+        public string CreatorID { get; set; }
         public virtual TBHAcademyUser TBHAcademyUser { get; set; }
     }
 }

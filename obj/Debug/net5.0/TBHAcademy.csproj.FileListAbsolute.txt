@@ -6133,6 +6133,7 @@ C:\Users\koketso mosena\OneDrive\Desktop\Latest\obj\Debug\net5.0\ref\TBHAcademy.
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\appsettings.json
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\bundleconfig.json
+C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\libman.json
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\TBHAcademy.StaticWebAssets.xml
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\TBHAcademy.exe
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\TBHAcademy.deps.json
@@ -6420,6 +6421,7 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\TBHAcad
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\TBHAcademy.Views.pdb
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\AspNetCoreHero.ToastNotification.Views.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\AspNetCoreHero.ToastNotification.dll
+C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\DayPilot.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\Humanizer.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\koketso mosena\source\repos\Final_Year_Project\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -6596,14 +6598,14 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\A
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Administration\CreateRole.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Administration\ListRoles.cshtml.g.cs
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\Calender.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\DiplayFAQs.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\Edit.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\EditFAQs.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\FAQs.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\ListCourse.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\ListFAQs.cshtml.g.cs
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Admin\Statistics.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Calendar\Index.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\ComingSoonPage\Index.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\ContactUs\Index.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Dashboard\Admin.cshtml.g.cs
@@ -6612,9 +6614,10 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\V
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\Activities.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\Announcements.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\Assign.cshtml.g.cs
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\Calendar.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\Assigned_Tutors.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\CreateAnnouncement.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\DeleteModule.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\FAQ_Display.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\Index.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\InsertFaculty.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\InsertModule.cshtml.g.cs
@@ -6622,6 +6625,7 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\V
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\ListModules.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\UpdateFaculty.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Hod\UpdateModule.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Home\Chat.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Home\demo.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
@@ -6634,15 +6638,25 @@ C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\V
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Module\Add.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Module\AddContent.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Module\AddTopics.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Module\Attempt.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Module\Content.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Module\InsertModule.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Module\Submit.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Module\Submit1.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Module\Upload.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Module\Upload1.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Quiz\Add_Quiz_Question.cshtml.g.cs
-C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Quiz\Attempt.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Quiz\Create_Quiz.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Reports\Academic_Info_Report.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Reports\Course_Info_Report.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Reports\Enrolled_Modules_Report.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Reports\Faculty_Report.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Reports\Modules_Report.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Reports\Progress_Report.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Reports\Users_Info_Report.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayoutOld.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Shared\_Fake.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Shared\_HodLayout.cshtml.g.cs
 C:\Users\koketso mosena\source\repos\Final_Year_Project\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -7147,7 +7161,6 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Areas\Identity\Pa
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Administration\CreateRole.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Administration\ListRoles.cshtml.g.cs
-C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\Calender.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\DiplayFAQs.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\Edit.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\EditFAQs.cshtml.g.cs
@@ -7155,6 +7168,7 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\FAQs.
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\ListCourse.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\ListFAQs.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Calendar\Index.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\ComingSoonPage\Index.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\ContactUs\Index.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Dashboard\Admin.cshtml.g.cs
@@ -7165,7 +7179,6 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Activit
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Announcements.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Assign.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Assigned_Tutors.cshtml.g.cs
-C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Calendar.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\CreateAnnouncement.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\DeleteModule.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\FAQ_Display.cshtml.g.cs
@@ -7182,6 +7195,7 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Home\Index.
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Marks\AddMark.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Marks\ListMarks.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Marks\UpdateMark.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Meeting\AddMeeting.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Meeting\Create.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Meeting\Delete.cshtml.g.cs
@@ -7191,10 +7205,14 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Meeting\Upd
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Module\Add.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Module\AddContent.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Module\AddTopics.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Module\Attempt.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Module\Content.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Module\InsertModule.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Module\Submit.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Module\Submit1.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Module\Upload.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Module\Upload1.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Quiz\Add_Quiz_Question.cshtml.g.cs
-C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Quiz\Attempt.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Quiz\Create_Quiz.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Academic_Info_Report.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Course_Info_Report.cshtml.g.cs
@@ -7203,6 +7221,7 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Fac
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\MeetingHistory.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Modules_Report.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Progress_Report.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Users_Info_Report.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayoutOld.cshtml.g.cs
@@ -7242,4 +7261,3 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\refint\TBHAcademy.dll
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\TBHAcademy.pdb
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\TBHAcademy.genruntimeconfig.cache
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\ref\TBHAcademy.dll
-C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Marks\UpdateMark.cshtml.g.cs
