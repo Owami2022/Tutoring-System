@@ -32,7 +32,7 @@ namespace TBHAcademy.Controllers
             }
             else if (User.IsInRole("Tutor"))
             {
-                ViewBag.Layout = "_TutorLayout";
+                ViewBag.Layout = "_TutorLayoutcshtml";
             }
             else if (User.IsInRole("Administrator"))
             {
