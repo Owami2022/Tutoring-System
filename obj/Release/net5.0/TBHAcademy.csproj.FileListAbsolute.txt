@@ -4511,3 +4511,5 @@ C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\M
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Module\Upload1.cshtml.g.cs
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\Faculty_Update_Report.cshtml.g.cs
 C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Reports\MeetingHistory.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Marks\ListMarks1.cshtml.g.cs
+C:\Users\Owami\source\21-10 Final Final project\obj\Release\net5.0\Razor\Views\Tutor\DiplayFAQs.cshtml.g.cs
