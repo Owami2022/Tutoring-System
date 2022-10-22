@@ -7168,6 +7168,7 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\FAQs.
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\ListCourse.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Admin\ListFAQs.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Announcements\Index.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Calendar\Index.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\ComingSoonPage\Index.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\ContactUs\Index.cshtml.g.cs
@@ -7180,6 +7181,7 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Announc
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Assign.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Assigned_Tutors.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\CreateAnnouncement.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\DeleteFaculty.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\DeleteModule.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\FAQ_Display.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Hod\Index.cshtml.g.cs
@@ -7218,6 +7220,7 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Aca
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Course_Info_Report.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Enrolled_Modules_Report.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Faculty_Report.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Faculty_Update_Report.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\MeetingHistory.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Modules_Report.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Reports\Progress_Report.cshtml.g.cs
@@ -7245,6 +7248,7 @@ C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Tutor\Calen
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Tutor\CapturetMarklist.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Tutor\Dashboard.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Tutor\DeleteTermMark.cshtml.g.cs
+C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Tutor\DisplayFAQs.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Tutor\Index.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Tutor\InsertMark.cshtml.g.cs
 C:\Users\Ernest\3D Objects\Project 2022\obj\Debug\net5.0\Razor\Views\Tutor\TearmResultUpdate.cshtml.g.cs

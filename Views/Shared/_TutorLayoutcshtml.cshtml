@@ -354,8 +354,8 @@
 
                @* --------------------------------Nav bar href----------------------------------------*@
 
-                <li class="nav-item" style="color:white"><a id="Content" style="color:white" class="nav-link"><i data-feather="edit-3" style="color:white"></i><span>Content</span></a></li>
-                <li class="nav-item" style="color:white"><a id="Meeting" style="color:white" class="nav-link"><i data-feather="monitor" style="color:white"></i><span>Schedule Meeting</span></a></li>
+                <li class="button nav-item" style="color:white"><a id="Content" style="color:white" class="nav-link"><i data-feather="edit-3" style="color:white"></i><span>Content</span></a></li>
+                <li class="button nav-item" style="color:white"><a id="Meeting" style="color:white" class="nav-link"><i data-feather="monitor" style="color:white"></i><span>Schedule Meeting</span></a></li>
                 <li class="nav-item">
 
                     @*-------------------Add Marks-----------------------*@
@@ -366,17 +366,17 @@
                         <a class="button"  href=""  style="color:white">Team Mark</a>
                     </nav>
                 </li>
-                <li class="nav-item"><a href="" style="color:white" class="nav-link"><i data-feather="calendar" style="color:white"></i><span>Calendar</span></a></li>
-                <li class="nav-item"><a href="" style="color:white" class="nav-link"><i data-feather="briefcase" style="color:white"></i><span>Create Assessment</span></a></li>
+                <li class="button nav-item"><a id="Calender1" style="color:white" class="nav-link"><i data-feather="calendar" style="color:white"></i><span>Calendar</span></a></li>
+                <li class="button nav-item"><a id="CreateAssessment" style="color:white" class="nav-link"><i data-feather="briefcase" style="color:white"></i><span>Create Assessment</span></a></li>
 
             </ul>
 
             <hr>
 
             <nav class="nav-sidebar ">
-                <a href="" style="color:white" class="nav-link"><i data-feather="activity" style="color:white"></i><span style="color:white">Activity Logs</span></a>
-                <a href="" style="color:white" class="nav-link"><i data-feather="settings" style="color:white"></i><span>Preferences</span></a>
-                <a href="" style="color:white" class="nav-link"><i data-feather="help-circle" style="color:white"></i><span>Help &amp; Support</span></a>
+       @*         <a href="" style="color:white" class="nav-link"><i data-feather="activity" style="color:white"></i><span style="color:white">Activity Logs</span></a>
+                <a href="" style="color:white" class="nav-link"><i data-feather="settings" style="color:white"></i><span>Preferences</span></a>*@
+                <a href="" id = "FAQ" style="color:white" class="nav-link"><i data-feather="help-circle" style="color:white"></i><span>Help &amp; Support</span></a>
                
             </nav>
         </div><!-- sidebar-body -->
@@ -578,10 +578,22 @@
     $('#Content').click(function () {
             document.location = '@Url.Action("Content","Module")';
     });
+      $('#Calender1').click(function () {
+            document.location = '@Url.Action("Index","Calendar")';
+    });
+     $('#Meeting').click(function () {
+            document.location = '@Url.Action("Create","Meeting")';
+    });
+
     //$('#Meeting').click(function () {
     //        document.location = '@Url.Action("Module","Content")';
     // });
 
+</script>
+<script type="text/javascript">
+    $('#FAQ').click(function () {
+        document.location = '@Url.Action("DisplayFAQs","Tutor")';
+    });
 </script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
