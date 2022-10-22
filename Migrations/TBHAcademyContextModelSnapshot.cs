@@ -220,6 +220,7 @@ namespace TBHAcademy.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
+                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("TwoFactorEnabled")
